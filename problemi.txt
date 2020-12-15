@@ -16,4 +16,4 @@ vincolo: il corso puo essere associato solo a assistente medico o ad entrambi.
 
 Reifichiamo qualifica
 
-
+Sono sottintesi i vincoli dell'ER non ristrutturato
