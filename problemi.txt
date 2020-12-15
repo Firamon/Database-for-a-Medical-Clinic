@@ -1,0 +1,19 @@
+generalizzazione medico: eliminiamo i figli. Al padre aggiungiamo gli attributi tipo, tariffa oraria e percentuale. Reifichiamo l'attributo specializzazione in una entità debole.
+vincoli: se il tipo è esterno valorizzo il campo tariffa oraria, se il tipo è interno valorizzo il campo percentuale
+
+terapia prolungata: l'attributo tipo di medico diventa specializzazione richiesta
+
+generalizzazione appuntamento: 
+vincoli: appuntamento può essere associato solo ad una entità tra accettao, programmato e saltato contemporaneamente
+
+generalizzazione terapia: abbiamo eliminato i figlio, e aggiunto al padre il campo figlio.
+
+generalizzazione paziente: elimino i figli e aggiungo un campo "tipo": "occasionale", "regolare", o "entrambi".
+vincolo: il paziente, se è di tipo "occasionale" o "entrambi" deve essere associato ad almeno una seduta, se è di tipo "regolare" od "entrambi" deve essere associato ad almeno un terapia prolungata aperta.
+
+generalizzazione membro del personale ausiliario: elimino i figli e aggiungo un campo del tipo "assistente medico", "amministrativo" o ad "entrambi".
+vincolo: il corso puo essere associato solo a assistente medico o ad entrambi.
+
+Reifichiamo qualifica
+
+
