@@ -1327,21 +1327,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Seduta</ParticipantKey>
-          <RelationKey>Relation:MedicoSeduta</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Medico</ParticipantKey>
           <RelationKey>Relation:MedicoSeduta</RelationKey>
           <Description></Description>
@@ -1352,6 +1337,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Seduta</ParticipantKey>
+          <RelationKey>Relation:MedicoSeduta</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:M [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -1410,21 +1410,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
-          <RelationKey>Relation:AusiliarioSeduta</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Seduta</ParticipantKey>
           <RelationKey>Relation:AusiliarioSeduta</RelationKey>
           <Description></Description>
@@ -1435,6 +1420,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
+          <RelationKey>Relation:AusiliarioSeduta</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -1576,21 +1576,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Paziente</ParticipantKey>
-          <RelationKey>Relation:Sottposto</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
           <RelationKey>Relation:Sottposto</RelationKey>
           <Description></Description>
@@ -1601,6 +1586,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Paziente</ParticipantKey>
+          <RelationKey>Relation:Sottposto</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -1659,21 +1659,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
-          <RelationKey>Relation:AusiliarioAppuntamento</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Accettato</ParticipantKey>
           <RelationKey>Relation:AusiliarioAppuntamento</RelationKey>
           <Description></Description>
@@ -1684,6 +1669,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
+          <RelationKey>Relation:AusiliarioAppuntamento</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -1991,21 +1991,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
-          <RelationKey>Relation:PrevistaDa</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Appuntamento</ParticipantKey>
           <RelationKey>Relation:PrevistaDa</RelationKey>
           <Description></Description>
@@ -2016,6 +2001,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
+          <RelationKey>Relation:PrevistaDa</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:M [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -2074,21 +2074,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Appuntamento</ParticipantKey>
-          <RelationKey>Relation:ApuntamentoAccettato</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:1 [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Accettato</ParticipantKey>
           <RelationKey>Relation:ApuntamentoAccettato</RelationKey>
           <Description></Description>
@@ -2099,6 +2084,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Appuntamento</ParticipantKey>
+          <RelationKey>Relation:ApuntamentoAccettato</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:1 [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -2157,21 +2157,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Programmato</ParticipantKey>
-          <RelationKey>Relation:AppuntamentoProgrammato</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:1 [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Appuntamento</ParticipantKey>
           <RelationKey>Relation:AppuntamentoProgrammato</RelationKey>
           <Description></Description>
@@ -2182,6 +2167,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>0:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Programmato</ParticipantKey>
+          <RelationKey>Relation:AppuntamentoProgrammato</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:1 [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -2240,21 +2240,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Appuntamento</ParticipantKey>
-          <RelationKey>Relation:AppuntamentoSaltato</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:1 [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Saltato</ParticipantKey>
           <RelationKey>Relation:AppuntamentoSaltato</RelationKey>
           <Description></Description>
@@ -2265,6 +2250,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Appuntamento</ParticipantKey>
+          <RelationKey>Relation:AppuntamentoSaltato</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:1 [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -2406,21 +2406,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
-          <RelationKey>Relation:Richiede</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:1 [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Specializzazione</ParticipantKey>
           <RelationKey>Relation:Richiede</RelationKey>
           <Description></Description>
@@ -2431,6 +2416,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
+          <RelationKey>Relation:Richiede</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:1 [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -5141,6 +5141,140 @@
       </Bounds>
       <Visible>true</Visible>
       <KEY>Attribute:Entity:Qualifica.TipoDiQualifica</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>NumeroDiAppuntamenti</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>true</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:TerapiaProlungata</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>80.0</width>
+            <x>1976.0</x>
+            <y>692.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1976.0</double>
+          <double>692.0</double>
+          <double>80.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:TerapiaProlungata.NumeroDiAppuntamenti</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>Età</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>true</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Paziente</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>80.0</width>
+            <x>1938.0</x>
+            <y>1320.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1938.0</double>
+          <double>1320.0</double>
+          <double>80.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:Paziente.Età</KEY>
       <PROCESSED>false</PROCESSED>
     </Attribute>
   </Attributes>
