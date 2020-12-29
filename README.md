@@ -11,3 +11,10 @@ ristrutturazione schema E/R
 traduzione schema E/R in logico
 analisi delle ridondanze con tabelle dei volumi, operazioni e accessi (attributi e associazioni derivate)
 vincoli aziendali + regole di derivazione per gli attributi/relazioni derivate
+
+
+TODO
+
+controllare che i vincoli siano rispettati nel logico
+uniformare la sintassi mysql
+verificare le forme normali
