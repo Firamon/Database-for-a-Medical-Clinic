@@ -119,7 +119,7 @@ create table seduta(
     ambulatorio char(1),
     cf char(16) not null,
     constraint seduta_pk primary key (data,ora,cf),
-    constraint fk_paziente_seduta foreign key (cf) references paziente (cf) on delete cascade on update no action),
+    constraint fk_paziente_seduta foreign key (cf) references paziente (cf) on delete cascade on update no action);
 
 create table medicoSeduta(
     codiceMedico varchar(20),
