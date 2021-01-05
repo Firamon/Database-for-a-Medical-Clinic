@@ -14,7 +14,9 @@ create table medico(
     nome varchar(20) not null,
     tipo tipoMedico not null,
     percentualeIncassi smallint,
-    tariffaOraria int);
+    tariffaOraria int
+    constraint medico_interno check (((percentualeIncassi between 1 and 100) and tariffaOraria is null) or tipo <> 'interno')
+    constraint medico_esterno check ((percentualeIncassi is null and tariffaOraria > 0) or tipo <> 'esterno'));
 
 create type tipoPersonale as enum ('assistente medico','amministrativo','entrambi');
 
@@ -94,7 +96,7 @@ create table paziente(
     indirizzo varchar(20) not null,
     recapitoTelefonico decimal(15,0) not null,
     dataDiNascita date not null,
-    tipo tipoMedico not null,
+    tipo tipoPaziente not null,
     eta int not null);
 
 create type tipoTerapia as enum ('aperta', 'chiusa');
@@ -116,7 +118,8 @@ create table appuntamento(
     cf char(16),
     ora int not null constraint validTime check (ora between 1 and 24),
     constraint appuntamento_pk primary key (data,dataDiInizio,cf) ,
-    constraint fk_terapia_appuntamento foreign key (dataDiInizio,cf) references terapiaProlungata (dataDiInizio,cf) on delete cascade on update cascade);
+    constraint fk_terapia_appuntamento foreign key (dataDiInizio,cf) references terapiaProlungata (dataDiInizio,cf) on delete cascade on update cascade,
+    constraint pazienteUbiquitario unique (data, ora, cf));
 
 create table programmato(
     data date,

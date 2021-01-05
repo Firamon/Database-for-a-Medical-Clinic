@@ -16,5 +16,4 @@ vincoli aziendali + regole di derivazione per gli attributi/relazioni derivate
 TODO
 
 controllare che i vincoli siano rispettati nel logico
-uniformare la sintassi mysql
 verificare le forme normali

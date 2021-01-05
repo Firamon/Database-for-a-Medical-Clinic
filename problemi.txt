@@ -10,9 +10,11 @@ generalizzazione terapia: abbiamo eliminato i figlio, e aggiunto al padre il cam
 
 generalizzazione paziente: elimino i figli e aggiungo un campo "tipo": "occasionale", "regolare", o "entrambi".
 vincolo: il paziente, se è di tipo "occasionale" o "entrambi" deve essere associato ad almeno una seduta, se è di tipo "regolare" od "entrambi" deve essere associato ad almeno un terapia prolungata aperta.
+Si risolve con trigger alla creazione ed accettazione degli appuntamenti.
 
 generalizzazione membro del personale ausiliario: elimino i figli e aggiungo un campo del tipo "assistente medico", "amministrativo" o ad "entrambi".
 vincolo: il corso puo essere associato solo a assistente medico o ad entrambi.
+Trigger alla creazione delle tuple partecipa
 
 Reifichiamo qualifica
 
