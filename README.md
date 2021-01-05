@@ -1,6 +1,20 @@
 # Database-Project-2020
 
-fare la ristrutturazione dell'e/r
-fare la traduzione dell'e/r in logico
-costruire le tabelle dei volumi e delle operazioni. Possiamo fare la tabella dei volumi? Dobbiamo immaginarci dei volumi?
-costruire la tabella degli accessi
+Fase Analisi dei requisiti)
+Analisi dei requisiti
+Specifiche
+
+Fase Progettazione)
+Progettazione Concettuale
+verifica forme normali
+ristrutturazione schema E/R
+traduzione schema E/R in logico
+analisi delle ridondanze con tabelle dei volumi, operazioni e accessi (attributi e associazioni derivate)
+vincoli aziendali + regole di derivazione per gli attributi/relazioni derivate
+
+
+TODO
+
+controllare che i vincoli siano rispettati nel logico
+uniformare la sintassi mysql
+verificare le forme normali

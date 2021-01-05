@@ -116,186 +116,20 @@
           <default>
             <height>60.0</height>
             <width>100.0</width>
-            <x>330.0</x>
-            <y>609.0</y>
+            <x>286.0</x>
+            <y>817.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>330.0</double>
-          <double>609.0</double>
+          <double>286.0</double>
+          <double>817.0</double>
           <double>100.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
       <KEY>Entity:Medico</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Entity>
-    <Entity>
-      <Name>MedicoEsterno</Name>
-      <Description>entity</Description>
-      <IsWeak>false</IsWeak>
-      <Geometry>
-        <Type reference="../../../Entity/Geometry/Type"/>
-        <Temporality>
-          <ValidTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>ValidTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </ValidTime>
-          <HasTransactionTime>false</HasTransactionTime>
-          <EventTime>
-            <startevent>false</startevent>
-            <endevent>false</endevent>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>EventTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </EventTime>
-          <AvailabilityTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>AvailabilityTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </AvailabilityTime>
-          <KEY>FactTimeSupport:v|t|e|a</KEY>
-          <PROCESSED>false</PROCESSED>
-        </Temporality>
-        <TemporalCollectionKey></TemporalCollectionKey>
-        <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:MedicoEsterno</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
-      <Temporality>
-        <LifeSpan>
-          <IsActive>false</IsActive>
-          <IsActiveSD>false</IsActiveSD>
-          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>LifeSpan:Delta0|(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </LifeSpan>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>60.0</height>
-            <width>100.0</width>
-            <x>422.0</x>
-            <y>828.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>422.0</double>
-          <double>828.0</double>
-          <double>100.0</double>
-          <double>60.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Entity:MedicoEsterno</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Entity>
-    <Entity>
-      <Name>MedicoInterno</Name>
-      <Description>entity</Description>
-      <IsWeak>false</IsWeak>
-      <Geometry>
-        <Type reference="../../../Entity/Geometry/Type"/>
-        <Temporality>
-          <ValidTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>ValidTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </ValidTime>
-          <HasTransactionTime>false</HasTransactionTime>
-          <EventTime>
-            <startevent>false</startevent>
-            <endevent>false</endevent>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>EventTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </EventTime>
-          <AvailabilityTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>AvailabilityTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </AvailabilityTime>
-          <KEY>FactTimeSupport:v|t|e|a</KEY>
-          <PROCESSED>false</PROCESSED>
-        </Temporality>
-        <TemporalCollectionKey></TemporalCollectionKey>
-        <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:MedicoInterno</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
-      <Temporality>
-        <LifeSpan>
-          <IsActive>false</IsActive>
-          <IsActiveSD>false</IsActiveSD>
-          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>LifeSpan:Delta0|(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </LifeSpan>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>60.0</height>
-            <width>112.0</width>
-            <x>234.0</x>
-            <y>823.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>234.0</double>
-          <double>823.0</double>
-          <double>112.0</double>
-          <double>60.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Entity:MedicoInterno</KEY>
       <PROCESSED>false</PROCESSED>
     </Entity>
     <Entity>
@@ -364,187 +198,21 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>132.0</width>
-            <x>1307.0</x>
-            <y>663.0</y>
+            <width>385.0</width>
+            <x>1214.0</x>
+            <y>862.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1307.0</double>
-          <double>663.0</double>
-          <double>132.0</double>
+          <double>1214.0</double>
+          <double>862.0</double>
+          <double>385.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
       <KEY>Entity:MembroPersonaleAusiliario</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Entity>
-    <Entity>
-      <Name>Amministrativo</Name>
-      <Description>entity</Description>
-      <IsWeak>false</IsWeak>
-      <Geometry>
-        <Type reference="../../../Entity/Geometry/Type"/>
-        <Temporality>
-          <ValidTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>ValidTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </ValidTime>
-          <HasTransactionTime>false</HasTransactionTime>
-          <EventTime>
-            <startevent>false</startevent>
-            <endevent>false</endevent>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>EventTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </EventTime>
-          <AvailabilityTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>AvailabilityTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </AvailabilityTime>
-          <KEY>FactTimeSupport:v|t|e|a</KEY>
-          <PROCESSED>false</PROCESSED>
-        </Temporality>
-        <TemporalCollectionKey></TemporalCollectionKey>
-        <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:Amministrativo</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
-      <Temporality>
-        <LifeSpan>
-          <IsActive>false</IsActive>
-          <IsActiveSD>false</IsActiveSD>
-          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>LifeSpan:Delta0|(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </LifeSpan>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>60.0</height>
-            <width>100.0</width>
-            <x>1506.0</x>
-            <y>823.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1506.0</double>
-          <double>823.0</double>
-          <double>100.0</double>
-          <double>60.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Entity:Amministrativo</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Entity>
-    <Entity>
-      <Name>AssistenteMedico</Name>
-      <Description>entity</Description>
-      <IsWeak>false</IsWeak>
-      <Geometry>
-        <Type reference="../../../Entity/Geometry/Type"/>
-        <Temporality>
-          <ValidTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>ValidTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </ValidTime>
-          <HasTransactionTime>false</HasTransactionTime>
-          <EventTime>
-            <startevent>false</startevent>
-            <endevent>false</endevent>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>EventTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </EventTime>
-          <AvailabilityTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>AvailabilityTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </AvailabilityTime>
-          <KEY>FactTimeSupport:v|t|e|a</KEY>
-          <PROCESSED>false</PROCESSED>
-        </Temporality>
-        <TemporalCollectionKey></TemporalCollectionKey>
-        <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:AssistenteMedico</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
-      <Temporality>
-        <LifeSpan>
-          <IsActive>false</IsActive>
-          <IsActiveSD>false</IsActiveSD>
-          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>LifeSpan:Delta0|(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </LifeSpan>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>60.0</height>
-            <width>100.0</width>
-            <x>1290.0</x>
-            <y>868.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1290.0</double>
-          <double>868.0</double>
-          <double>100.0</double>
-          <double>60.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Entity:AssistenteMedico</KEY>
       <PROCESSED>false</PROCESSED>
     </Entity>
     <Entity>
@@ -613,187 +281,21 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>1767.0</x>
-            <y>689.0</y>
+            <width>166.0</width>
+            <x>1733.0</x>
+            <y>1147.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1767.0</double>
-          <double>689.0</double>
-          <double>100.0</double>
+          <double>1733.0</double>
+          <double>1147.0</double>
+          <double>166.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
       <KEY>Entity:Paziente</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Entity>
-    <Entity>
-      <Name>Occasionale</Name>
-      <Description>entity</Description>
-      <IsWeak>false</IsWeak>
-      <Geometry>
-        <Type reference="../../../Entity/Geometry/Type"/>
-        <Temporality>
-          <ValidTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>ValidTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </ValidTime>
-          <HasTransactionTime>false</HasTransactionTime>
-          <EventTime>
-            <startevent>false</startevent>
-            <endevent>false</endevent>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>EventTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </EventTime>
-          <AvailabilityTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>AvailabilityTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </AvailabilityTime>
-          <KEY>FactTimeSupport:v|t|e|a</KEY>
-          <PROCESSED>false</PROCESSED>
-        </Temporality>
-        <TemporalCollectionKey></TemporalCollectionKey>
-        <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:Occasionale</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
-      <Temporality>
-        <LifeSpan>
-          <IsActive>false</IsActive>
-          <IsActiveSD>false</IsActiveSD>
-          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>LifeSpan:Delta0|(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </LifeSpan>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>60.0</height>
-            <width>100.0</width>
-            <x>1867.0</x>
-            <y>907.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1867.0</double>
-          <double>907.0</double>
-          <double>100.0</double>
-          <double>60.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Entity:Occasionale</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Entity>
-    <Entity>
-      <Name>Regolare</Name>
-      <Description>entity</Description>
-      <IsWeak>false</IsWeak>
-      <Geometry>
-        <Type reference="../../../Entity/Geometry/Type"/>
-        <Temporality>
-          <ValidTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>ValidTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </ValidTime>
-          <HasTransactionTime>false</HasTransactionTime>
-          <EventTime>
-            <startevent>false</startevent>
-            <endevent>false</endevent>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>EventTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </EventTime>
-          <AvailabilityTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>AvailabilityTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </AvailabilityTime>
-          <KEY>FactTimeSupport:v|t|e|a</KEY>
-          <PROCESSED>false</PROCESSED>
-        </Temporality>
-        <TemporalCollectionKey></TemporalCollectionKey>
-        <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:Regolare</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
-      <Temporality>
-        <LifeSpan>
-          <IsActive>false</IsActive>
-          <IsActiveSD>false</IsActiveSD>
-          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>LifeSpan:Delta0|(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </LifeSpan>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>57.0</height>
-            <width>100.0</width>
-            <x>1991.0</x>
-            <y>853.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1991.0</double>
-          <double>853.0</double>
-          <double>100.0</double>
-          <double>57.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Entity:Regolare</KEY>
       <PROCESSED>false</PROCESSED>
     </Entity>
     <Entity>
@@ -862,16 +364,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>1520.0</x>
-            <y>1013.0</y>
+            <width>305.0</width>
+            <x>1197.0</x>
+            <y>1107.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1520.0</double>
-          <double>1013.0</double>
-          <double>100.0</double>
+          <double>1197.0</double>
+          <double>1107.0</double>
+          <double>305.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -946,14 +448,14 @@
           <default>
             <height>60.0</height>
             <width>100.0</width>
-            <x>840.0</x>
-            <y>690.0</y>
+            <x>796.0</x>
+            <y>898.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>840.0</double>
-          <double>690.0</double>
+          <double>796.0</double>
+          <double>898.0</double>
           <double>100.0</double>
           <double>60.0</double>
         </Bounds>
@@ -1029,14 +531,14 @@
           <default>
             <height>60.0</height>
             <width>100.0</width>
-            <x>819.0</x>
-            <y>1022.0</y>
+            <x>782.0</x>
+            <y>1196.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>819.0</double>
-          <double>1022.0</double>
+          <double>782.0</double>
+          <double>1196.0</double>
           <double>100.0</double>
           <double>60.0</double>
         </Bounds>
@@ -1110,18 +612,18 @@
       <Bounds class="Bounds" serialization="custom">
         <java.awt.geom.Rectangle2D-Double>
           <default>
-            <height>60.0</height>
-            <width>100.0</width>
-            <x>2126.0</x>
-            <y>425.0</y>
+            <height>62.0</height>
+            <width>284.0</width>
+            <x>1646.0</x>
+            <y>693.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2126.0</double>
-          <double>425.0</double>
-          <double>100.0</double>
-          <double>60.0</double>
+          <double>1646.0</double>
+          <double>693.0</double>
+          <double>284.0</double>
+          <double>62.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
@@ -1129,9 +631,9 @@
       <PROCESSED>false</PROCESSED>
     </Entity>
     <Entity>
-      <Name>TerapiaAperta</Name>
+      <Name>Programmato</Name>
       <Description>entity</Description>
-      <IsWeak>false</IsWeak>
+      <IsWeak>true</IsWeak>
       <Geometry>
         <Type reference="../../../Entity/Geometry/Type"/>
         <Temporality>
@@ -1160,10 +662,10 @@
         </Temporality>
         <TemporalCollectionKey></TemporalCollectionKey>
         <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:TerapiaAperta</KEY>
+        <KEY>Geometry:Entity:Programmato</KEY>
         <PROCESSED>false</PROCESSED>
       </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
+      <IndetifyingConstructKey>Relation:AppuntamentoProgrammato</IndetifyingConstructKey>
       <Temporality>
         <LifeSpan>
           <IsActive>false</IsActive>
@@ -1194,25 +696,108 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>2197.0</x>
-            <y>211.0</y>
+            <width>214.0</width>
+            <x>788.0</x>
+            <y>358.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2197.0</double>
-          <double>211.0</double>
-          <double>100.0</double>
+          <double>788.0</double>
+          <double>358.0</double>
+          <double>214.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
-      <KEY>Entity:TerapiaAperta</KEY>
+      <KEY>Entity:Programmato</KEY>
       <PROCESSED>false</PROCESSED>
     </Entity>
     <Entity>
-      <Name>TerapiaChiusa</Name>
+      <Name>Accettato</Name>
+      <Description>entity</Description>
+      <IsWeak>true</IsWeak>
+      <Geometry>
+        <Type reference="../../../Entity/Geometry/Type"/>
+        <Temporality>
+          <ValidTime>
+            <IsActive>false</IsActive>
+            <TemporalGranularityKey></TemporalGranularityKey>
+            <KEY>ValidTime:(none)</KEY>
+            <PROCESSED>false</PROCESSED>
+          </ValidTime>
+          <HasTransactionTime>false</HasTransactionTime>
+          <EventTime>
+            <startevent>false</startevent>
+            <endevent>false</endevent>
+            <TemporalGranularityKey></TemporalGranularityKey>
+            <KEY>EventTime:(none)</KEY>
+            <PROCESSED>false</PROCESSED>
+          </EventTime>
+          <AvailabilityTime>
+            <IsActive>false</IsActive>
+            <TemporalGranularityKey></TemporalGranularityKey>
+            <KEY>AvailabilityTime:(none)</KEY>
+            <PROCESSED>false</PROCESSED>
+          </AvailabilityTime>
+          <KEY>FactTimeSupport:v|t|e|a</KEY>
+          <PROCESSED>false</PROCESSED>
+        </Temporality>
+        <TemporalCollectionKey></TemporalCollectionKey>
+        <IsKey>false</IsKey>
+        <KEY>Geometry:Entity:Accettato</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Geometry>
+      <IndetifyingConstructKey>Relation:ApuntamentoAccettato</IndetifyingConstructKey>
+      <Temporality>
+        <LifeSpan>
+          <IsActive>false</IsActive>
+          <IsActiveSD>false</IsActiveSD>
+          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>LifeSpan:Delta0|(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </LifeSpan>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>60.0</height>
+            <width>164.0</width>
+            <x>735.0</x>
+            <y>503.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>735.0</double>
+          <double>503.0</double>
+          <double>164.0</double>
+          <double>60.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Entity:Accettato</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Entity>
+    <Entity>
+      <Name>Specializzazione</Name>
       <Description>entity</Description>
       <IsWeak>false</IsWeak>
       <Geometry>
@@ -1243,7 +828,7 @@
         </Temporality>
         <TemporalCollectionKey></TemporalCollectionKey>
         <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:TerapiaChiusa</KEY>
+        <KEY>Geometry:Entity:Specializzazione</KEY>
         <PROCESSED>false</PROCESSED>
       </Geometry>
       <IndetifyingConstructKey></IndetifyingConstructKey>
@@ -1277,21 +862,21 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>2336.0</x>
-            <y>291.0</y>
+            <width>261.0</width>
+            <x>824.0</x>
+            <y>124.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2336.0</double>
-          <double>291.0</double>
-          <double>100.0</double>
+          <double>824.0</double>
+          <double>124.0</double>
+          <double>261.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
-      <KEY>Entity:TerapiaChiusa</KEY>
+      <KEY>Entity:Specializzazione</KEY>
       <PROCESSED>false</PROCESSED>
     </Entity>
     <Entity>
@@ -1329,7 +914,7 @@
         <KEY>Geometry:Entity:Appuntamento</KEY>
         <PROCESSED>false</PROCESSED>
       </Geometry>
-      <IndetifyingConstructKey>Relation:PrevistoDa</IndetifyingConstructKey>
+      <IndetifyingConstructKey>Relation:PrevistaDa</IndetifyingConstructKey>
       <Temporality>
         <LifeSpan>
           <IsActive>false</IsActive>
@@ -1360,16 +945,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>1540.0</x>
-            <y>228.0</y>
+            <width>212.0</width>
+            <x>1336.0</x>
+            <y>446.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1540.0</double>
-          <double>228.0</double>
-          <double>100.0</double>
+          <double>1336.0</double>
+          <double>446.0</double>
+          <double>212.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -1378,7 +963,7 @@
       <PROCESSED>false</PROCESSED>
     </Entity>
     <Entity>
-      <Name>Programmato</Name>
+      <Name>Qualifica</Name>
       <Description>entity</Description>
       <IsWeak>false</IsWeak>
       <Geometry>
@@ -1409,7 +994,7 @@
         </Temporality>
         <TemporalCollectionKey></TemporalCollectionKey>
         <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:Programmato</KEY>
+        <KEY>Geometry:Entity:Qualifica</KEY>
         <PROCESSED>false</PROCESSED>
       </Geometry>
       <IndetifyingConstructKey></IndetifyingConstructKey>
@@ -1442,188 +1027,22 @@
       <Bounds class="Bounds" serialization="custom">
         <java.awt.geom.Rectangle2D-Double>
           <default>
-            <height>60.0</height>
-            <width>100.0</width>
-            <x>1277.0</x>
-            <y>107.0</y>
+            <height>65.0</height>
+            <width>147.0</width>
+            <x>1510.0</x>
+            <y>1072.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1277.0</double>
-          <double>107.0</double>
-          <double>100.0</double>
-          <double>60.0</double>
+          <double>1510.0</double>
+          <double>1072.0</double>
+          <double>147.0</double>
+          <double>65.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
-      <KEY>Entity:Programmato</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Entity>
-    <Entity>
-      <Name>Accettato</Name>
-      <Description>entity</Description>
-      <IsWeak>false</IsWeak>
-      <Geometry>
-        <Type reference="../../../Entity/Geometry/Type"/>
-        <Temporality>
-          <ValidTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>ValidTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </ValidTime>
-          <HasTransactionTime>false</HasTransactionTime>
-          <EventTime>
-            <startevent>false</startevent>
-            <endevent>false</endevent>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>EventTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </EventTime>
-          <AvailabilityTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>AvailabilityTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </AvailabilityTime>
-          <KEY>FactTimeSupport:v|t|e|a</KEY>
-          <PROCESSED>false</PROCESSED>
-        </Temporality>
-        <TemporalCollectionKey></TemporalCollectionKey>
-        <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:Accettato</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
-      <Temporality>
-        <LifeSpan>
-          <IsActive>false</IsActive>
-          <IsActiveSD>false</IsActiveSD>
-          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>LifeSpan:Delta0|(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </LifeSpan>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>60.0</height>
-            <width>100.0</width>
-            <x>840.0</x>
-            <y>313.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>840.0</double>
-          <double>313.0</double>
-          <double>100.0</double>
-          <double>60.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Entity:Accettato</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Entity>
-    <Entity>
-      <Name>Saltato</Name>
-      <Description>entity</Description>
-      <IsWeak>false</IsWeak>
-      <Geometry>
-        <Type reference="../../../Entity/Geometry/Type"/>
-        <Temporality>
-          <ValidTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>ValidTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </ValidTime>
-          <HasTransactionTime>false</HasTransactionTime>
-          <EventTime>
-            <startevent>false</startevent>
-            <endevent>false</endevent>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>EventTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </EventTime>
-          <AvailabilityTime>
-            <IsActive>false</IsActive>
-            <TemporalGranularityKey></TemporalGranularityKey>
-            <KEY>AvailabilityTime:(none)</KEY>
-            <PROCESSED>false</PROCESSED>
-          </AvailabilityTime>
-          <KEY>FactTimeSupport:v|t|e|a</KEY>
-          <PROCESSED>false</PROCESSED>
-        </Temporality>
-        <TemporalCollectionKey></TemporalCollectionKey>
-        <IsKey>false</IsKey>
-        <KEY>Geometry:Entity:Saltato</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Geometry>
-      <IndetifyingConstructKey></IndetifyingConstructKey>
-      <Temporality>
-        <LifeSpan>
-          <IsActive>false</IsActive>
-          <IsActiveSD>false</IsActiveSD>
-          <StateTransactionGraphKey>Delta0</StateTransactionGraphKey>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>LifeSpan:Delta0|(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </LifeSpan>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>ConceptTimeSupport:LifeSpan:Delta0|(none)|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>60.0</height>
-            <width>100.0</width>
-            <x>1258.0</x>
-            <y>329.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1258.0</double>
-          <double>329.0</double>
-          <double>100.0</double>
-          <double>60.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Entity:Saltato</KEY>
+      <KEY>Entity:Qualifica</KEY>
       <PROCESSED>false</PROCESSED>
     </Entity>
   </Entities>
@@ -1695,14 +1114,14 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>609.0</x>
-            <y>671.0</y>
+            <x>572.0</x>
+            <y>881.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>609.0</double>
-          <double>671.0</double>
+          <double>572.0</double>
+          <double>881.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
@@ -1742,21 +1161,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
-          <RelationKey>Relation:AusiliarioRegistra</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Storico</ParticipantKey>
           <RelationKey>Relation:AusiliarioRegistra</RelationKey>
           <Description></Description>
@@ -1771,6 +1175,21 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
+        <Link>
+          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
+          <RelationKey>Relation:AusiliarioRegistra</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
       </Links>
       <AutoLineup>false</AutoLineup>
       <Bounds class="Bounds" serialization="custom">
@@ -1778,14 +1197,14 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>1020.0</x>
-            <y>671.0</y>
+            <x>976.0</x>
+            <y>879.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1020.0</double>
-          <double>671.0</double>
+          <double>976.0</double>
+          <double>879.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
@@ -1831,10 +1250,10 @@
           <Role reference="../../../../Relation/Links/Link[2]/Role"/>
           <Cardinality>
             <MinSS>0</MinSS>
-            <MaxSS>1</MaxSS>
+            <MaxSS>-1</MaxSS>
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
-            <KEY>0:1 [1:M]</KEY>
+            <KEY>0:M [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -1861,14 +1280,14 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>608.0</x>
-            <y>902.0</y>
+            <x>564.0</x>
+            <y>1110.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>608.0</double>
-          <double>902.0</double>
+          <double>564.0</double>
+          <double>1110.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
@@ -1944,14 +1363,14 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>1071.0</x>
-            <y>944.0</y>
+            <x>1027.0</x>
+            <y>1152.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1071.0</double>
-          <double>944.0</double>
+          <double>1027.0</double>
+          <double>1152.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
@@ -1991,6 +1410,21 @@
       </Temporality>
       <Links>
         <Link>
+          <ParticipantKey>Entity:Paziente</ParticipantKey>
+          <RelationKey>Relation:Presenzia</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
           <ParticipantKey>Entity:Seduta</ParticipantKey>
           <RelationKey>Relation:Presenzia</RelationKey>
           <Description></Description>
@@ -2005,21 +1439,6 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
-        <Link>
-          <ParticipantKey>Entity:Occasionale</ParticipantKey>
-          <RelationKey>Relation:Presenzia</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
       </Links>
       <AutoLineup>false</AutoLineup>
       <Bounds class="Bounds" serialization="custom">
@@ -2027,14 +1446,14 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>1714.0</x>
-            <y>1164.0</y>
+            <x>1473.0</x>
+            <y>1303.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1714.0</double>
-          <double>1164.0</double>
+          <double>1473.0</double>
+          <double>1303.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
@@ -2110,103 +1529,20 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>2099.0</x>
-            <y>711.0</y>
+            <x>1719.0</x>
+            <y>866.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2099.0</double>
-          <double>711.0</double>
+          <double>1719.0</double>
+          <double>866.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
       <KEY>Relation:Sottposto</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Relation>
-    <Relation>
-      <Name>PrevistoDa</Name>
-      <IsIdentifying>true</IsIdentifying>
-      <TopologicalType reference="../../Relation/TopologicalType"/>
-      <SynchronizationType reference="../../Relation/SynchronizationType"/>
-      <Temporality>
-        <ValidTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>ValidTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </ValidTime>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>FactTimeSupport:v|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Links>
-        <Link>
-          <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
-          <RelationKey>Relation:PrevistoDa</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
-          <ParticipantKey>Entity:Appuntamento</ParticipantKey>
-          <RelationKey>Relation:PrevistoDa</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:1 [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-      </Links>
-      <AutoLineup>false</AutoLineup>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>70.0</height>
-            <width>130.0</width>
-            <x>1835.0</x>
-            <y>248.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1835.0</double>
-          <double>248.0</double>
-          <double>130.0</double>
-          <double>70.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Relation:PrevistoDa</KEY>
       <PROCESSED>false</PROCESSED>
     </Relation>
     <Relation>
@@ -2240,21 +1576,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Accettato</ParticipantKey>
-          <RelationKey>Relation:AusiliarioAppuntamento</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
           <RelationKey>Relation:AusiliarioAppuntamento</RelationKey>
           <Description></Description>
@@ -2269,6 +1590,21 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
+        <Link>
+          <ParticipantKey>Entity:Accettato</ParticipantKey>
+          <RelationKey>Relation:AusiliarioAppuntamento</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
       </Links>
       <AutoLineup>false</AutoLineup>
       <Bounds class="Bounds" serialization="custom">
@@ -2276,14 +1612,14 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>993.0</x>
-            <y>452.0</y>
+            <x>949.0</x>
+            <y>660.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>993.0</double>
-          <double>452.0</double>
+          <double>949.0</double>
+          <double>660.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
@@ -2323,21 +1659,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Accettato</ParticipantKey>
-          <RelationKey>Relation:MedicoAppuntamento</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Medico</ParticipantKey>
           <RelationKey>Relation:MedicoAppuntamento</RelationKey>
           <Description></Description>
@@ -2352,6 +1673,21 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
+        <Link>
+          <ParticipantKey>Entity:Accettato</ParticipantKey>
+          <RelationKey>Relation:MedicoAppuntamento</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
       </Links>
       <AutoLineup>false</AutoLineup>
       <Bounds class="Bounds" serialization="custom">
@@ -2359,14 +1695,14 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>633.0</x>
-            <y>425.0</y>
+            <x>528.0</x>
+            <y>656.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>633.0</double>
-          <double>425.0</double>
+          <double>528.0</double>
+          <double>656.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
@@ -2406,7 +1742,22 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:AssistenteMedico</ParticipantKey>
+          <ParticipantKey>Entity:CorsoDiAggiornamento</ParticipantKey>
+          <RelationKey>Relation:Partecipa</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
           <RelationKey>Relation:Partecipa</RelationKey>
           <Description></Description>
           <Role reference="../../../../Relation/Links/Link[2]/Role"/>
@@ -2420,11 +1771,162 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
+      </Links>
+      <AutoLineup>false</AutoLineup>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>70.0</height>
+            <width>130.0</width>
+            <x>1319.0</x>
+            <y>978.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1319.0</double>
+          <double>978.0</double>
+          <double>130.0</double>
+          <double>70.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Relation:Partecipa</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Relation>
+    <Relation>
+      <Name>Specializzare</Name>
+      <IsIdentifying>false</IsIdentifying>
+      <TopologicalType reference="../../Relation/TopologicalType"/>
+      <SynchronizationType reference="../../Relation/SynchronizationType"/>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Links>
         <Link>
-          <ParticipantKey>Entity:CorsoDiAggiornamento</ParticipantKey>
-          <RelationKey>Relation:Partecipa</RelationKey>
+          <ParticipantKey>Entity:Medico</ParticipantKey>
+          <RelationKey>Relation:Specializzare</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Specializzazione</ParticipantKey>
+          <RelationKey>Relation:Specializzare</RelationKey>
           <Description></Description>
           <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+      </Links>
+      <AutoLineup>false</AutoLineup>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>70.0</height>
+            <width>130.0</width>
+            <x>510.0</x>
+            <y>385.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>510.0</double>
+          <double>385.0</double>
+          <double>130.0</double>
+          <double>70.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Relation:Specializzare</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Relation>
+    <Relation>
+      <Name>PrevistaDa</Name>
+      <IsIdentifying>true</IsIdentifying>
+      <TopologicalType reference="../../Relation/TopologicalType"/>
+      <SynchronizationType reference="../../Relation/SynchronizationType"/>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Links>
+        <Link>
+          <ParticipantKey>Entity:Appuntamento</ParticipantKey>
+          <RelationKey>Relation:PrevistaDa</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
+          <RelationKey>Relation:PrevistaDa</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
           <Cardinality>
             <MinSS>1</MinSS>
             <MaxSS>-1</MaxSS>
@@ -2442,253 +1944,357 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>1308.0</x>
-            <y>1000.0</y>
+            <x>1585.0</x>
+            <y>578.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1308.0</double>
-          <double>1000.0</double>
+          <double>1585.0</double>
+          <double>578.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
-      <KEY>Relation:Partecipa</KEY>
+      <KEY>Relation:PrevistaDa</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Relation>
+    <Relation>
+      <Name>ApuntamentoAccettato</Name>
+      <IsIdentifying>true</IsIdentifying>
+      <TopologicalType reference="../../Relation/TopologicalType"/>
+      <SynchronizationType reference="../../Relation/SynchronizationType"/>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Links>
+        <Link>
+          <ParticipantKey>Entity:Accettato</ParticipantKey>
+          <RelationKey>Relation:ApuntamentoAccettato</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Appuntamento</ParticipantKey>
+          <RelationKey>Relation:ApuntamentoAccettato</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+      </Links>
+      <AutoLineup>false</AutoLineup>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>70.0</height>
+            <width>130.0</width>
+            <x>1105.0</x>
+            <y>489.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1105.0</double>
+          <double>489.0</double>
+          <double>130.0</double>
+          <double>70.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Relation:ApuntamentoAccettato</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Relation>
+    <Relation>
+      <Name>AppuntamentoProgrammato</Name>
+      <IsIdentifying>true</IsIdentifying>
+      <TopologicalType reference="../../Relation/TopologicalType"/>
+      <SynchronizationType reference="../../Relation/SynchronizationType"/>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Links>
+        <Link>
+          <ParticipantKey>Entity:Programmato</ParticipantKey>
+          <RelationKey>Relation:AppuntamentoProgrammato</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Appuntamento</ParticipantKey>
+          <RelationKey>Relation:AppuntamentoProgrammato</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+      </Links>
+      <AutoLineup>false</AutoLineup>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>70.0</height>
+            <width>130.0</width>
+            <x>1062.0</x>
+            <y>385.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1062.0</double>
+          <double>385.0</double>
+          <double>130.0</double>
+          <double>70.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Relation:AppuntamentoProgrammato</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Relation>
+    <Relation>
+      <Name>Qualificare</Name>
+      <IsIdentifying>false</IsIdentifying>
+      <TopologicalType reference="../../Relation/TopologicalType"/>
+      <SynchronizationType reference="../../Relation/SynchronizationType"/>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Links>
+        <Link>
+          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
+          <RelationKey>Relation:Qualificare</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Qualifica</ParticipantKey>
+          <RelationKey>Relation:Qualificare</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+      </Links>
+      <AutoLineup>false</AutoLineup>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>72.0</height>
+            <width>133.0</width>
+            <x>1476.0</x>
+            <y>966.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1476.0</double>
+          <double>966.0</double>
+          <double>133.0</double>
+          <double>72.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Relation:Qualificare</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Relation>
+    <Relation>
+      <Name>Richiede</Name>
+      <IsIdentifying>false</IsIdentifying>
+      <TopologicalType reference="../../Relation/TopologicalType"/>
+      <SynchronizationType reference="../../Relation/SynchronizationType"/>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Links>
+        <Link>
+          <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
+          <RelationKey>Relation:Richiede</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Specializzazione</ParticipantKey>
+          <RelationKey>Relation:Richiede</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+      </Links>
+      <AutoLineup>false</AutoLineup>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>70.0</height>
+            <width>130.0</width>
+            <x>1550.0</x>
+            <y>249.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1550.0</double>
+          <double>249.0</double>
+          <double>130.0</double>
+          <double>70.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Relation:Richiede</KEY>
       <PROCESSED>false</PROCESSED>
     </Relation>
   </Relations>
   <Aggregations/>
-  <Specializations>
-    <Specialization>
-      <Name>0</Name>
-      <IsCartographic>false</IsCartographic>
-      <IsPartial>false</IsPartial>
-      <IsOverlapped>false</IsOverlapped>
-      <GeneralizationKey>Entity:Medico</GeneralizationKey>
-      <Specializations>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:0</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:MedicoInterno</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:MedicoInterno-&gt;SpecializationNode:0</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:0</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:MedicoEsterno</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:MedicoEsterno-&gt;SpecializationNode:0</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-      </Specializations>
-      <AutoLineup>true</AutoLineup>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>30.0</height>
-            <width>30.0</width>
-            <x>367.0</x>
-            <y>712.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>367.0</double>
-          <double>712.0</double>
-          <double>30.0</double>
-          <double>30.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>SpecializationNode:0</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Specialization>
-    <Specialization>
-      <Name>1</Name>
-      <IsCartographic>false</IsCartographic>
-      <IsPartial>false</IsPartial>
-      <IsOverlapped>true</IsOverlapped>
-      <GeneralizationKey>Entity:MembroPersonaleAusiliario</GeneralizationKey>
-      <Specializations>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:1</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:AssistenteMedico</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:AssistenteMedico-&gt;SpecializationNode:1</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:1</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Amministrativo</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Amministrativo-&gt;SpecializationNode:1</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-      </Specializations>
-      <AutoLineup>true</AutoLineup>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>30.0</height>
-            <width>30.0</width>
-            <x>1399.0</x>
-            <y>775.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1399.0</double>
-          <double>775.0</double>
-          <double>30.0</double>
-          <double>30.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>SpecializationNode:1</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Specialization>
-    <Specialization>
-      <Name>2</Name>
-      <IsCartographic>false</IsCartographic>
-      <IsPartial>false</IsPartial>
-      <IsOverlapped>true</IsOverlapped>
-      <GeneralizationKey>Entity:Paziente</GeneralizationKey>
-      <Specializations>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:2</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Regolare</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Regolare-&gt;SpecializationNode:2</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:2</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Occasionale</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Occasionale-&gt;SpecializationNode:2</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-      </Specializations>
-      <AutoLineup>true</AutoLineup>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>30.0</height>
-            <width>30.0</width>
-            <x>1882.0</x>
-            <y>800.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1882.0</double>
-          <double>800.0</double>
-          <double>30.0</double>
-          <double>30.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>SpecializationNode:2</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Specialization>
-    <Specialization>
-      <Name>3</Name>
-      <IsCartographic>false</IsCartographic>
-      <IsPartial>false</IsPartial>
-      <IsOverlapped>false</IsOverlapped>
-      <GeneralizationKey>Entity:TerapiaProlungata</GeneralizationKey>
-      <Specializations>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:3</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:TerapiaChiusa</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:TerapiaChiusa-&gt;SpecializationNode:3</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:3</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:TerapiaAperta</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:TerapiaAperta-&gt;SpecializationNode:3</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-      </Specializations>
-      <AutoLineup>true</AutoLineup>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>30.0</height>
-            <width>30.0</width>
-            <x>2225.0</x>
-            <y>354.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>2225.0</double>
-          <double>354.0</double>
-          <double>30.0</double>
-          <double>30.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>SpecializationNode:3</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Specialization>
-    <Specialization>
-      <Name>4</Name>
-      <IsCartographic>false</IsCartographic>
-      <IsPartial>false</IsPartial>
-      <IsOverlapped>false</IsOverlapped>
-      <GeneralizationKey>Entity:Appuntamento</GeneralizationKey>
-      <Specializations>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:4</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Accettato</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Accettato-&gt;SpecializationNode:4</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:4</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Saltato</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Saltato-&gt;SpecializationNode:4</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:4</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Programmato</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Programmato-&gt;SpecializationNode:4</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-      </Specializations>
-      <AutoLineup>true</AutoLineup>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>30.0</height>
-            <width>30.0</width>
-            <x>1420.0</x>
-            <y>234.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1420.0</double>
-          <double>234.0</double>
-          <double>30.0</double>
-          <double>30.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>SpecializationNode:4</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Specialization>
-  </Specializations>
+  <Specializations/>
   <TemporalCollections/>
   <Attributes>
     <Attribute>
@@ -2742,14 +2348,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>169.0</x>
-            <y>659.0</y>
+            <x>125.0</x>
+            <y>867.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>169.0</double>
-          <double>659.0</double>
+          <double>125.0</double>
+          <double>867.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -2809,14 +2415,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>161.0</x>
-            <y>586.0</y>
+            <x>117.0</x>
+            <y>794.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>161.0</double>
-          <double>586.0</double>
+          <double>117.0</double>
+          <double>794.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -2876,14 +2482,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>176.0</x>
-            <y>508.0</y>
+            <x>132.0</x>
+            <y>716.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>176.0</double>
-          <double>508.0</double>
+          <double>132.0</double>
+          <double>716.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -2943,14 +2549,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>236.0</x>
-            <y>443.0</y>
+            <x>192.0</x>
+            <y>651.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>236.0</double>
-          <double>443.0</double>
+          <double>192.0</double>
+          <double>651.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3010,154 +2616,20 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>339.0</x>
-            <y>399.0</y>
+            <x>263.0</x>
+            <y>610.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>339.0</double>
-          <double>399.0</double>
+          <double>263.0</double>
+          <double>610.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
       <KEY>Attribute:Entity:Medico.RecapitoTelefonico</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Attribute>
-    <Attribute>
-      <Name>PercantualeIncassi</Name>
-      <IsKey>false</IsKey>
-      <DataType>
-        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
-        <IsNullable>true</IsNullable>
-        <Lenght>10</Lenght>
-        <Scale>0</Scale>
-        <PROCESSED>false</PROCESSED>
-      </DataType>
-      <IsDerived>false</IsDerived>
-      <Temporality>
-        <ValidTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>ValidTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </ValidTime>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>FactTimeSupport:v|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Cardinality>
-        <MinSS>1</MinSS>
-        <MaxSS>1</MaxSS>
-        <MinLS>1</MinLS>
-        <MaxLS>-1</MaxLS>
-        <KEY>1:1 [1:M]</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Cardinality>
-      <listState/>
-      <ed>false</ed>
-      <LeaderKey>Entity:MedicoInterno</LeaderKey>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>20.0</height>
-            <width>80.0</width>
-            <x>240.0</x>
-            <y>980.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>240.0</double>
-          <double>980.0</double>
-          <double>80.0</double>
-          <double>20.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Attribute:Entity:MedicoInterno.PercantualeIncassi</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Attribute>
-    <Attribute>
-      <Name>TariffaOraria</Name>
-      <IsKey>false</IsKey>
-      <DataType>
-        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
-        <IsNullable>true</IsNullable>
-        <Lenght>10</Lenght>
-        <Scale>0</Scale>
-        <PROCESSED>false</PROCESSED>
-      </DataType>
-      <IsDerived>false</IsDerived>
-      <Temporality>
-        <ValidTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>ValidTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </ValidTime>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>FactTimeSupport:v|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Cardinality>
-        <MinSS>1</MinSS>
-        <MaxSS>1</MaxSS>
-        <MinLS>1</MinLS>
-        <MaxLS>-1</MaxLS>
-        <KEY>1:1 [1:M]</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Cardinality>
-      <listState/>
-      <ed>false</ed>
-      <LeaderKey>Entity:MedicoEsterno</LeaderKey>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>20.0</height>
-            <width>80.0</width>
-            <x>441.0</x>
-            <y>980.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>441.0</double>
-          <double>980.0</double>
-          <double>80.0</double>
-          <double>20.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Attribute:Entity:MedicoEsterno.TariffaOraria</KEY>
       <PROCESSED>false</PROCESSED>
     </Attribute>
     <Attribute>
@@ -3211,14 +2683,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1283.0</x>
-            <y>465.0</y>
+            <x>1146.0</x>
+            <y>686.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1283.0</double>
-          <double>465.0</double>
+          <double>1146.0</double>
+          <double>686.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3278,14 +2750,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1394.0</x>
-            <y>478.0</y>
+            <x>1234.0</x>
+            <y>646.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1394.0</double>
-          <double>478.0</double>
+          <double>1234.0</double>
+          <double>646.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3345,14 +2817,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1477.0</x>
-            <y>517.0</y>
+            <x>1337.0</x>
+            <y>644.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1477.0</double>
-          <double>517.0</double>
+          <double>1337.0</double>
+          <double>644.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3412,14 +2884,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1537.0</x>
-            <y>571.0</y>
+            <x>1440.0</x>
+            <y>664.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1537.0</double>
-          <double>571.0</double>
+          <double>1440.0</double>
+          <double>664.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3479,154 +2951,20 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1556.0</x>
-            <y>632.0</y>
+            <x>1480.0</x>
+            <y>715.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1556.0</double>
-          <double>632.0</double>
+          <double>1480.0</double>
+          <double>715.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
       <KEY>Attribute:Entity:MembroPersonaleAusiliario.RecapitoTelefonico</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Attribute>
-    <Attribute>
-      <Name>Qualifica</Name>
-      <IsKey>false</IsKey>
-      <DataType>
-        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
-        <IsNullable>true</IsNullable>
-        <Lenght>10</Lenght>
-        <Scale>0</Scale>
-        <PROCESSED>false</PROCESSED>
-      </DataType>
-      <IsDerived>false</IsDerived>
-      <Temporality>
-        <ValidTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>ValidTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </ValidTime>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>FactTimeSupport:v|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Cardinality>
-        <MinSS>1</MinSS>
-        <MaxSS>-1</MaxSS>
-        <MinLS>1</MinLS>
-        <MaxLS>-1</MaxLS>
-        <KEY>1:M [1:M]</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Cardinality>
-      <listState/>
-      <ed>false</ed>
-      <LeaderKey>Entity:MembroPersonaleAusiliario</LeaderKey>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>20.0</height>
-            <width>80.0</width>
-            <x>1565.0</x>
-            <y>696.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1565.0</double>
-          <double>696.0</double>
-          <double>80.0</double>
-          <double>20.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Attribute:Entity:MembroPersonaleAusiliario.Qualifica</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Attribute>
-    <Attribute>
-      <Name>Specializzazione</Name>
-      <IsKey>false</IsKey>
-      <DataType>
-        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
-        <IsNullable>true</IsNullable>
-        <Lenght>10</Lenght>
-        <Scale>0</Scale>
-        <PROCESSED>false</PROCESSED>
-      </DataType>
-      <IsDerived>false</IsDerived>
-      <Temporality>
-        <ValidTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>ValidTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </ValidTime>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>FactTimeSupport:v|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Cardinality>
-        <MinSS>1</MinSS>
-        <MaxSS>-1</MaxSS>
-        <MinLS>1</MinLS>
-        <MaxLS>-1</MaxLS>
-        <KEY>1:M [1:M]</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Cardinality>
-      <listState/>
-      <ed>false</ed>
-      <LeaderKey>Entity:Medico</LeaderKey>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>20.0</height>
-            <width>80.0</width>
-            <x>454.0</x>
-            <y>413.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>454.0</double>
-          <double>413.0</double>
-          <double>80.0</double>
-          <double>20.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Attribute:Entity:Medico.Specializzazione</KEY>
       <PROCESSED>false</PROCESSED>
     </Attribute>
     <Attribute>
@@ -3680,14 +3018,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1689.0</x>
-            <y>481.0</y>
+            <x>1944.0</x>
+            <y>1004.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1689.0</double>
-          <double>481.0</double>
+          <double>1944.0</double>
+          <double>1004.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3747,14 +3085,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1781.0</x>
-            <y>487.0</y>
+            <x>1980.0</x>
+            <y>1049.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1781.0</double>
-          <double>487.0</double>
+          <double>1980.0</double>
+          <double>1049.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3814,14 +3152,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1875.0</x>
-            <y>501.0</y>
+            <x>1995.0</x>
+            <y>1087.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1875.0</double>
-          <double>501.0</double>
+          <double>1995.0</double>
+          <double>1087.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3881,14 +3219,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1922.0</x>
-            <y>549.0</y>
+            <x>2005.0</x>
+            <y>1128.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1922.0</double>
-          <double>549.0</double>
+          <double>2005.0</double>
+          <double>1128.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3948,14 +3286,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1932.0</x>
-            <y>600.0</y>
+            <x>2019.0</x>
+            <y>1175.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1932.0</double>
-          <double>600.0</double>
+          <double>2019.0</double>
+          <double>1175.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4015,14 +3353,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1956.0</x>
-            <y>649.0</y>
+            <x>2011.0</x>
+            <y>1224.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1956.0</double>
-          <double>649.0</double>
+          <double>2011.0</double>
+          <double>1224.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4082,14 +3420,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1612.0</x>
-            <y>1119.0</y>
+            <x>1223.0</x>
+            <y>1218.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1612.0</double>
-          <double>1119.0</double>
+          <double>1223.0</double>
+          <double>1218.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4149,14 +3487,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1662.0</x>
-            <y>1045.0</y>
+            <x>1403.0</x>
+            <y>1217.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1662.0</double>
-          <double>1045.0</double>
+          <double>1403.0</double>
+          <double>1217.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4216,14 +3554,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1650.0</x>
-            <y>1079.0</y>
+            <x>1312.0</x>
+            <y>1226.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1650.0</double>
-          <double>1079.0</double>
+          <double>1312.0</double>
+          <double>1226.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4283,14 +3621,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>846.0</x>
-            <y>832.0</y>
+            <x>808.0</x>
+            <y>1038.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>846.0</double>
-          <double>832.0</double>
+          <double>808.0</double>
+          <double>1038.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4350,14 +3688,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>645.0</x>
-            <y>832.0</y>
+            <x>585.0</x>
+            <y>1010.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>645.0</double>
-          <double>832.0</double>
+          <double>585.0</double>
+          <double>1010.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4417,14 +3755,14 @@
           <default>
             <height>21.0</height>
             <width>80.0</width>
-            <x>700.0</x>
-            <y>590.0</y>
+            <x>604.0</x>
+            <y>800.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>700.0</double>
-          <double>590.0</double>
+          <double>604.0</double>
+          <double>800.0</double>
           <double>80.0</double>
           <double>21.0</double>
         </Bounds>
@@ -4484,14 +3822,14 @@
           <default>
             <height>22.0</height>
             <width>80.0</width>
-            <x>970.0</x>
-            <y>569.0</y>
+            <x>979.0</x>
+            <y>792.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>970.0</double>
-          <double>569.0</double>
+          <double>979.0</double>
+          <double>792.0</double>
           <double>80.0</double>
           <double>22.0</double>
         </Bounds>
@@ -4551,14 +3889,14 @@
           <default>
             <height>23.0</height>
             <width>80.0</width>
-            <x>1051.0</x>
-            <y>829.0</y>
+            <x>1007.0</x>
+            <y>1037.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1051.0</double>
-          <double>829.0</double>
+          <double>1007.0</double>
+          <double>1037.0</double>
           <double>80.0</double>
           <double>23.0</double>
         </Bounds>
@@ -4618,14 +3956,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>732.0</x>
-            <y>1212.0</y>
+            <x>668.0</x>
+            <y>1370.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>732.0</double>
-          <double>1212.0</double>
+          <double>668.0</double>
+          <double>1370.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4685,14 +4023,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>839.0</x>
-            <y>1208.0</y>
+            <x>784.0</x>
+            <y>1381.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>839.0</double>
-          <double>1208.0</double>
+          <double>784.0</double>
+          <double>1381.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4752,87 +4090,20 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>976.0</x>
-            <y>1190.0</y>
+            <x>887.0</x>
+            <y>1365.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>976.0</double>
-          <double>1190.0</double>
+          <double>887.0</double>
+          <double>1365.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
       <KEY>Attribute:Entity:Seduta.Ambulatorio</KEY>
-      <PROCESSED>false</PROCESSED>
-    </Attribute>
-    <Attribute>
-      <Name>TipoDiMedico</Name>
-      <IsKey>true</IsKey>
-      <DataType>
-        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
-        <IsNullable>false</IsNullable>
-        <Lenght>10</Lenght>
-        <Scale>0</Scale>
-        <PROCESSED>false</PROCESSED>
-      </DataType>
-      <IsDerived>false</IsDerived>
-      <Temporality>
-        <ValidTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>ValidTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </ValidTime>
-        <HasTransactionTime>false</HasTransactionTime>
-        <EventTime>
-          <startevent>false</startevent>
-          <endevent>false</endevent>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>EventTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </EventTime>
-        <AvailabilityTime>
-          <IsActive>false</IsActive>
-          <TemporalGranularityKey></TemporalGranularityKey>
-          <KEY>AvailabilityTime:(none)</KEY>
-          <PROCESSED>false</PROCESSED>
-        </AvailabilityTime>
-        <KEY>FactTimeSupport:v|t|e|a</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Temporality>
-      <Cardinality>
-        <MinSS>1</MinSS>
-        <MaxSS>1</MaxSS>
-        <MinLS>1</MinLS>
-        <MaxLS>-1</MaxLS>
-        <KEY>1:1 [1:M]</KEY>
-        <PROCESSED>false</PROCESSED>
-      </Cardinality>
-      <listState/>
-      <ed>false</ed>
-      <LeaderKey>Entity:TerapiaProlungata</LeaderKey>
-      <Bounds class="Bounds" serialization="custom">
-        <java.awt.geom.Rectangle2D-Double>
-          <default>
-            <height>23.0</height>
-            <width>81.0</width>
-            <x>1975.0</x>
-            <y>433.0</y>
-          </default>
-        </java.awt.geom.Rectangle2D-Double>
-        <Bounds>
-          <default/>
-          <double>1975.0</double>
-          <double>433.0</double>
-          <double>81.0</double>
-          <double>23.0</double>
-        </Bounds>
-      </Bounds>
-      <Visible>true</Visible>
-      <KEY>Attribute:Entity:TerapiaProlungata.TipoDiMedico</KEY>
       <PROCESSED>false</PROCESSED>
     </Attribute>
     <Attribute>
@@ -4886,14 +4157,14 @@
           <default>
             <height>23.0</height>
             <width>80.0</width>
-            <x>2066.0</x>
-            <y>548.0</y>
+            <x>1987.0</x>
+            <y>770.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2066.0</double>
-          <double>548.0</double>
+          <double>1987.0</double>
+          <double>770.0</double>
           <double>80.0</double>
           <double>23.0</double>
         </Bounds>
@@ -4947,26 +4218,361 @@
       </Cardinality>
       <listState/>
       <ed>false</ed>
-      <LeaderKey>Entity:TerapiaChiusa</LeaderKey>
+      <LeaderKey>Entity:TerapiaProlungata</LeaderKey>
       <Bounds class="Bounds" serialization="custom">
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>2345.0</x>
-            <y>199.0</y>
+            <x>1920.0</x>
+            <y>823.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2345.0</double>
-          <double>199.0</double>
+          <double>1920.0</double>
+          <double>823.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
-      <KEY>Attribute:Entity:TerapiaChiusa.DataFine</KEY>
+      <KEY>Attribute:Entity:TerapiaProlungata.DataFine</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>Ambulatorio</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Accettato</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>80.0</width>
+            <x>771.0</x>
+            <y>625.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>771.0</double>
+          <double>625.0</double>
+          <double>80.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:Accettato.Ambulatorio</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>Tipo</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Medico</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>80.0</width>
+            <x>143.0</x>
+            <y>955.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>143.0</double>
+          <double>955.0</double>
+          <double>80.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:Medico.Tipo</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>PercentualeIncassi</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Medico</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>81.0</width>
+            <x>217.0</x>
+            <y>1005.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>217.0</double>
+          <double>1005.0</double>
+          <double>81.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:Medico.PercentualeIncassi</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>TariffaOraria</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Medico</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>80.0</width>
+            <x>331.0</x>
+            <y>1025.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>331.0</double>
+          <double>1025.0</double>
+          <double>80.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:Medico.TariffaOraria</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>TipoDiSpecializzazione</Name>
+      <IsKey>true</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>false</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Specializzazione</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>23.0</height>
+            <width>80.0</width>
+            <x>925.0</x>
+            <y>219.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>925.0</double>
+          <double>219.0</double>
+          <double>80.0</double>
+          <double>23.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:Specializzazione.TipoDiSpecializzazione</KEY>
       <PROCESSED>false</PROCESSED>
     </Attribute>
     <Attribute>
@@ -5020,14 +4626,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1478.0</x>
-            <y>340.0</y>
+            <x>1497.0</x>
+            <y>375.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1478.0</double>
-          <double>340.0</double>
+          <double>1497.0</double>
+          <double>375.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -5087,14 +4693,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1604.0</x>
-            <y>352.0</y>
+            <x>1392.0</x>
+            <y>353.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1604.0</double>
-          <double>352.0</double>
+          <double>1392.0</double>
+          <double>353.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -5104,7 +4710,7 @@
       <PROCESSED>false</PROCESSED>
     </Attribute>
     <Attribute>
-      <Name>Ambulatorio</Name>
+      <Name>TipoDiTerapia</Name>
       <IsKey>false</IsKey>
       <DataType>
         <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
@@ -5148,30 +4754,298 @@
       </Cardinality>
       <listState/>
       <ed>false</ed>
-      <LeaderKey>Entity:Accettato</LeaderKey>
+      <LeaderKey>Entity:TerapiaProlungata</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>25.0</height>
+            <width>148.0</width>
+            <x>1895.0</x>
+            <y>609.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1895.0</double>
+          <double>609.0</double>
+          <double>148.0</double>
+          <double>25.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:TerapiaProlungata.TipoDiTerapia</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>Tipo</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Paziente</LeaderKey>
       <Bounds class="Bounds" serialization="custom">
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>849.0</x>
-            <y>214.0</y>
+            <x>1996.0</x>
+            <y>1271.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>849.0</double>
-          <double>214.0</double>
+          <double>1996.0</double>
+          <double>1271.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
-      <KEY>Attribute:Entity:Accettato.Ambulatorio</KEY>
+      <KEY>Attribute:Entity:Paziente.Tipo</KEY>
       <PROCESSED>false</PROCESSED>
     </Attribute>
     <Attribute>
-      <Name>NumeroAppuntamenti</Name>
+      <Name>TipoDiPersonale</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:MembroPersonaleAusiliario</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>80.0</width>
+            <x>1518.0</x>
+            <y>775.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1518.0</double>
+          <double>775.0</double>
+          <double>80.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:MembroPersonaleAusiliario.TipoDiPersonale</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>TipoDiQualifica</Name>
+      <IsKey>true</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>false</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Qualifica</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>80.0</width>
+            <x>1578.0</x>
+            <y>1178.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>1578.0</double>
+          <double>1178.0</double>
+          <double>80.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:Qualifica.TipoDiQualifica</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>Ora</Name>
+      <IsKey>false</IsKey>
+      <DataType>
+        <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
+        <IsNullable>true</IsNullable>
+        <Lenght>10</Lenght>
+        <Scale>0</Scale>
+        <PROCESSED>false</PROCESSED>
+      </DataType>
+      <IsDerived>false</IsDerived>
+      <Temporality>
+        <ValidTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>ValidTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </ValidTime>
+        <HasTransactionTime>false</HasTransactionTime>
+        <EventTime>
+          <startevent>false</startevent>
+          <endevent>false</endevent>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>EventTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </EventTime>
+        <AvailabilityTime>
+          <IsActive>false</IsActive>
+          <TemporalGranularityKey></TemporalGranularityKey>
+          <KEY>AvailabilityTime:(none)</KEY>
+          <PROCESSED>false</PROCESSED>
+        </AvailabilityTime>
+        <KEY>FactTimeSupport:v|t|e|a</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Temporality>
+      <Cardinality>
+        <MinSS>1</MinSS>
+        <MaxSS>1</MaxSS>
+        <MinLS>1</MinLS>
+        <MaxLS>-1</MaxLS>
+        <KEY>1:1 [1:M]</KEY>
+        <PROCESSED>false</PROCESSED>
+      </Cardinality>
+      <listState/>
+      <ed>false</ed>
+      <LeaderKey>Entity:Programmato</LeaderKey>
+      <Bounds class="Bounds" serialization="custom">
+        <java.awt.geom.Rectangle2D-Double>
+          <default>
+            <height>20.0</height>
+            <width>80.0</width>
+            <x>872.0</x>
+            <y>279.0</y>
+          </default>
+        </java.awt.geom.Rectangle2D-Double>
+        <Bounds>
+          <default/>
+          <double>872.0</double>
+          <double>279.0</double>
+          <double>80.0</double>
+          <double>20.0</double>
+        </Bounds>
+      </Bounds>
+      <Visible>true</Visible>
+      <KEY>Attribute:Entity:Programmato.Ora</KEY>
+      <PROCESSED>false</PROCESSED>
+    </Attribute>
+    <Attribute>
+      <Name>NumeroDiAppuntamenti</Name>
       <IsKey>false</IsKey>
       <DataType>
         <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
@@ -5221,24 +5095,24 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>2284.0</x>
-            <y>466.0</y>
+            <x>1985.0</x>
+            <y>698.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2284.0</double>
-          <double>466.0</double>
+          <double>1985.0</double>
+          <double>698.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
-      <KEY>Attribute:Entity:TerapiaProlungata.NumeroAppuntamenti</KEY>
+      <KEY>Attribute:Entity:TerapiaProlungata.NumeroDiAppuntamenti</KEY>
       <PROCESSED>false</PROCESSED>
     </Attribute>
     <Attribute>
-      <Name>età</Name>
+      <Name>Età</Name>
       <IsKey>false</IsKey>
       <DataType>
         <Type>com.chronogeograph.datatypes.CGG_VarChar</Type>
@@ -5288,20 +5162,20 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1726.0</x>
-            <y>848.0</y>
+            <x>1981.0</x>
+            <y>1319.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1726.0</double>
-          <double>848.0</double>
+          <double>1981.0</double>
+          <double>1319.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
       <Visible>true</Visible>
-      <KEY>Attribute:Entity:Paziente.età</KEY>
+      <KEY>Attribute:Entity:Paziente.Età</KEY>
       <PROCESSED>false</PROCESSED>
     </Attribute>
   </Attributes>
