@@ -15,5 +15,8 @@ vincoli aziendali + regole di derivazione per gli attributi/relazioni derivate
 
 TODO
 
-controllare che i vincoli siano rispettati nel logico
-verificare le forme normali
+trigger
+progettazione fisica e indici
+raccolta dati in R
+implementare esempi di query
+relazione
