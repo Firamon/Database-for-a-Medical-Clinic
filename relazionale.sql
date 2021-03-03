@@ -106,10 +106,10 @@ create table terapiaProlungata(
     cf char(16),
     dataDiFine date,
     tipoDiTerapia tipoTerapia not null,
-    tipoDiSpecializzazione varchar(20) not null,
+    tipoDiSpecializzazione varchar(20),
     numeroAppuntamenti int,
-    constraint data_check check (dataDiFine >= dataDiInizio),
-    constraint terapiaProlungata_pk primary key (dataDiInizio,cf),
+    constraint data_check check ((dataDiFine is null and tipoDiTerapia = 'aperta') or (dataDiFine >= dataDiInizio and tipoDiTerapia = 'chiusa')),
+    constraint terapiaProlungata_pk primary key (dataDiInizio,cf,tipoDiSpecializzazione),
     constraint fk_paziente_terapia foreign key (cf) references paziente (cf) on delete no action on update no action,
     constraint fk_specializzazione_terapia foreign key (tipoDiSpecializzazione) references specializzazione (tipoDiSpecializzazione) on delete cascade on update cascade);
 
@@ -136,41 +136,46 @@ create table ausiliarioSeduta(
     ora int not null constraint validTime check (ora between 1 and 24),
     cf char(16),
     constraint ausiliarioSeduta_pk primary key (codicePersonale,data,ora,cf),
-    constraint fk_Seduta_ausiliario_appuntamento foreign key (data,ora,cf) references accettato (data,ora,cf) on delete cascade on update cascade,
+    constraint fk_Seduta_ausiliario_appuntamento foreign key (data,ora,cf) references seduta (data,ora,cf) on delete cascade on update cascade,
     constraint fk_ausiliario_ausiliario_Seduta foreign key (codicePersonale) references membroPersonaleAusiliario (codicePersonale) on delete cascade on update cascade);
 
 create table appuntamento(
     data date,
     dataDiInizio date,
     cf char(16),
+    tipoDiSpecializzazione varchar(20),
     ora int not null constraint validTime check (ora between 1 and 24),
-    constraint appuntamento_pk primary key (data,dataDiInizio,cf) ,
-    constraint fk_terapia_appuntamento foreign key (dataDiInizio,cf) references terapiaProlungata (dataDiInizio,cf) on delete cascade on update cascade,
+    constraint appuntamento_pk primary key (data,dataDiInizio,cf,tipoDiSpecializzazione) ,
+    constraint fk_terapia_appuntamento foreign key (dataDiInizio,cf,tipoDiSpecializzazione) references terapiaProlungata (dataDiInizio,cf,tipoDiSpecializzazione) on delete cascade on update cascade,
     constraint pazienteUbiquitario unique (data, ora, cf));
 
 create table programmato(
     data date,
     dataDiInizio date,
     cf char(16),
+    tipoDiSpecializzazione varchar(20),
     ora int not null constraint validTime check (ora between 1 and 24),
-    constraint programmato_pk primary key (data,dataDiInizio,cf),
-    constraint fk_appuntamento_programmato foreign key (data,dataDiInizio,cf) references appuntamento (data,dataDiInizio,cf) on delete cascade on update cascade);
+    constraint data_check check ((data > CURRENT_DATE) or (data = CURRENT_DATE and ora > extract(hour from CURRENT_TIME))),
+    constraint programmato_pk primary key (data,dataDiInizio,cf,tipoDiSpecializzazione),
+    constraint fk_appuntamento_programmato foreign key (data,dataDiInizio,cf,tipoDiSpecializzazione) references appuntamento (data,dataDiInizio,cf,tipoDiSpecializzazione) on delete cascade on update cascade);
 
 create table accettato(
     data date,
     dataDiInizio date,
     cf char(16),
+    tipoDiSpecializzazione varchar(20),
     ambulatorio int not null,
-    constraint accettato_pk primary key (data,dataDiInizio,cf),
-    constraint fk_appuntamento_accettato foreign key (data,dataDiInizio,cf) references appuntamento (data,dataDiInizio,cf) on delete cascade on update cascade);
+    constraint accettato_pk primary key (data,dataDiInizio,cf,tipoDiSpecializzazione),
+    constraint fk_appuntamento_accettato foreign key (data,dataDiInizio,cf,tipoDiSpecializzazione) references appuntamento (data,dataDiInizio,cf,tipoDiSpecializzazione) on delete cascade on update cascade);
 
 create table medicoAppuntamento(
     codiceMedico varchar(20),
     data date not null,
     dataDiInizio date,
     cf char(16),
-    constraint medicoAppuntamento_pk primary key (codiceMedico,data,dataDiInizio,cf),
-    constraint fk_appuntamento_medico_appuntamento foreign key (data,dataDiInizio,cf) references accettato (data,dataDiInizio,cf) on delete cascade on update cascade,
+    tipoDiSpecializzazione varchar(20),
+    constraint medicoAppuntamento_pk primary key (codiceMedico,data,dataDiInizio,cf,tipoDiSpecializzazione),
+    constraint fk_appuntamento_medico_appuntamento foreign key (data,dataDiInizio,cf,tipoDiSpecializzazione) references accettato (data,dataDiInizio,cf,tipoDiSpecializzazione) on delete cascade on update cascade,
     constraint fk_medico_medico_appuntamento foreign key (codiceMedico) references medico (codiceMedico) on delete no action on update cascade);
 
 create table ausiliarioAppuntamento(
@@ -178,6 +183,7 @@ create table ausiliarioAppuntamento(
     data date not null,
     dataDiInizio date,
     cf char(16),
-    constraint ausiliarioAppuntamento_pk primary key (codicePersonale,data,DataDiInizio,cf),
-    constraint fk_appuntamento_ausiliario_appuntamento foreign key (data,dataDiInizio,cf) references accettato (data,dataDiInizio,cf) on delete cascade on update cascade,
+    tipoDiSpecializzazione varchar(20),
+    constraint ausiliarioAppuntamento_pk primary key (codicePersonale,data,DataDiInizio,cf,tipoDiSpecializzazione),
+    constraint fk_appuntamento_ausiliario_appuntamento foreign key (data,dataDiInizio,cf,tipoDiSpecializzazione) references accettato (data,dataDiInizio,cf,tipoDiSpecializzazione) on delete cascade on update cascade,
     constraint fk_ausiliario_ausiliario_appuntamento foreign key (codicePersonale) references membroPersonaleAusiliario (codicePersonale) on delete cascade on update cascade);

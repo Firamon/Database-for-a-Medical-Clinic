@@ -2,14 +2,8 @@ trigger: appuntamento può essere associato solo ad una entità tra accettato, p
 trigger: quando aggiungi un appuntamento sulla tabella appuntamento, automaticamente viene aggiunto anche in programmato se ha data futura
 #(eliminati)trigger: quando apro una terapia prolungata aperta per un certo paziente, se è regolare, resta regolare, altrimenti diventa entrambi
 #(eliminati)trigger: quando chiudo una terapia prolungata aperta per un certo paziente, se è regolare va "in attivo", se è entrambi e non ha altre terapie prolungate aperte resta entrambi, se è entrambi e ha una sola terapia prolungata aperta, diventa occasionale
-check: nella tabella terapia prolungata la data di fine deve concordare con il tipo di terapia. Se è la terapia chiusa la data deve essere settata, se la terapia è aperta la data deve essere null
 trigger: nella tabella partecipa, non posso aggiungere membri di tipo "amministrativo"
 trigger: quando si modifica la terapia da aperta a chiusa, si controlla che non ci siano appuntamenti programmati associati a quella terapia
 trigger: quando si inserisce un appuntamento programmato per una certa terapia, si controlla che quella terapia sia aperta
 trigger: quando aggiungiamo un appuntamento programmato, la specializzazione richiesta dalla terapia deve essere tra le specializzazioni del medico che fa l'appuntamento
 trigger: quando inseriamo una terapia prolungata, non ci devono essere, per quel paziente, terapie prolungate aperte con lo stesso tipo di specializzazione
-check: quando aggiungiamo un appuntamento programmato, controlliamo che data e ora inserite siano future
-
-
-cambio
-nella tabella terapia prolungata aperta, dobbiamo mettere come chiave primaria: dataInizio, cf, tipoDiSpecializzazione, e poi cambiare le altre tabelle di conseguenza.
