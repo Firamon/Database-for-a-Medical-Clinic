@@ -1,0 +1,5 @@
+massimo: cercare appuntamenti programmati (con ridondanza)
+cercare dati dei medici
+
+alvise: segna appuntamenti saltati (senza ridondanza)
+accettare sedute
