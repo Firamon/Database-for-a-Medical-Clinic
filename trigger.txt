@@ -1,0 +1,57 @@
+Trigger:
+
+trigger: quando aggiungiamo un appuntamento programmato, la specializzazione richiesta dalla terapia deve essere tra le specializzazioni del medico che fa l'appuntamento
+
+create trigger inserisci_programmato()
+before insert on Programmato
+for each row
+execute procedure controlla medico_ha_specializzazione();
+
+create or replace function controlla_terapia_aperta()
+return trigger
+language plpgsql as $$
+begin
+select *
+from programmato natural join appuntamento, appuntamento natural join terapiaProlungata
+check new.tipiDiSpecializzazione = tipiDiSpecializzazione
+end
+
+Questo trigger non ha senso, non aggiungiamo mai un appuntamento programmato, ma un appuntamento normale.
+Ad appuntamento servirebbe un campo bool, che verifichiamo quando vogliamo aggiungere un nuovo appuntamento. Se mettiamo 0 allora vogliamo
+un appuntamento programmato, con 1 vogliamo un appuntamento accettato, e poi aggiungiamo con un trigger l'appuntamento programmato o accettato nella rispettiva tabella.
+
+trigger: quando inseriamo una terapia prolungata, non ci devono essere, per quel paziente, terapie prolungate aperte con lo stesso tipo di specializzazione
+
+create trigger inserisci_terapiaProlungata()
+before insert on Programmato
+for each row
+execute procedure controlla medico_ha_specializzazione();
+
+create or replace function controlla_terapia_aperta()
+return trigger
+language plpgsql as $$
+begin
+select *
+from terapiaProlungata as tp
+where tp.tipoDiTerapia = 'aperta' and tp.fk_paziente_terapia = new.fk_paziente_terapia
+check new.tipoDiSpecializzazione not in tp.tipoDiSpecializzazione
+end
+
+
+Query
+Dato un paziente, trova tutti i medici che lo hanno visitato
+
+select ma.codiceMedico
+from terapiaProlungata natural join appuntamento, appuntamento natural join medicoAppuntamento, medicoAppuntamento natural join medico
+where cf='<cf del paziente>'
+
+
+Tutti i medici specializzati in almeno 2 discipline
+
+select codiceMedico
+from medico as m
+where (select count(*)
+from medico as me, specializzare as s
+where m.codiceMedico = me.codiceMedico and m.tipoDiSpecializzazione <> me.tipoDiSpecializzazione and m.tipoDiSpecializzazione <> null and me.tipoDiSpecializzazione <> null and s.codiceMedico = m.codiceMedico) >= 2
+
+
