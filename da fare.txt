@@ -1,4 +1,5 @@
 da fare:
 
-indici
-analisi dei dati in R
+(Massimo): modifica i trigger
+indici: su appuntamento (e le altre tabelle con cf) (cf), indice su paziente e medico (nome, cognome)
+(guarda i video di laboratorio in R)

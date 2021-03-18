@@ -1,6 +1,6 @@
 Trigger:
 
-trigger: quando aggiungiamo un appuntamento programmato, la specializzazione richiesta dalla terapia deve essere tra le specializzazioni del medico che fa l'appuntamento
+trigger: quando aggiungiamo un appuntamento accettato, la specializzazione richiesta dalla terapia deve essere tra le specializzazioni del medico che fa l'appuntamento
 
 create trigger inserisci_programmato()
 before insert on Programmato
@@ -52,6 +52,6 @@ select codiceMedico
 from medico as m
 where (select count(*)
 from medico as me, specializzare as s
-where m.codiceMedico = me.codiceMedico and m.tipoDiSpecializzazione <> me.tipoDiSpecializzazione and m.tipoDiSpecializzazione <> null and me.tipoDiSpecializzazione <> null and s.codiceMedico = m.codiceMedico) >= 2
+where m.codiceMedico = me.codiceMedico and m.tipoDiSpecializzazione <> me.tipoDiSpecializzazione and m.tipoDiSpecializzazione is not null and me.tipoDiSpecializzazione is not null and s.codiceMedico = m.codiceMedico) >= 2
 
 
