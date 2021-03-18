@@ -1,5 +1,4 @@
-massimo: cercare appuntamenti programmati (con ridondanza)
-cercare dati dei medici
+da fare:
 
-alvise: segna appuntamenti saltati (senza ridondanza)
-accettare sedute
+indici
+analisi dei dati in R
