@@ -189,7 +189,7 @@ create table ausiliarioAppuntamento(
     constraint fk_ausiliario_ausiliario_appuntamento foreign key (codicePersonale) references membroPersonaleAusiliario (codicePersonale) on delete cascade on update cascade);
 
 
-insert into medico values ('a1234567', 3459386039, 'via 20 settembre 1', 'rossi','gianni', 'interno', 2, null);
+insert into medico values ('a1234567', 3459386039, 'via 20 settembre 1', 'flavio','belisario', 'interno', 2, null);
 insert into medico values ('b1234567', 5495849598, 'via del popolo 10', 'verdi', 'mauro', 'interno', 6, null);
 insert into medico values ('c1234567', 9032498764, 'viale Garibaldi 20', 'bianchi', 'anna', 'esterno', null, 55);
 insert into medico values ('d1234567', 9875324766, 'via flaminia 1', 'montecristo', 'michelle', 'esterno', null, 46);
@@ -234,8 +234,8 @@ insert into paziente values ('a011235812213455', 'gianni', 'rossi', 'via del pro
 insert into paziente values ('b011235812213455', 'carla', 'neri', 'via del proletario 2', 8475948033, '1960-01-12', 'regolare', 61);
 insert into paziente values ('c011235812213455', 'girolamo', 'rossi', 'via del proletario 3', 8475948033, '1999-01-12', 'occasionale', 22);
 insert into paziente values ('d011235812213455', 'anna', 'neri', 'via del proletario 4', 8475948033, '1980-01-12', 'occasionale', 41);
-insert into paziente values ('e011235812213455', 'luca', 'verdi', 'via del proletario 5', 8475948033, '2002-01-12', 'entrambi', 19);
-insert into paziente values ('f011235812213455', 'luisa', 'montecristo', 'via del proletario 6', 8475948033, '1928-01-12', 'entrambi', 93);
+insert into paziente values ('e011235812213455', 'Flavio', 'Eraclio I', 'Via Egnatia 1', 8475948033, '572-01-01', 'entrambi', 19);
+insert into paziente values ('f011235812213455', 'luisa', 'montecristo', 'via del proletario 5', 8475948033, '1928-01-12', 'entrambi', 93);
 
 insert into terapiaProlungata values ('2020-01-01','a011235812213455', '2020-06-30', 'chiusa', 'radiologia' ,5);
 insert into terapiaProlungata values ('2021-02-22','a011235812213455', null, 'aperta', 'urologia' , 2);
