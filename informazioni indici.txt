@@ -1,0 +1,11 @@
+1) abbiamo aggiunto un indice su terapiaProlungata(cf), per tutte le query che cercano dati su un paziente in generale (es. tutte le terapie del paziente x).
+2) abbiamo aggiunto un indice su appuntamento(cf), stesso ragionamento di terapiaProlungata.
+3) abbiamo aggiunto un indice su appuntamento accettato(cf), stesso ragionamento di terapiaProlungata.
+4) abbiamo aggiunto un indice su appuntamento programmato(cf), stesso ragionamento di terapiaProlungata.
+5) abbiamo aggiunto un indice su appuntamento(dataDiInizio, cf, tipoDiSpecializzazione). (Es. cerca tutti gli appuntamenti di una determinata terapia x).
+6) abbiamo aggiunto un indice su seduta(cf). stesso ragionamento di terapiaProlungata.
+7) abbiamo aggiunto un indice su medicoAppuntamento(codiceMedico). (Es. Tutti gli appuntamenti in cui il medico ha partecipato)
+8) abbiamo aggiunto un indice su medicoSeduta(codiceMedico). (Es. Tutte le sedute a cui il medico ha partecipato)
+
+Non abbiamo messo un indice su programmato(dataDiInizio, cf, tipoDiSpecializzazione) perchè piccola, ovveroperchè, quando un appuntamento programmato è passato, un trigger lo sposta da programmato a accettato.
+Non abbiamo messo un indice su accettato(dataDiInizio, cf, tipoDiSpecializzazione) perchè è interrogata meno spesso.

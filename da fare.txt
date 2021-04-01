@@ -1,10 +1,4 @@
-da fare:
+Bisogna popolare con R le seguenti tabelle:
 
-(Massimo): modifica i trigger
-indici: su appuntamento (e le altre tabelle con cf) (cf), indice su paziente e medico (nome, cognome)
-(guarda i video di laboratorio in R)
-
-problemi:
-possiamo associare gli ausiliari amministrativi alle sedute
-ora di appuntamento e ora di programmato possono essere settate diverse
-ho cambiato ambulatorio da int a char[1]
+Massimo: Medico, Ausiliario, storico, ausiliarioRegistra, medicoRegistra, corsi di aggiornamento (a mano)
+Alvise: Paziente, Seduta, TerapiaProlungata, specializzazione
