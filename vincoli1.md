@@ -15,3 +15,4 @@ Vincoli aziendali:
   * Bisogna unire data ed ora in un singolo campo
 * Gli appuntamenti saltati ed accettati sono programmati per una data ed ora passate
   * Ogni giorno un infermiere controlla chi si presenta o meno e segna gli appuntamenti
+* Gli appuntamenti programmati sono programmati per la stessa data ed ora dell'appuntamento

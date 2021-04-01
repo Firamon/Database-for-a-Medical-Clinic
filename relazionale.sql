@@ -136,7 +136,7 @@ create table ausiliarioSeduta(
     ora int not null constraint validTime check (ora between 1 and 24),
     cf char(16),
     constraint ausiliarioSeduta_pk primary key (codicePersonale,data,ora,cf),
-    constraint fk_Seduta_ausiliario_appuntamento foreign key (data,ora,cf) references seduta (data,ora,cf) on delete cascade on update cascade,
+    constraint fk_seduta_ausiliario_seduta foreign key (data,ora,cf) references seduta (data,ora,cf) on delete cascade on update cascade,
     constraint fk_ausiliario_ausiliario_Seduta foreign key (codicePersonale) references membroPersonaleAusiliario (codicePersonale) on delete cascade on update cascade);
 
 create table appuntamento(
