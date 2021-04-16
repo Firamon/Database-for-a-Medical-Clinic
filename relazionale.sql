@@ -91,8 +91,8 @@ create type tipoPaziente as enum ('occasionale', 'regolare', 'entrambi');
 
 create table paziente(
     cf char(16) primary key,
-    nome varchar(20) not null,
-    cognome varchar(10) not null,
+    nome varchar(40) not null,
+    cognome varchar(40) not null,
     indirizzo varchar(20) not null,
     recapitoTelefonico decimal(15,0) not null,
     dataDiNascita date not null,

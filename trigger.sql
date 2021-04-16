@@ -1,6 +1,6 @@
-Trigger:
+--Trigger:
 
-trigger: quando aggiungiamo un appuntamento accettato, la specializzazione richiesta dalla terapia deve essere tra le specializzazioni del medico che fa l'appuntamento
+--trigger: quando aggiungiamo un appuntamento accettato, la specializzazione richiesta dalla terapia deve essere tra le specializzazioni del medico che fa l'appuntamento
 
 create trigger inserisci_accettato()
 before insert on accettato
@@ -26,7 +26,7 @@ endif;
 end;
 $$;
 
-trigger: quando inseriamo una terapia prolungata, non ci devono essere, per quel paziente, terapie prolungate aperte con lo stesso tipo di specializzazione
+--trigger: quando inseriamo una terapia prolungata, non ci devono essere, per quel paziente, terapie prolungate aperte con lo stesso tipo di specializzazione
 
 create trigger inserisci_terapiaProlungata()
 before insert on terapiaProlungata
@@ -52,9 +52,9 @@ end;
 $$;
 
 
-Query
+--Query
 
-(Fai l'unione di queste 2 query)
+--(Fai l'unione di queste 2 query)
 Dato un paziente, trova tutti i medici che lo hanno visitato
 select codiceMedico, nome, cognome, 
 from medico natural join medicoAppuntamento natural join accettato natural join appuntamento natural join terapiaProlungata
@@ -64,7 +64,7 @@ select codiceMedico, nome, cognome
 from medicoSeduta natural join medico
 where cf='a123456789123456'
 
-Tutti i medici specializzati in almeno 2 discipline
+--Tutti i medici specializzati in almeno 2 discipline
 
 select codiceMedico
 from specializzare as s1

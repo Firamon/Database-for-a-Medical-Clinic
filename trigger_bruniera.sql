@@ -23,7 +23,7 @@ language plpgsql as $$
 begin
     perform * from partecipa
         where codicePersonale = new.codicePersonale;
-    if found and then
+    if found then
         raise exception 'Solo gli assistenti medici possono essere iscritti ai corsi di aggiornamento';
         return null;
     else
@@ -84,6 +84,7 @@ begin
         insert into programmato (data, cf, dataDiInizio, tipoDiSpecializzazione, ora)
         values (new.data, new.cf, new.dataDiInizio, new.tipoDiSpecializzazione, new.ora);
     end if;
+    return new;
 end;
 $$;
 

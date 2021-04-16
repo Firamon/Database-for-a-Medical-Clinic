@@ -5,7 +5,7 @@ where ((data > CURRENT_DATE)
         and ora < extract(hour from CURRENT_TIME)));
 
 -- medici che hanno seguito le terapie aperte del paziente ABCDEF
-select codiceMedico, nome, cognome
+select medico.codiceMedico, nome, cognome
 from (terapiaProlungata natural join medicoAppuntamento) join medico on medicoAppuntamento.codiceMedico = medico.codiceMedico
 where tipoDiTerapia = 'aperta' and cf = 'ABCDEF';
 

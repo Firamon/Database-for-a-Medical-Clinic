@@ -1,4 +1,4 @@
-Massimo: Medico, Ausiliario, storico, ausiliarioRegistra, medicoRegistra, corsi di aggiornamento (a mano)
+#Massimo: Medico, Ausiliario, storico, ausiliarioRegistra, medicoRegistra, corsi di aggiornamento (a mano)
 
 v_nomi <- readLines("C:/Users/grand/Desktop/nomi.txt", warn=FALSE)
 v_cognomi <- readLines("C:/Users/grand/Desktop/cognomi.txt", warn=FALSE)
