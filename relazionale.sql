@@ -10,8 +10,8 @@ create table medico(
     codiceMedico char(8) primary key,
     recapitoTelefonico decimal(15,0) not null,
     indirizzo varchar(50) not null,
-    cognome varchar(20) not null,
-    nome varchar(20) not null,
+    cognome varchar(40) not null,
+    nome varchar(40) not null,
     tipo tipoMedico not null,
     percentualeIncassi smallint,
     tariffaOraria int
@@ -24,8 +24,8 @@ create table membroPersonaleAusiliario(
     codicePersonale char(8) primary key,
     recapitoTelefonico decimal(15,0) not null,
     indirizzo varchar(50) not null,
-    cognome varchar(20) not null,
-    nome varchar(20) not null,
+    cognome varchar(40) not null,
+    nome varchar(40) not null,
     tipo tipoPersonale not null);
 
 create table storico(
@@ -93,7 +93,7 @@ create table paziente(
     cf char(16) primary key,
     nome varchar(40) not null,
     cognome varchar(40) not null,
-    indirizzo varchar(20) not null,
+    indirizzo varchar(50) not null,
     recapitoTelefonico decimal(15,0) not null,
     dataDiNascita date not null,
     tipo tipoPaziente not null,
@@ -188,112 +188,156 @@ create table ausiliarioAppuntamento(
     constraint fk_appuntamento_ausiliario_appuntamento foreign key (data,dataDiInizio,cf,tipoDiSpecializzazione) references accettato (data,dataDiInizio,cf,tipoDiSpecializzazione) on delete cascade on update cascade,
     constraint fk_ausiliario_ausiliario_appuntamento foreign key (codicePersonale) references membroPersonaleAusiliario (codicePersonale) on delete cascade on update cascade);
 
+--trigger: quando aggiungiamo un appuntamento accettato, la specializzazione richiesta dalla terapia deve essere tra le specializzazioni del medico che fa l'appuntamento
 
-insert into medico values ('a1234567', 3459386039, 'via 20 settembre 1', 'flavio','belisario', 'interno', 2, null);
-insert into medico values ('b1234567', 5495849598, 'via del popolo 10', 'verdi', 'mauro', 'interno', 6, null);
-insert into medico values ('c1234567', 9032498764, 'viale Garibaldi 20', 'bianchi', 'anna', 'esterno', null, 55);
-insert into medico values ('d1234567', 9875324766, 'via flaminia 1', 'montecristo', 'michelle', 'esterno', null, 46);
+create or replace function controlla_specializzazione()
+returns trigger
+language plpgsql as $$
+begin
+perform *
+from specializzare
+where codiceMedico = new.codiceMedico and new.tipoDiSpecializzazione = tipoDiSpecializzazione;
+if found then
+	return new;
+else
+	raise exception 'Il medico inserito non ? specializzato per l appuntamento';
+	return null;
+end if;
+end;
+$$;
 
-insert into membroPersonaleAusiliario values ('a0112358', 3459386036, 'via flaminia 10', 'bianchi', 'luca', 'assistente medico');
-insert into membroPersonaleAusiliario values ('b0112358', 3459386036, 'via del popolo 5', 'neri', 'giacomo', 'amministrativo');
-insert into membroPersonaleAusiliario values ('c0112358', 3459386036, 'viale Garibaldi 6', 'rossi', 'raimondo', 'assistente medico');
-insert into membroPersonaleAusiliario values ('d0112358', 3459386036, 'via del popolo 5', 'marroni', 'luca', 'entrambi');
-insert into membroPersonaleAusiliario values ('e0112358', 3459386036, 'viale Garibaldi 78', 'montecristo', 'giocanni', 'entrambi');
+create trigger inserisci_accettato
+before insert on medicoAppuntamento
+for each row
+execute procedure controlla_specializzazione();
 
-insert into corsoDiAggiornamento values ('associazione medici', 'corso sulle iniezioni', '2021-03-20');
-insert into corsoDiAggiornamento values ('associazione ortopedici', '1000 modi per martellare le ossa', '2021-01-22');
-insert into corsoDiAggiornamento values ('associazione ortopedici', 'le protesi moderne', '2021-01-22');
+--trigger: quando inseriamo una terapia prolungata, non ci devono essere, per quel paziente, terapie prolungate aperte con lo stesso tipo di specializzazione
 
-inserto into partecipa values ('a0112358', 'associazione medici', 'corso sulle iniezioni', '2021-03-20');
-inserto into partecipa values ('a0112358', 'associazione ortopedici', '1000 modi per martellare le ossa', '2021-01-22');
-inserto into partecipa values ('a0112358', 'associazione ortopedici', 'le protesi moderne', '2021-01-22');
+create or replace function controlla_specializzazione_terapieProlungate()
+returns trigger
+language plpgsql as $$
+begin
+perform *
+from terapiaProlungata
+where new.tipoDiSpecializzazione = tipoDiSpecializzazione and tipoDiTerapia = 'aperta' and new.cf = cf and new.tipoDiTerapia = 'aperto';
+if found then
+	raise exception 'Non puoi inserite 2 terapie aperte con la stessa specializzazione';
+	return null;
+else
+	return new;
+end if;
+end;
+$$;
 
-insert into qualifica values ('diploma di ragioneria');
-insert into qualifica values ('tecnico radiologo');
-insert into qualifica values ('laurea in infermieristica');
+create trigger inserisci_terapiaProlungata
+before insert on terapiaProlungata
+for each row
+execute procedure controlla_specializzazione_terapieProlungate();
 
-insert into qualificare values ('a0112358', 'tecnico radiologo');
-insert into qualificare values ('b0112358', 'laurea in infermieristica');
-insert into qualificare values ('c0112358', 'laurea in infermieristica');
-insert into qualificare values ('d0112358', 'diploma di ragioneria');
-insert into qualificare values ('e0112358', 'diploma di ragioneria');
+create or replace function check_non_partecipa_amministrativo()
+returns trigger
+language plpgsql as $$
+begin
+    perform * from membroPersonaleAusiliario
+        where codicePersonale = new.codicePersonale and tipo = 'amministrativo';
+    if found then
+        raise exception 'Solo gli assistenti medici possono essere iscritti ai corsi di aggiornamento';
+        return null;
+    else
+        return new;
+    end if;
+end;
+$$;
 
-insert into specializzazione values ('ortopedia');
-insert into specializzazione values ('oculistica');
-insert into specializzazione values ('radiologia');
-insert into specializzazione values ('urologia');
+create trigger non_partecipa_amministrativo
+before insert or update on partecipa
+for each row
+execute procedure check_non_partecipa_amministrativo();
 
-insert into specializzare values ('a1234567', 'ortopedia');
-insert into specializzare values ('b1234567', 'radiologia');
-insert into specializzare values ('c1234567', 'ortopedia');
-insert into specializzare values ('d1234567', 'oculistica');
-insert into specializzare values ('a1234567', 'oculistica');
-insert into specializzare values ('b1234567', 'urologia');
+create or replace function check_amministrativo_non_partecipa()
+returns trigger
+language plpgsql as $$
+begin
+    perform * from partecipa
+        where codicePersonale = new.codicePersonale;
+    if found then
+        raise exception 'Solo gli assistenti medici possono essere iscritti ai corsi di aggiornamento';
+        return null;
+    else
+        return new;
+    end if;
+end;
+$$;
 
-insert into paziente values ('a011235812213455', 'gianni', 'rossi', 'via del proletario 1', 8475948033, '1976-01-12', 'regolare', 45);
-insert into paziente values ('b011235812213455', 'carla', 'neri', 'via del proletario 2', 8475948033, '1960-01-12', 'regolare', 61);
-insert into paziente values ('c011235812213455', 'girolamo', 'rossi', 'via del proletario 3', 8475948033, '1999-01-12', 'occasionale', 22);
-insert into paziente values ('d011235812213455', 'anna', 'neri', 'via del proletario 4', 8475948033, '1980-01-12', 'occasionale', 41);
-insert into paziente values ('e011235812213455', 'Flavio', 'Eraclio I', 'Via Egnatia 1', 8475948033, '572-01-01', 'entrambi', 19);
-insert into paziente values ('f011235812213455', 'luisa', 'montecristo', 'via del proletario 5', 8475948033, '1928-01-12', 'entrambi', 93);
+create trigger amministrativo_non_partecipa before insert or update
+on membroPersonaleAusiliario for each row
+        when (new.tipo = 'amministrativo')
+execute procedure check_amministrativo_non_partecipa();
 
-insert into terapiaProlungata values ('2020-01-01','a011235812213455', '2020-06-30', 'chiusa', 'radiologia' ,5);
-insert into terapiaProlungata values ('2021-02-22','a011235812213455', null, 'aperta', 'urologia' , 2);
-insert into terapiaProlungata values ('2021-01-01','a011235812213455', null, 'aperta', 'oculistica' ,9);
-insert into terapiaProlungata values ('2021-01-01','b011235812213455', null, 'aperta', 'ortopedia' ,1);
-insert into terapiaProlungata values ('2019-01-01','e011235812213455', '2019-06-30', 'chiusa', 'urologia' ,14);
-insert into terapiaProlungata values ('2020-01-01','e011235812213455', '2020-06-30', 'chiusa', 'ortopedia' ,3);
-insert into terapiaProlungata values ('2021-01-02','f011235812213455', null, 'aperta', 'oculistica' ,1);
-insert into terapiaProlungata values ('2019-02-13','e011235812213455', '2019-07-30', 'chiusa', 'radiologia' ,6);
+create or replace function check_appuntamenti_terapia_chiusa()
+returns trigger
+language plpgsql as $$
+begin
+    perform * from programmato
+        where dataDiInizio = new.dataDiInizio and cf = new.cf and tipoDiSpecializzazione = new.tipoDiSpecializzazione;
+    if found and new.tipoDiTerapia = 'chiusa' then
+        raise exception 'Le terapie chiuse non possono avere appuntamenti programmati';
+        return null;
+    else
+        return new;
+    end if;
+end;
+$$;
 
-insert into seduta values ('2021-01-02', 12, 'A', 'c011235812213455');
-insert into seduta values ('2020-03-12', 13, 'A', 'c011235812213455');
-insert into seduta values ('2020-05-06', 8, 'B', 'd011235812213455');
-insert into seduta values ('2019-09-15', 17, 'B', 'e011235812213455');
-insert into seduta values ('2018-12-02', 12, 'C', 'f011235812213455');
+create trigger appuntamenti_terapia_chiusa before update
+on terapiaProlungata for each row
+        when (new.tipoDiTerapia = 'chiusa')
+execute procedure check_appuntamenti_terapia_chiusa();
 
-insert into medicoSeduta values ('2021-01-02', 12, 'A', 'c011235812213455', 'a1234567');
-insert into medicoSeduta values ('2021-01-02', 12, 'A', 'c011235812213455', 'b1234567');
-insert into medicoSeduta values ('2021-01-02', 12, 'A', 'c011235812213455', 'c1234567');
-insert into medicoSeduta values ('2020-03-12', 13, 'A', 'c011235812213455', 'b1234567');
-insert into medicoSeduta values ('2020-05-06', 8, 'B', 'd011235812213455', 'b1234567');
-insert into medicoSeduta values ('2019-09-15', 17, 'B', 'e011235812213455', 'c1234567');
-insert into medicoSeduta values ('2018-12-02', 12, 'C', 'f011235812213455', 'd1234567');
-insert into medicoSeduta values ('2018-12-02', 12, 'C', 'f011235812213455', 'a1234567');
+create or replace function check_terapia_chiusa_appuntamenti()
+returns trigger
+language plpgsql as $$
+begin
+    perform * from terapiaProlungata
+        where dataDiInizio = new.dataDiInizio and cf = new.cf and tipoDiSpecializzazione = new.tipoDiSpecializzazione and tipoDiTerapia = 'chiusa';
+    if found then
+        raise exception 'Le terapie chiuse non possono avere appuntamenti programmati';
+        return null;
+    else
+        return new;
+    end if;
+end;
+$$;
 
-insert into ausiliarioAppuntamento values ('2021-01-02', 12, 'A', 'c011235812213455', 'a0112358');
-insert into ausiliarioAppuntamento values ('2020-03-12', 13, 'A', 'c011235812213455', 'a0112358');
-insert into ausiliarioAppuntamento values ('2020-03-12', 13, 'A', 'c011235812213455', 'c0112358');
-insert into ausiliarioAppuntamento values ('2019-09-15', 17, 'B', 'e011235812213455', 'd0112358');
-insert into ausiliarioAppuntamento values ('2018-12-02', 12, 'C', 'f011235812213455', 'e0112358');
+create trigger terapia_chiusa_appuntamenti before insert
+on programmato for each row
+execute procedure check_terapia_chiusa_appuntamenti();
 
-insert into appuntamento values ('2021-04-20','2021-02-22','a011235812213455', 'urologia' ,10);
-insert into appuntamento values ('2021-04-27','2021-01-01','a011235812213455', 'oculistica' ,12);
-insert into appuntamento values ('2021-05-27','2021-01-01','b011235812213455', 'ortopedia' ,8);
-insert into appuntamento values ('2021-06-28','2021-01-02','f011235812213455', 'oculistica' ,18);
+create or replace function check_programma_appuntamento_futuro()
+returns trigger
+language plpgsql as $$
+begin
+    if ((new.data > CURRENT_DATE) or (new.data = CURRENT_DATE and new.ora > extract(hour from CURRENT_TIME))) then
+        insert into programmato (data, cf, dataDiInizio, tipoDiSpecializzazione, ora)
+        values (new.data, new.cf, new.dataDiInizio, new.tipoDiSpecializzazione, new.ora);
+    end if;
+    return new;
+end;
+$$;
 
-insert into appuntamento values ('2019-01-01','2019-01-01','e011235812213455', 'urologia' ,13);
-insert into appuntamento values ('2020-01-01','2020-01-01','e011235812213455', 'ortopedia' ,12);
-insert into appuntamento values ('2019-02-13','2020-01-01','a011235812213455', 'radiologia' ,18);
+create trigger programma_appuntamento_futuro after insert or update
+on appuntamento for each row
+execute procedure check_programma_appuntamento_futuro();
 
-insert into programmato values ('2021-04-20','2021-02-22','a011235812213455', 'urologia' ,10);
-insert into programmato values ('2021-04-27','2021-01-01','a011235812213455', 'oculistica' ,12);
-insert into programmato values ('2021-05-27','2021-01-01','b011235812213455', 'ortopedia' ,8);
-insert into programmato values ('2021-06-28','2021-01-02','f011235812213455', 'oculistica' ,18);
-
-insert into accettato values ('2019-01-01','2019-01-01','e011235812213455', 'urologia' ,'A');
-insert into accettato values ('2020-01-01','2020-01-01','e011235812213455', 'ortopedia' ,'A');
-insert into accettato values ('2019-02-13','2020-01-01','a011235812213455', 'radiologia' ,'B');
-
-insert into medicoAppuntamento values ('b1234567', '2019-01-01','2019-01-01','e011235812213455', 'urologia');
-insert into medicoAppuntamento values ('a1234567', '2020-01-01','2020-01-01','e011235812213455', 'ortopedia');
-insert into medicoAppuntamento values ('c1234567', '2020-01-01','2020-01-01','e011235812213455', 'ortopedia');
-insert into medicoAppuntamento values ('b1234567', '2019-02-13','2020-01-01','a011235812213455', 'radiologia');
-
-insert into ausiliarioAppuntamento values ('a0112358', '2019-01-01','2019-01-01','e011235812213455', 'urologia');
-insert into ausiliarioAppuntamento values ('c0112358', '2020-01-01','2020-01-01','e011235812213455', 'ortopedia');
-insert into ausiliarioAppuntamento values ('c0112358', '2019-02-13','2020-01-01','a011235812213455', 'radiologia');
-insert into ausiliarioAppuntamento values ('d0112358', '2019-02-13','2020-01-01','a011235812213455', 'radiologia');
-insert into ausiliarioAppuntamento values ('e0112358', '2020-01-01','2020-01-01','e011235812213455', 'ortopedia');
-insert into ausiliarioAppuntamento values ('c0112358', '2019-01-01','2019-01-01','e011235812213455', 'urologia');
-
+create index cf_terapiaProlungata on terapiaProlungata (cf);
+create index cf_appuntamento on appuntamento (cf);
+create index cf_programmato on programmato (cf);
+create index cf_accettato on accettato (cf);
+create index cf_seduta on seduta (cf);
+create index terapia_appuntamento on appuntamento (dataDiInizio,cf,tipoDiSpecializzazione);
+create index codiceMedico_medicoAppuntamento on medicoAppuntamento (codiceMedico);
+create index codiceMedico_medicoSeduta on medicoSeduta (codiceMedico);
+create index nome_paziente on paziente (nome);
+create index nome_medico on medico (nome);
+create index cognome_paziente on paziente (cognome);
+create index cognome_medico on medico (cognome);

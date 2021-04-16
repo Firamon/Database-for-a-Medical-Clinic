@@ -6,12 +6,11 @@ con <- dbConnect(drv,
 	port=5432,
 	user="postgres",
 	password="postgres")
-# Imposta lo schema di default
-dbGetQuery(con, "set search_path to studio")
 # Campioni
 nomi <- readLines("nomi.txt")
 cognomi <- readLines("cognomi.txt")
 dat <- seq(as.Date('1922/01/01'), as.Date('2021/01/01'), by="day")
+indirizzi <- readLines("indirizzi.csv")
 
 # Tabella di specializzazioni
 tipodispecializzazione <- c("Cardiologia", "Pneumologia", "Neurologia", "Dermatologia", "Nefrologia", "Infettivologia", "Medicina Interna", "Chirurgia generale")
@@ -20,7 +19,7 @@ tipodispecializzazione <- c("Cardiologia", "Pneumologia", "Neurologia", "Dermato
 cf <- paste(1:10000)
 nome <- sample(nomi, 10000, replace=T)
 cognome <- sample(cognomi, 10000, replace=T)
-indirizzo <- "Via delle Scienze 1"
+indirizzo <- sample(indirizzi, 10000, replace=T)
 recapitotelefonico <- sample(1:10000000000, 10000, replace=T)
 datadinascita <- sample(dat, 10000)
 eta <- sample(1:99, 10000, replace=T)
@@ -104,7 +103,7 @@ seduta <- data.frame(
 )
 
 # Scrittura tabelle sul DB
-dbWriteTable(con, name = c("specializzazione"), value = specializzazioni, row.names=F, append = T)
-dbWriteTable(con, name = c("paziente"), value = paziente, row.names=F, append = T)
-dbWriteTable(con, name = c("terapiaprolungata"), value = terapiaprolungata, row.names=F, append = T)
-dbWriteTable(con, name = c("seduta"), value = seduta, row.names=F, append = T)
+dbWriteTable(con, name = c("studio", "specializzazione"), value = specializzazione, row.names=F, append = T)
+dbWriteTable(con, name = c("studio", "paziente"), value = paziente, row.names=F, append = T)
+dbWriteTable(con, name = c("studio", "terapiaProlungata"), value = terapiaprolungata, row.names=F, append = T)
+dbWriteTable(con, name = c("studio", "seduta"), value = seduta, row.names=F, append = T)

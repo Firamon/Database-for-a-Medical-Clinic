@@ -6,3 +6,7 @@ create index cf_seduta on seduta (cf);
 create index terapia_appuntamento on appuntamento (dataDiInizio,cf,tipoDiSpecializzazione);
 create index codiceMedico_medicoAppuntamento on medicoAppuntamento (codiceMedico);
 create index codiceMedico_medicoSeduta on medicoSeduta (codiceMedico);
+create index nome_paziente on paziente (nome);
+create index nome_medico on medico (nome);
+create index cognome_paziente on paziente (cognome);
+create index cognome_medico on medico (cognome);
