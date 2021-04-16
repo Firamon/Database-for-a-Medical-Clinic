@@ -2,11 +2,11 @@
 library("RPostgreSQL")
 drv <- dbDriver("PostgreSQL")
 con <- dbConnect(drv,
-	dbname="studiomedico",
+	dbname="ospedale",
 	host="localhost",
 	port=5432,
 	user="postgres",
-	password="postgres")
+	password="Maximo98--")
 v_nomi <- readLines("nomi.txt", warn=FALSE)
 v_cognomi <- readLines("cognomi.txt", warn=FALSE)
 v_indirizzi <- readLines("indirizzi.csv", warn=FALSE)
@@ -63,7 +63,7 @@ medicoRegistra_df <- data.frame(
 
 luoghi <- c("gilda dei medici", "associazione dentisti", "sultanato ortopedici", "Tema dei chirurghi", "corporazione neuroscienziati")
 denominazione <- c("protesi e installazione", "Logopedia","Geriatria applicata", "i bisogni dei pazienti", "fisioterapia", "salute pubblica")
-giorni_seq <-seq(as.Date("2021/5/1"), as.Date("2021/10/1"), "day")
+giorni_seq <-seq(as.Date("2021/5/1"), as.Date("2021/10/1"), by="day")
 corsi_di_aggiornamento_df <- data.frame(
                                         luogo=sample(luoghi, 10, replace=T),
                                         denominazione=sample(denominazione, 10, replace=T),

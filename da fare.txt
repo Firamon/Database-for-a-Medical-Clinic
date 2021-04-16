@@ -1,4 +1,7 @@
 Bisogna popolare con R le seguenti tabelle:
 
-Massimo: Medico, Ausiliario, storico, ausiliarioRegistra, medicoRegistra, corsi di aggiornamento (a mano)
-Alvise: Paziente, Seduta, TerapiaProlungata, specializzazione
+Massimo: medicoSeduta, qualifica, qualificare, specializzare, ausiliarioSeduta
+Alvise: appuntamenti, accettato, programmato, medicoAppuntamento, ausiliarioAppuntamento
+
+N.B: usa le query per prendere i dati dal database da cui dipendono le tabelle che scrivi
+
