@@ -5,3 +5,5 @@ Alvise: appuntamenti, accettato, programmato, medicoAppuntamento, ausiliarioAppu
 
 N.B: usa le query per prendere i dati dal database da cui dipendono le tabelle che scrivi
 
+problema: dobbiamo usare lo stesso cf, ho creato un file di CF casuali
+

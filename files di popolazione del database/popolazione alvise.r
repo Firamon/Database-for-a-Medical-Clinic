@@ -116,6 +116,8 @@ seduta <- data.frame(
                      cf = cf_seduta
 )
 
+
+
 # Scrittura tabelle sul DB
 # Non devono esserci gli schemi nel nome della tabella
 dbWriteTable(con, name = c("specializzazione"), value = specializzazione, row.names=F, append = T)
