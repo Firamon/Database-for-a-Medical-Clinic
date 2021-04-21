@@ -219,7 +219,7 @@ language plpgsql as $$
 begin
 perform *
 from terapiaProlungata
-where new.tipoDiSpecializzazione = tipoDiSpecializzazione and tipoDiTerapia = 'aperta' and new.cf = cf and new.tipoDiTerapia = 'aperto';
+where new.tipoDiSpecializzazione = tipoDiSpecializzazione and tipoDiTerapia = 'aperta' and new.cf = cf and new.tipoDiTerapia = 'aperta' and dataDiInizio <> new.dataDiInizio;
 if found then
 	raise exception 'Non puoi inserite 2 terapie aperte con la stessa specializzazione';
 	return null;

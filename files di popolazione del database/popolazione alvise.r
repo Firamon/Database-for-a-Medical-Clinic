@@ -6,14 +6,17 @@ con <- dbConnect(drv,
 	port=5432,
 	user="postgres",
 	password="postgres")
+# Settiamo lo schema così non serve indicarlo
+dbGetQuery(con, "set search_path to studio")
 # Campioni
 nomi <- readLines("nomi.txt")
 cognomi <- readLines("cognomi.txt")
 dat <- seq(as.Date('1922/01/01'), as.Date('2021/01/01'), by="day")
 indirizzi <- readLines("indirizzi.csv")
+moneta <- c("testa", "croce")
 
 # Tabella di specializzazioni
-tipodispecializzazione <- c("Cardiologia", "Pneumologia", "Neurologia", "Dermatologia", "Nefrologia", "Infettivologia", "Medicina Interna", "Chirurgia generale")
+tipodispecializzazione <- c("Cardiologia", "Pneumologia", "Neurologia", "Dermatologia", "Nefrologia", "Infettivologia", "Medicina Interna", "Chirurgia generale", "Fisiatria", "Geriatria", "Odontoiatria")
 
 # Pazienti parziali (manca il tipo di paziente)
 cf <- paste(1:10000)
@@ -31,6 +34,9 @@ ambulatorio <- sample(LETTERS[1:26], 20000, replace=T)
 data_seduta <- sample(dat, 20000, replace=T)
 # cf[!(cf%in%cf_seduta)]
 
+# Terapie aperte (frame di appoggio per controllare i vincoli)
+aperte <- data.frame(matrix(ncol = 2, nrow=0))
+colnames(aperte) <- c("cf", "spec")
 # Terapia prolungata
 cf_terapia <- sample(cf, 5000, replace=T)
 tipodispecializzazione_terapia <- sample(tipodispecializzazione, 5000, replace=T)
@@ -40,8 +46,16 @@ datadifine <- sample(dat, 5000, replace=T)
 tipoditerapia <- c()
 for(i in 1:length(datadifine)) {
     if(datadifine[i] < datadiinizio[i]) {
-        datadifine[i]  <- NA
-        tipoditerapia[i] <- "aperta"
+        # Controlla i vincoli
+        record <- data.frame(cf = c(cf_terapia[i]), spec = c(tipodispecializzazione_terapia[i]))
+        if(!duplicated(rbind(aperte, record))[nrow(aperte)+1]) {
+            datadifine[i]  <- NA
+            tipoditerapia[i] <- "aperta"
+            aperte <- rbind(aperte, record)
+        } else {
+            datadifine[i] <- datadiinizio[i] + 1
+            tipoditerapia[i] <- "chiusa"
+        }
     } else {
         tipoditerapia[i] <- "chiusa"
     }
@@ -103,7 +117,8 @@ seduta <- data.frame(
 )
 
 # Scrittura tabelle sul DB
-dbWriteTable(con, name = c("studio", "specializzazione"), value = specializzazione, row.names=F, append = T)
-dbWriteTable(con, name = c("studio", "paziente"), value = paziente, row.names=F, append = T)
-dbWriteTable(con, name = c("studio", "terapiaProlungata"), value = terapiaprolungata, row.names=F, append = T)
-dbWriteTable(con, name = c("studio", "seduta"), value = seduta, row.names=F, append = T)
+# Non devono esserci gli schemi nel nome della tabella
+dbWriteTable(con, name = c("specializzazione"), value = specializzazione, row.names=F, append = T)
+dbWriteTable(con, name = c("paziente"), value = paziente, row.names=F, append = T)
+dbWriteTable(con, name = c("terapiaprolungata"), value = terapiaprolungata, row.names=F, append = T)
+dbWriteTable(con, name = c("seduta"), value = seduta, row.names=F, append = T)
