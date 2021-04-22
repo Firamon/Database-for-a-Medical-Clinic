@@ -14,12 +14,12 @@ cognomi <- readLines("cognomi.txt")
 dat <- seq(as.Date('1922/01/01'), as.Date('2021/01/01'), by="day")
 indirizzi <- readLines("indirizzi.csv")
 moneta <- c("testa", "croce")
+cf <- readLines("cf.txt")
 
 # Tabella di specializzazioni
 tipodispecializzazione <- c("Cardiologia", "Pneumologia", "Neurologia", "Dermatologia", "Nefrologia", "Infettivologia", "Medicina Interna", "Chirurgia generale", "Fisiatria", "Geriatria", "Odontoiatria")
 
 # Pazienti parziali (manca il tipo di paziente)
-cf <- paste(1:10000)
 nome <- sample(nomi, 10000, replace=T)
 cognome <- sample(cognomi, 10000, replace=T)
 indirizzo <- sample(indirizzi, 10000, replace=T)
@@ -165,22 +165,38 @@ ausiliario_df <- data.frame(
                             indirizzo=sample(v_indirizzi, 100, replace=T),
                             cognome=sample(v_cognomi, 100, replace=T),
                             nome=sample(v_nomi, 100, replace=T),
-                            tipopersonale=sample(c("assistente medico", "amministrativo", "entrambi"),100,replace=T))
+                            tipo=sample(c("assistente medico", "amministrativo", "entrambi"),100,replace=T))
 
 mesi_seq <-seq(as.Date("2000/1/1"), as.Date("2021/1/1"), "month")
 storico_df <- data.frame(mese=mesi_seq)
 
+mesi_au = c()
+personale_au = c()
+for(mese in mesi_seq) {
+    n <- sample(1:100, 1)
+    persone <- sample(codici_personale_ausiliario, n, replace=F)
+    personale_au <- append(personale_au, persone)
+    mesi_au <- append(mesi_au, rep(as.Date(mese, origin="1970/01/01"), n))
+}
 ausiliarioRegistra_df <- data.frame(
-                                    mese=sample(mesi_seq, 1000, replace=T),
-                                    codicepersonale=sample(codici_personale_ausiliario, 1000, replace=T),
-                                    ordinario=sample(1:48, 1000, replace=T),
-                                    straordinario=sample(1:24, 1000, replace=T))
+                                    mese=mesi_au,
+                                    codicepersonale=personale_au,
+                                    ordinario=sample(20:160, length(mesi_au), replace=T),
+                                    straordinario=sample(0:24, length(mesi_au), replace=T))
 
+mesi_md = c()
+medici_st = c()
+for(mese in mesi_seq) {
+    n <- sample(1:100, 1)
+    persone <- sample(codice_medico, n, replace=F)
+    medici_st <- append(medici_st, persone)
+    mesi_md <- append(mesi_md, rep(as.Date(mese, origin="1970/01/01"), n))
+}
 medicoRegistra_df <- data.frame(
-                                mese=sample(mesi_seq, 1000, replace=T),
-                                codicemedico=sample(codice_medico, 1000, replace=T),
-                                ordinario=sample(1:48, 1000, replace=T),
-                                straordinario=sample(1:24, 1000, replace=T))
+                                mese=mesi_md,
+                                codicemedico=medici_st,
+                                ordinario=sample(20:160, length(mesi_md), replace=T),
+                                straordinario=sample(0:24, length(mesi_md), replace=T))
 
 luoghi <- c("gilda dei medici", "associazione dentisti", "sultanato ortopedici", "Tema dei chirurghi", "corporazione neuroscienziati")
 denominazione <- c("protesi e installazione", "Logopedia","Geriatria applicata", "i bisogni dei pazienti", "fisioterapia", "salute pubblica")
@@ -191,19 +207,20 @@ corsi_di_aggiornamento_df <- data.frame(
                                         data=sample(giorni_seq, 10, replace=T))
 	
 
-medicoSeduta_df <- data.frame(
-							codicemedico=codice_medico,
-							data=data_seduta,
-							ora=ora,
-							cf=v_cf
-							)
+#edicoSeduta_df <- data.frame(
+#   						codicemedico=codice_medico,
+#   						data=data_seduta,
+#   						ora=ora,
+#   						cf=v_cf
+#   						)
+#
+#usiliarioSeduta_df <- data.frame(
+#   						codicepersonale=codici_personale_ausiliario,
+#   						data=data_seduta,
+#   						ora=ora,
+#   						cf=v_cf
+#   						)
 
-ausiliarioSeduta_df <- data.frame(
-							codicepersonale=codici_personale_ausiliario,
-							data=data_seduta,
-							ora=ora,
-							cf=v_cf
-							)
 							
 qualifiche <- c("diploma di ragioneria", "tecnico cardiologo", "laurea infermieristica", "B2 inglese", "C1 inglese", "B2 copto")
 
@@ -211,13 +228,30 @@ qualifica_df <- data.frame(
 							tipodiqualifica=qualifiche
 )
 
+spec_md = c()
+medici_sp = c()
+for(medico in codice_medico) {
+    n <- sample(1:4, 1)
+    spec <- sample(tipodispecializzazione, n, replace=F)
+    spec_md <- append(spec_md, spec)
+    medici_sp <- append(medici_sp, rep(medico, n))
+}
 specializzare_df <- data.frame(
-							codicemedico=sample(codice_medico, 100, replace=T),
-							tipodispecializzazione=sample(tipodispecializzazione, 100, replace=T)
+							codicemedico=medici_sp,
+							tipodispecializzazione=spec_md
 							)
+
+pers_qu = c()
+qual_au = c()
+for(pers in codici_personale_ausiliario) {
+    n <- sample(1:4, 1)
+    qual <- sample(qualifiche, n, replace=F)
+    qual_au <- append(qual_au, qual)
+    pers_qu <- append(pers_qu, rep(pers, n))
+}
 qualificare_df <- data.frame(
-						codicePersonale=codici_personale_ausiliario,
-						tipoDiQualifica=sample(qualifiche, 100, replace=T)
+						codicepersonale=pers_qu,
+						tipodiqualifica=qual_au
 						)
 
 
@@ -226,18 +260,15 @@ qualificare_df <- data.frame(
 
 
 
-dbWriteTable( con,name=c("studio", "medico"),value=medici_int_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "medico"),value=medici_ext_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "membropersonaleausiliario"),value=ausiliario_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "storico"),value=storico_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "ausiliarioregistra"),value=ausiliarioRegistra_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "medicoregistra"),value=medicoRegistra_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "corsodiaggiornamento"),value=corsi_di_aggiornamento_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "medicoseduta"),value=medicoSeduta_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "ausiliarioseduta"),value=ausiliarioSeduta_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "qualifica"),value=qualifica_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "qualificare"),value=qualificare_df,append=T,row.names=F)
-dbWriteTable( con,name=c("studio", "specializzare"),value=specializzare_df,append=T,row.names=F)
-
-
-
+dbWriteTable( con,name=c("medico"),value=medici_ext_df,append=T,row.names=F)
+dbWriteTable( con,name=c("medico"),value=medici_int_df,append=T,row.names=F)
+dbWriteTable( con,name=c("membropersonaleausiliario"),value=ausiliario_df,append=T,row.names=F)
+dbWriteTable( con,name=c("storico"),value=storico_df,append=T,row.names=F)
+dbWriteTable( con,name=c("ausiliarioregistra"),value=ausiliarioRegistra_df,append=T,row.names=F)
+dbWriteTable( con,name=c("medicoregistra"),value=medicoRegistra_df,append=T,row.names=F)
+dbWriteTable( con,name=c("corsodiaggiornamento"),value=corsi_di_aggiornamento_df,append=T,row.names=F)
+#dbWriteTable( con,name=c("medicoseduta"),value=medicoSeduta_df,append=T,row.names=F)
+#dbWriteTable( con,name=c("ausiliarioseduta"),value=ausiliarioSeduta_df,append=T,row.names=F)
+dbWriteTable( con,name=c("qualifica"),value=qualifica_df,append=T,row.names=F)
+dbWriteTable( con,name=c("qualificare"),value=qualificare_df,append=T,row.names=F)
+dbWriteTable( con,name=c("specializzare"),value=specializzare_df,append=T,row.names=F)

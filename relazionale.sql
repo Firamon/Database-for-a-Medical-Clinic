@@ -53,36 +53,36 @@ create table ausiliarioRegistra(
     constraint ausiliario_registra_pk primary key (mese,codicePersonale));
 
 create table corsoDiAggiornamento(
-    luogo varchar(20) not null,
-    denominazione varchar(20) not null,
+    luogo varchar(50) not null,
+    denominazione varchar(200) not null,
     data date not null,
     constraint corso_pk primary key (luogo, denominazione, data));
 
 create table partecipa(
     codicePersonale varchar(20) not null,
-    luogo varchar(20) not null,
-    denominazione varchar(20) not null,
+    luogo varchar(50) not null,
+    denominazione varchar(200) not null,
     data date not null,
     constraint fk_ausiliario_partecipa foreign key (codicePersonale) references membroPersonaleAusiliario (codicePersonale) on delete cascade on update cascade,
     constraint fk_corso_partecipa foreign key (luogo,denominazione,data) references corsoDiAggiornamento (luogo,denominazione,data) on delete cascade on update cascade,
     constraint partecipa_pk primary key (codicePersonale,luogo,denominazione,data));
 
 create table qualifica(
-    tipoDiQualifica varchar(20) primary key);
+    tipoDiQualifica varchar(50) primary key);
 
 create table qualificare(
     codicePersonale varchar(20) not null,
-    tipoDiQualifica varchar(20) not null,
+    tipoDiQualifica varchar(50) not null,
     constraint fk_ausiliario_qualificare foreign key (codicePersonale) references membroPersonaleAusiliario (codicePersonale) on delete cascade on update cascade,
     constraint fk_qualifica_qualificare foreign key (tipoDiQualifica) references qualifica (tipoDiQualifica) on delete cascade on update cascade,
     constraint qualificare_pk primary key (codicePersonale,tipoDiQualifica));
 
 create table specializzazione(
-    tipoDiSpecializzazione varchar(20) primary key);
+    tipoDiSpecializzazione varchar(50) primary key);
 
 create table specializzare(
     codiceMedico varchar(20) not null,
-    tipoDiSpecializzazione varchar(20) not null,
+    tipoDiSpecializzazione varchar(50) not null,
     constraint fk_medico_specializzare foreign key (codiceMedico) references medico (codiceMedico) on delete cascade on update cascade,
     constraint fk_specializzazione_specializzare foreign key (tipoDiSpecializzazione) references specializzazione (tipoDiSpecializzazione) on delete cascade on update cascade,
     constraint specializzare_pk primary key (codiceMedico,tipoDiSpecializzazione));
@@ -106,7 +106,7 @@ create table terapiaProlungata(
     cf char(16),
     dataDiFine date,
     tipoDiTerapia tipoTerapia not null,
-    tipoDiSpecializzazione varchar(20),
+    tipoDiSpecializzazione varchar(50),
     numeroAppuntamenti int,
     constraint data_check check ((dataDiFine is null and tipoDiTerapia = 'aperta') or (dataDiFine >= dataDiInizio and tipoDiTerapia = 'chiusa')),
     constraint terapiaProlungata_pk primary key (dataDiInizio,cf,tipoDiSpecializzazione),
