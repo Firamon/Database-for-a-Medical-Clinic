@@ -9,7 +9,7 @@ con <- dbConnect(drv,
 # Settiamo lo schema così non serve indicarlo
 dbGetQuery(con, "set search_path to studio")
 # Campione di terapie associate ai pazienti
-terapie_pazienti <- dbGetQuery(con, "select * from paziente natural join terapiaprolungata")
+terapie <- dbGetQuery(con, "select * from terapiaprolungata")
 
 # Creo da 1 a 10 appuntamenti per ogni terapia
 ora_ap = c()
@@ -17,8 +17,8 @@ data_ap = c()
 datadiinizio = c()
 cf = c()
 tipodispecializzazione = c()
-for(i in 1:nrow(terapie_pazienti)) {
-    ter <- terapie_pazienti[i,]
+for(i in 1:nrow(terapie)) {
+    ter <- terapie[i,]
     n <- sample(1:10, 1)
     if(ter$tipoditerapia == "aperta") {
         # Scelgo la data (senza ripetizioni) tra quella di inizio ed una futura
@@ -45,7 +45,7 @@ for(i in 1:nrow(terapie_pazienti)) {
     data_ap <- append(data_ap, date_ap)
     datadiinizio <- append(datadiinizio, rep(ter$datadiinizio, n))
     cf <- append(cf, rep(ter$cf, n))
-    tipodispecializzazione <- append(tipodispecializzazione, rep(ter$tipodispecializzazione, n))
+    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(ter$tipodispecializzazione), n))
 }
 
 # Creo e carico il dataframe
@@ -76,39 +76,35 @@ accettato <- data.frame(
 dbWriteTable(con, name=c("accettato"), value=accettato, append=T, row.names=F)
 
 # Campione di specializzazioni
-specializzazione <- dbGetQuery(con, "select * from specializzazione")
+specializzare <- dbGetQuery(con, "select * from specializzare")
 
-medici_specializzati = new.env()
-for(i in 1:nrow(specializzazione)) {
-    spec = specializzazione[i,]
-    medici_specializzati[[spec]] <- dbGetQuery(con, "select codicemedico from specializzare")
+codicemedico = c()
+data_ac = c()
+datadiinizio = c()
+cf = c()
+tipodispecializzazione = c()
+for(i in 1:nrow(accettato)) {
+    app = accettato[i,]
+    n = sample(1:3, 1)
+    medici <- sample(
+                     specializzare[specializzare$tipodispecializzazione == app$tipodispecializzazione,]$codicemedico,
+                     n, replace=F)
+    codicemedico <- append(codicemedico, medici)
+    data_ac <- append(data_ac, rep(app$data, n))
+    datadiinizio <- append(datadiinizio, rep(app$datadiinizio, n))
+    cf <- append(cf, rep(paste(app$cf), n))
+    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(app$tipodispecializzazione), n))
 }
 
-#   codicemedico = c()
-#   data_ac = c()
-#   datadiinizio = c()
-#   cf = c()
-#   tipodispecializzazione = c()
-#   for(i in 1:nrow(accettato)) {
-#       app = accettato[i,]
-#       n = sample(1:3, 1)
-#       medici <- sample(medici_specializzati[[app$tipodispecializzazione]], n, replace=F)
-#       codicemedico <- append(codicemedico, medici)
-#       data_ac <- append(data_ac, rep(app$data, n))
-#       datadiinizio <- append(datadiinizio, rep(app$datadiinizio, n))
-#       cf <- append(cf, rep(app$cf, n))
-#       tipodispecializzazione <- append(tipodispecializzazione, rep(app$tipodispecializzazione, n))
-#   }
-#
-#   # Creo e carico il dataframe
-#   medicoappuntamento <- data.frame(
-#                                    cf = cf,
-#                                    data = data_ac,
-#                                    codicemedico = codicemedico,
-#                                    datadiinizio = datadiinizio,
-#                                    tipodispecializzazione = tipodispecializzazione)
-#
-#   dbWriteTable(con, name=c("medicoappuntamento"), value=medicoappuntamento, append=T, row.names=F)
+# Creo e carico il dataframe
+medicoappuntamento <- data.frame(
+                                 cf = cf,
+                                 data = data_ac,
+                                 codicemedico = codicemedico,
+                                 datadiinizio = datadiinizio,
+                                 tipodispecializzazione = tipodispecializzazione)
+
+dbWriteTable(con, name=c("medicoappuntamento"), value=medicoappuntamento, append=T, row.names=F)
 
 # Campione di medici
 personale <- dbGetQuery(con, "select * from membropersonaleausiliario")
@@ -125,8 +121,8 @@ for(i in 1:nrow(accettato)) {
     codicepersonale <- append(codicepersonale, medici)
     data_ac <- append(data_ac, rep(app$data, n))
     datadiinizio <- append(datadiinizio, rep(app$datadiinizio, n))
-    cf <- append(cf, rep(app$cf, n))
-    tipodispecializzazione <- append(tipodispecializzazione, rep(app$tipodispecializzazione, n))
+    cf <- append(cf, rep(paste(app$cf), n))
+    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(app$tipodispecializzazione), n))
 }
 
 # Creo e carico il dataframe

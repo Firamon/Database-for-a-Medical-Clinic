@@ -96,8 +96,7 @@ create table paziente(
     indirizzo varchar(50) not null,
     recapitoTelefonico decimal(15,0) not null,
     dataDiNascita date not null,
-    tipo tipoPaziente not null,
-    eta int not null);
+    tipo tipoPaziente not null);
 
 create type tipoTerapia as enum ('aperta', 'chiusa');
 
@@ -107,7 +106,6 @@ create table terapiaProlungata(
     dataDiFine date,
     tipoDiTerapia tipoTerapia not null,
     tipoDiSpecializzazione varchar(50),
-    numeroAppuntamenti int,
     constraint data_check check ((dataDiFine is null and tipoDiTerapia = 'aperta') or (dataDiFine >= dataDiInizio and tipoDiTerapia = 'chiusa')),
     constraint terapiaProlungata_pk primary key (dataDiInizio,cf,tipoDiSpecializzazione),
     constraint fk_paziente_terapia foreign key (cf) references paziente (cf) on delete no action on update no action,
@@ -341,3 +339,11 @@ create index nome_paziente on paziente (nome);
 create index nome_medico on medico (nome);
 create index cognome_paziente on paziente (cognome);
 create index cognome_medico on medico (cognome);
+
+create view paziente_eta as
+select *, age(datadinascita) eta from paziente;
+
+create view terapia_naccettati as
+select dataDiInizio, cf, dataDiFine, tipoDiTerapia, tipoDiSpecializzazione, count(*) nAppuntamentiAccettati
+from terapiaprolungata natural join accettato
+group by dataDiInizio, cf, dataDiFine, tipoDiTerapia, tipoDiSpecializzazione;

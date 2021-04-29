@@ -25,7 +25,6 @@ cognome <- sample(cognomi, 10000, replace=T)
 indirizzo <- sample(indirizzi, 10000, replace=T)
 recapitotelefonico <- sample(1:10000000000, 10000, replace=T)
 datadinascita <- sample(dat, 10000)
-eta <- sample(1:99, 10000, replace=T)
 
 # Seduta
 cf_seduta <- sample(cf, 20000, replace=T)
@@ -40,7 +39,6 @@ colnames(aperte) <- c("cf", "spec")
 # Terapia prolungata
 cf_terapia <- sample(cf, 5000, replace=T)
 tipodispecializzazione_terapia <- sample(tipodispecializzazione, 5000, replace=T)
-numeroappuntamenti <- 0
 datadiinizio <- sample(dat, 5000, replace=T)
 datadifine <- sample(dat, 5000, replace=T)
 tipoditerapia <- c()
@@ -96,7 +94,6 @@ paziente <- data.frame( cf = cf,
                        indirizzo = indirizzo, 
                        recapitotelefonico = recapitotelefonico, 
                        datadinascita = datadinascita, 
-                       eta = eta, 
                        tipo = tipo
 )
 
@@ -105,8 +102,7 @@ terapiaprolungata <- data.frame(
                                 cf = cf_terapia,
                                 datadifine =  datadifine,
                                 tipoditerapia = tipoditerapia,
-                                tipodispecializzazione = tipodispecializzazione_terapia,
-                                numeroappuntamenti = numeroappuntamenti
+                                tipodispecializzazione = tipodispecializzazione_terapia
 )
 
 seduta <- data.frame(
@@ -130,7 +126,7 @@ dbWriteTable(con, name = c("seduta"), value = seduta, row.names=F, append = T)
 v_nomi <- readLines("nomi.txt", warn=FALSE)
 v_cognomi <- readLines("cognomi.txt", warn=FALSE)
 v_indirizzi <- readLines("indirizzi.csv", warn=FALSE)
-v_cf <- readLines("codice_fiscale.csv", warn=FALSE)
+v_cf <- readLines("cf.txt", warn=FALSE)
 
 codice_int_medico <- paste(sample(1:10000, 50, replace=F))
 codice_ext_medico <- paste(sample(10001:20000, 50, replace=F))
@@ -207,19 +203,19 @@ corsi_di_aggiornamento_df <- data.frame(
                                         data=sample(giorni_seq, 10, replace=T))
 	
 
-#edicoSeduta_df <- data.frame(
-#   						codicemedico=codice_medico,
-#   						data=data_seduta,
-#   						ora=ora,
-#   						cf=v_cf
-#   						)
-#
-#usiliarioSeduta_df <- data.frame(
-#   						codicepersonale=codici_personale_ausiliario,
-#   						data=data_seduta,
-#   						ora=ora,
-#   						cf=v_cf
-#   						)
+medicoSeduta_df <- data.frame(
+   						codicemedico=codice_medico,
+  						data=data_seduta,
+   						ora=ora,
+   						cf=cf_seduta
+   						)
+
+ausiliarioSeduta_df <- data.frame(
+   						codicepersonale=codici_personale_ausiliario,
+  						data=data_seduta,
+   						ora=ora,
+   						cf=cf_seduta
+   						)
 
 							
 qualifiche <- c("diploma di ragioneria", "tecnico cardiologo", "laurea infermieristica", "B2 inglese", "C1 inglese", "B2 copto")
@@ -267,8 +263,136 @@ dbWriteTable( con,name=c("storico"),value=storico_df,append=T,row.names=F)
 dbWriteTable( con,name=c("ausiliarioregistra"),value=ausiliarioRegistra_df,append=T,row.names=F)
 dbWriteTable( con,name=c("medicoregistra"),value=medicoRegistra_df,append=T,row.names=F)
 dbWriteTable( con,name=c("corsodiaggiornamento"),value=corsi_di_aggiornamento_df,append=T,row.names=F)
-#dbWriteTable( con,name=c("medicoseduta"),value=medicoSeduta_df,append=T,row.names=F)
-#dbWriteTable( con,name=c("ausiliarioseduta"),value=ausiliarioSeduta_df,append=T,row.names=F)
+dbWriteTable( con,name=c("ausiliarioseduta"),value=ausiliarioSeduta_df,append=T,row.names=F)
 dbWriteTable( con,name=c("qualifica"),value=qualifica_df,append=T,row.names=F)
+dbWriteTable( con,name=c("medicoseduta"),value=medicoSeduta_df,append=T,row.names=F)
 dbWriteTable( con,name=c("qualificare"),value=qualificare_df,append=T,row.names=F)
 dbWriteTable( con,name=c("specializzare"),value=specializzare_df,append=T,row.names=F)
+
+
+# Campione di terapie associate ai pazienti
+terapie <- dbGetQuery(con, "select * from terapiaprolungata")
+
+# Creo da 1 a 10 appuntamenti per ogni terapia
+ora_ap = c()
+data_ap = c()
+datadiinizio = c()
+cf = c()
+tipodispecializzazione = c()
+for(i in 1:nrow(terapie)) {
+    ter <- terapie[i,]
+    n <- sample(1:10, 1)
+    if(ter$tipoditerapia == "aperta") {
+        # Scelgo la data (senza ripetizioni) tra quella di inizio ed una futura
+        date_ap <- sample(
+                      seq(
+                          as.Date(ter$datadiinizio),
+                          as.Date("2022/12/31"),
+                          by="day"),
+                      n, replace=F)
+    } else {
+        # Non posso avere più appuntamenti che giorni di terapia
+        n <- min(n, ter$datadifine - ter$datadiinizio + 1)
+        # Scelgo la data (senza ripetizioni) tra quella di inizio e quella di fine
+        date_ap <- sample(
+                      seq(
+                          as.Date(ter$datadiinizio),
+                          as.Date(ter$datadifine),
+                          by="day"),
+                      n, replace=F)
+    }
+    # Append di tutti i blocchi di dati
+    orari <- sample(1:24, n, replace = T)
+    ora_ap <- append(ora_ap, orari)
+    data_ap <- append(data_ap, date_ap)
+    datadiinizio <- append(datadiinizio, rep(ter$datadiinizio, n))
+    cf <- append(cf, rep(ter$cf, n))
+    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(ter$tipodispecializzazione), n))
+}
+
+# Creo e carico il dataframe
+appuntamento <- data.frame(
+                           datadiinizio = datadiinizio,
+                           cf = cf,
+                           tipodispecializzazione = tipodispecializzazione,
+                           data = data_ap,
+                           ora = ora_ap)
+
+
+dbWriteTable(con, name=c("appuntamento"), value=appuntamento, append=T, row.names=F)
+
+# Campione di appuntamenti passati
+appuntamenti_passati <- dbGetQuery(con, "select * from appuntamento where data <= CURRENT_DATE")
+passati = nrow(appuntamenti_passati)
+accettati <- appuntamenti_passati[sample(1:passati, passati / 2, replace=F),]
+ambulatorio <- sample(LETTERS, passati / 2, replace=T)
+
+# Creo e carico il dataframe
+accettato <- data.frame(
+                        ambulatorio = ambulatorio,
+                        data = accettati$data,
+                        datadiinizio = accettati$datadiinizio,
+                        tipodispecializzazione = accettati$tipodispecializzazione,
+                        cf = accettati$cf)
+
+dbWriteTable(con, name=c("accettato"), value=accettato, append=T, row.names=F)
+
+# Campione di specializzazioni
+specializzare <- dbGetQuery(con, "select * from specializzare")
+
+codicemedico = c()
+data_ac = c()
+datadiinizio = c()
+cf = c()
+tipodispecializzazione = c()
+for(i in 1:nrow(accettato)) {
+    app = accettato[i,]
+    n = sample(1:3, 1)
+    medici <- sample(
+                     specializzare[specializzare$tipodispecializzazione == app$tipodispecializzazione,]$codicemedico,
+                     n, replace=F)
+    codicemedico <- append(codicemedico, medici)
+    data_ac <- append(data_ac, rep(app$data, n))
+    datadiinizio <- append(datadiinizio, rep(app$datadiinizio, n))
+    cf <- append(cf, rep(paste(app$cf), n))
+    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(app$tipodispecializzazione), n))
+}
+
+# Creo e carico il dataframe
+medicoappuntamento <- data.frame(
+                                 cf = cf,
+                                 data = data_ac,
+                                 codicemedico = codicemedico,
+                                 datadiinizio = datadiinizio,
+                                 tipodispecializzazione = tipodispecializzazione)
+
+dbWriteTable(con, name=c("medicoappuntamento"), value=medicoappuntamento, append=T, row.names=F)
+
+# Campione di medici
+personale <- dbGetQuery(con, "select * from membropersonaleausiliario")
+
+codicepersonale = c()
+data_ac = c()
+datadiinizio = c()
+cf = c()
+tipodispecializzazione = c()
+for(i in 1:nrow(accettato)) {
+    app = accettato[i,]
+    n = sample(1:3, 1)
+    medici <- sample(personale$codicepersonale, n, replace=F)
+    codicepersonale <- append(codicepersonale, medici)
+    data_ac <- append(data_ac, rep(app$data, n))
+    datadiinizio <- append(datadiinizio, rep(app$datadiinizio, n))
+    cf <- append(cf, rep(paste(app$cf), n))
+    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(app$tipodispecializzazione), n))
+}
+
+# Creo e carico il dataframe
+ausiliarioappuntamento <- data.frame(
+                                 cf = cf,
+                                 data = data_ac,
+                                 codicepersonale = codicepersonale,
+                                 datadiinizio = datadiinizio,
+                                 tipodispecializzazione = tipodispecializzazione)
+
+dbWriteTable(con, name=c("ausiliarioappuntamento"), value=ausiliarioappuntamento, append=T, row.names=F)
