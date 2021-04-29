@@ -1,9 +1,21 @@
-Bisogna popolare con R le seguenti tabelle:
+Fare l'analisi in R.
 
-Massimo: medicoSeduta, qualifica, qualificare, specializzare, ausiliarioSeduta
-Alvise: appuntamenti, accettato, programmato, medicoAppuntamento, ausiliarioAppuntamento
+Massimo:
+bisogna popolare la relazione partecipa.
 
-N.B: usa le query per prendere i dati dal database da cui dipendono le tabelle che scrivi
-
-problema: dobbiamo usare lo stesso cf, ho creato un file di CF casuali
+La relazione:
+Il prof vuole principalmente la relazione, non serve necessariamente il codice.
+Nella relazione vuole:
+progettazione concettuale, logica, fisica.
+Puoi includere frammenti di codice usati per la creazione delle tabelle, per le query, per le viste, per i trigger. Si aspetta 2/3 trigger e 3/4 query rilevanti.
+Puoi anche allegare il codice.
+Lui si aspetta la relazione che si concentri sulla fase di progettazione.
+Nella relazione analisi in R e frammenti di codice in R.
+La relazione deve avere circa 20-30 pagine.
+Nella relazione
+1) requisiti e specifiche;
+2) relazionale e ER
+3) progettazione fisica (indici)
+4) popolazione db, 2/3 trigger, 3/4 query.
+5) analisi dati R
 
