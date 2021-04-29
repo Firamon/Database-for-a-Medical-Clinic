@@ -1,20 +1,20 @@
 library("RPostgreSQL")
 drv <- dbDriver("PostgreSQL")
 con <- dbConnect(drv,
-	dbname="studiomedico",
+	dbname="ospedale",
 	host="localhost",
 	port=5432,
 	user="postgres",
-	password="postgres")
+	password="Maximo98--")
 # Settiamo lo schema così non serve indicarlo
 dbGetQuery(con, "set search_path to studio")
 # Campioni
-nomi <- readLines("nomi.txt")
-cognomi <- readLines("cognomi.txt")
+nomi <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/nomi.txt")
+cognomi <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/cognomi.txt")
 dat <- seq(as.Date('1922/01/01'), as.Date('2021/01/01'), by="day")
-indirizzi <- readLines("indirizzi.csv")
+indirizzi <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/indirizzi.csv")
 moneta <- c("testa", "croce")
-cf <- readLines("cf.txt")
+cf <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/cf.txt")
 
 # Tabella di specializzazioni
 tipodispecializzazione <- c("Cardiologia", "Pneumologia", "Neurologia", "Dermatologia", "Nefrologia", "Infettivologia", "Medicina Interna", "Chirurgia generale", "Fisiatria", "Geriatria", "Odontoiatria")
@@ -127,10 +127,10 @@ dbWriteTable(con, name = c("seduta"), value = seduta, row.names=F, append = T)
 
 
 
-v_nomi <- readLines("nomi.txt", warn=FALSE)
-v_cognomi <- readLines("cognomi.txt", warn=FALSE)
-v_indirizzi <- readLines("indirizzi.csv", warn=FALSE)
-v_cf <- readLines("codice_fiscale.csv", warn=FALSE)
+v_nomi <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/nomi.txt", warn=FALSE)
+v_cognomi <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/cognomi.txt", warn=FALSE)
+v_indirizzi <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/indirizzi.csv", warn=FALSE)
+v_cf <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/cf.txt", warn=FALSE)
 
 codice_int_medico <- paste(sample(1:10000, 50, replace=F))
 codice_ext_medico <- paste(sample(10001:20000, 50, replace=F))
@@ -157,7 +157,7 @@ medici_ext_df <- data.frame(
                             percentualeincassi=NA,
                             tariffaoraria=sample(30:120, 50, replace=T))
 
-v_codes <- readLines("8char_codes.csv", warn=FALSE)
+v_codes <- readLines("C:/Users/grand/Desktop/Programming/Database-Project-2020/files di popolazione del database/8char_codes.csv", warn=FALSE)
 codici_personale_ausiliario <- sample(v_codes, 100, replace=F)
 ausiliario_df <- data.frame(
                             codicepersonale=codici_personale_ausiliario,
@@ -207,19 +207,19 @@ corsi_di_aggiornamento_df <- data.frame(
                                         data=sample(giorni_seq, 10, replace=T))
 	
 
-#edicoSeduta_df <- data.frame(
-#   						codicemedico=codice_medico,
-#   						data=data_seduta,
-#   						ora=ora,
-#   						cf=v_cf
-#   						)
-#
-#usiliarioSeduta_df <- data.frame(
-#   						codicepersonale=codici_personale_ausiliario,
-#   						data=data_seduta,
-#   						ora=ora,
-#   						cf=v_cf
-#   						)
+medicoSeduta_df <- data.frame(
+   						codicemedico=codice_medico,
+  						data=data_seduta,
+   						ora=ora,
+   						cf=cf_seduta
+   						)
+
+ausiliarioSeduta_df <- data.frame(
+   						codicepersonale=codici_personale_ausiliario,
+  						data=data_seduta,
+   						ora=ora,
+   						cf=cf_seduta
+   						)
 
 							
 qualifiche <- c("diploma di ragioneria", "tecnico cardiologo", "laurea infermieristica", "B2 inglese", "C1 inglese", "B2 copto")
@@ -267,8 +267,8 @@ dbWriteTable( con,name=c("storico"),value=storico_df,append=T,row.names=F)
 dbWriteTable( con,name=c("ausiliarioregistra"),value=ausiliarioRegistra_df,append=T,row.names=F)
 dbWriteTable( con,name=c("medicoregistra"),value=medicoRegistra_df,append=T,row.names=F)
 dbWriteTable( con,name=c("corsodiaggiornamento"),value=corsi_di_aggiornamento_df,append=T,row.names=F)
-#dbWriteTable( con,name=c("medicoseduta"),value=medicoSeduta_df,append=T,row.names=F)
-#dbWriteTable( con,name=c("ausiliarioseduta"),value=ausiliarioSeduta_df,append=T,row.names=F)
+dbWriteTable( con,name=c("medicoseduta"),value=medicoSeduta_df,append=T,row.names=F)
+dbWriteTable( con,name=c("ausiliarioseduta"),value=ausiliarioSeduta_df,append=T,row.names=F)
 dbWriteTable( con,name=c("qualifica"),value=qualifica_df,append=T,row.names=F)
 dbWriteTable( con,name=c("qualificare"),value=qualificare_df,append=T,row.names=F)
 dbWriteTable( con,name=c("specializzare"),value=specializzare_df,append=T,row.names=F)
