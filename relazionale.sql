@@ -59,7 +59,7 @@ create table corsoDiAggiornamento(
     constraint corso_pk primary key (luogo, denominazione, data));
 
 create table partecipa(
-    codicePersonale varchar(20) not null,
+    codicePersonale char(8) not null,
     luogo varchar(50) not null,
     denominazione varchar(200) not null,
     data date not null,
@@ -71,7 +71,7 @@ create table qualifica(
     tipoDiQualifica varchar(50) primary key);
 
 create table qualificare(
-    codicePersonale varchar(20) not null,
+    codicePersonale char(8) not null,
     tipoDiQualifica varchar(50) not null,
     constraint fk_ausiliario_qualificare foreign key (codicePersonale) references membroPersonaleAusiliario (codicePersonale) on delete cascade on update cascade,
     constraint fk_qualifica_qualificare foreign key (tipoDiQualifica) references qualifica (tipoDiQualifica) on delete cascade on update cascade,
@@ -81,7 +81,7 @@ create table specializzazione(
     tipoDiSpecializzazione varchar(50) primary key);
 
 create table specializzare(
-    codiceMedico varchar(20) not null,
+    codiceMedico char(8) not null,
     tipoDiSpecializzazione varchar(50) not null,
     constraint fk_medico_specializzare foreign key (codiceMedico) references medico (codiceMedico) on delete cascade on update cascade,
     constraint fk_specializzazione_specializzare foreign key (tipoDiSpecializzazione) references specializzazione (tipoDiSpecializzazione) on delete cascade on update cascade,
@@ -120,7 +120,7 @@ create table seduta(
     constraint fk_paziente_seduta foreign key (cf) references paziente (cf) on delete cascade on update no action);
 
 create table medicoSeduta(
-    codiceMedico varchar(20),
+    codiceMedico char(8),
     data date not null,
     ora int not null constraint validTime check (ora between 1 and 24),
     cf char(16),
@@ -129,7 +129,7 @@ create table medicoSeduta(
     constraint fk_medico_medico_seduta foreign key (codiceMedico) references medico (codiceMedico) on delete no action on update cascade);
 
 create table ausiliarioSeduta(
-    codicePersonale varchar(20),
+    codicePersonale char(8),
     data date not null,
     ora int not null constraint validTime check (ora between 1 and 24),
     cf char(16),
@@ -167,7 +167,7 @@ create table accettato(
     constraint fk_appuntamento_accettato foreign key (data,dataDiInizio,cf,tipoDiSpecializzazione) references appuntamento (data,dataDiInizio,cf,tipoDiSpecializzazione) on delete cascade on update cascade);
 
 create table medicoAppuntamento(
-    codiceMedico varchar(20),
+    codiceMedico char(8),
     data date not null,
     dataDiInizio date,
     cf char(16),
@@ -177,7 +177,7 @@ create table medicoAppuntamento(
     constraint fk_medico_medico_appuntamento foreign key (codiceMedico) references medico (codiceMedico) on delete no action on update cascade);
 
 create table ausiliarioAppuntamento(
-    codicePersonale varchar(20),
+    codicePersonale char(8),
     data date not null,
     dataDiInizio date,
     cf char(16),

@@ -1,3 +1,4 @@
+#!/usr/bin/env Rscript
 library("RPostgreSQL")
 drv <- dbDriver("PostgreSQL")
 con <- dbConnect(drv,

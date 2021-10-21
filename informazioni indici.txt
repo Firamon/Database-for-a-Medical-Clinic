@@ -7,5 +7,5 @@
 7) abbiamo aggiunto un indice su medicoAppuntamento(codiceMedico). (Es. Tutti gli appuntamenti in cui il medico ha partecipato)
 8) abbiamo aggiunto un indice su medicoSeduta(codiceMedico). (Es. Tutte le sedute a cui il medico ha partecipato)
 
-Non abbiamo messo un indice su programmato(dataDiInizio, cf, tipoDiSpecializzazione) perchè piccola, ovveroperchè, quando un appuntamento programmato è passato, un trigger lo sposta da programmato a accettato.
+Non abbiamo messo un indice su programmato(dataDiInizio, cf, tipoDiSpecializzazione) perchè piccola, ovveroperchè, quando un appuntamento programmato è passato, una segretaria lo sposta da programmato a accettato.
 Non abbiamo messo un indice su accettato(dataDiInizio, cf, tipoDiSpecializzazione) perchè è interrogata meno spesso.
