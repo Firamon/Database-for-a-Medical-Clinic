@@ -1,24 +1,24 @@
-\contentsline {section}{\numberline {1}Introduzione}{2}%
-\contentsline {section}{\numberline {2}Requisiti e Specifiche}{2}%
-\contentsline {subsection}{\numberline {2.1}Workflow e fase di specificazione}{2}%
-\contentsline {subsection}{\numberline {2.2}Glossario}{4}%
-\contentsline {subsection}{\numberline {2.3}Requisiti}{6}%
-\contentsline {subsection}{\numberline {2.4}Specifiche}{7}%
-\contentsline {section}{\numberline {3}ER e relazionale}{9}%
-\contentsline {subsection}{\numberline {3.1}ER}{9}%
-\contentsline {subsubsection}{\numberline {3.1.1}Stesura}{9}%
-\contentsline {subsubsection}{\numberline {3.1.2}Ristrutturazione}{9}%
-\contentsline {subsubsection}{\numberline {3.1.3}Analisi delle ridondanze}{9}%
-\contentsline {subsection}{\numberline {3.2}Relazionale}{9}%
-\contentsline {subsubsection}{\numberline {3.2.1}Traduzione}{9}%
-\contentsline {subsubsection}{\numberline {3.2.2}Validazione e forme normali}{9}%
-\contentsline {section}{\numberline {4}Progettazione fisica}{10}%
-\contentsline {subsection}{\numberline {4.1}Scelta degli indici}{10}%
-\contentsline {section}{\numberline {5}Alcuni Trigger e Query}{10}%
-\contentsline {subsection}{\numberline {5.1}Trigger}{10}%
-\contentsline {subsection}{\numberline {5.2}query}{10}%
-\contentsline {section}{\numberline {6}Popolazione ed analisi}{10}%
-\contentsline {subsection}{\numberline {6.1}Popolazione}{10}%
-\contentsline {subsubsection}{\numberline {6.1.1}Snippets}{10}%
-\contentsline {subsection}{\numberline {6.2}Analisi e grafici}{10}%
-\contentsline {section}{\numberline {7}Conclusioni}{11}%
+\contentsline {section}{\numberline {1}Introduzione}{2}{section.1}%
+\contentsline {section}{\numberline {2}Requisiti e Specifiche}{2}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Workflow e fase di specificazione}{2}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Glossario}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Requisiti}{6}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Specifiche}{7}{subsection.2.4}%
+\contentsline {section}{\numberline {3}ER e relazionale}{9}{section.3}%
+\contentsline {subsection}{\numberline {3.1}ER}{9}{subsection.3.1}%
+\contentsline {subsubsection}{\numberline {3.1.1}Stesura}{9}{subsubsection.3.1.1}%
+\contentsline {subsubsection}{\numberline {3.1.2}Ristrutturazione}{10}{subsubsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.3}Analisi delle ridondanze}{10}{subsubsection.3.1.3}%
+\contentsline {subsection}{\numberline {3.2}Relazionale}{10}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Traduzione}{10}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Validazione e forme normali}{10}{subsubsection.3.2.2}%
+\contentsline {section}{\numberline {4}Progettazione fisica}{10}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Scelta degli indici}{10}{subsection.4.1}%
+\contentsline {section}{\numberline {5}Alcuni Trigger e Query}{10}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Trigger}{10}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}query}{10}{subsection.5.2}%
+\contentsline {section}{\numberline {6}Popolazione ed analisi}{11}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Popolazione}{11}{subsection.6.1}%
+\contentsline {subsubsection}{\numberline {6.1.1}Snippets}{11}{subsubsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.2}Analisi e grafici}{11}{subsection.6.2}%
+\contentsline {section}{\numberline {7}Conclusioni}{11}{section.7}%

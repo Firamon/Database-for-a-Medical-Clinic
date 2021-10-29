@@ -1,0 +1,24 @@
+\BOOKMARK [1][-]{section.1}{Introduzione}{}% 1
+\BOOKMARK [1][-]{section.2}{Requisiti e Specifiche}{}% 2
+\BOOKMARK [2][-]{subsection.2.1}{Workflow e fase di specificazione}{section.2}% 3
+\BOOKMARK [2][-]{subsection.2.2}{Glossario}{section.2}% 4
+\BOOKMARK [2][-]{subsection.2.3}{Requisiti}{section.2}% 5
+\BOOKMARK [2][-]{subsection.2.4}{Specifiche}{section.2}% 6
+\BOOKMARK [1][-]{section.3}{ER e relazionale}{}% 7
+\BOOKMARK [2][-]{subsection.3.1}{ER}{section.3}% 8
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Stesura}{subsection.3.1}% 9
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Ristrutturazione}{subsection.3.1}% 10
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Analisi delle ridondanze}{subsection.3.1}% 11
+\BOOKMARK [2][-]{subsection.3.2}{Relazionale}{section.3}% 12
+\BOOKMARK [3][-]{subsubsection.3.2.1}{Traduzione}{subsection.3.2}% 13
+\BOOKMARK [3][-]{subsubsection.3.2.2}{Validazione e forme normali}{subsection.3.2}% 14
+\BOOKMARK [1][-]{section.4}{Progettazione fisica}{}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Scelta degli indici}{section.4}% 16
+\BOOKMARK [1][-]{section.5}{Alcuni Trigger e Query}{}% 17
+\BOOKMARK [2][-]{subsection.5.1}{Trigger}{section.5}% 18
+\BOOKMARK [2][-]{subsection.5.2}{query}{section.5}% 19
+\BOOKMARK [1][-]{section.6}{Popolazione ed analisi}{}% 20
+\BOOKMARK [2][-]{subsection.6.1}{Popolazione}{section.6}% 21
+\BOOKMARK [3][-]{subsubsection.6.1.1}{Snippets}{subsection.6.1}% 22
+\BOOKMARK [2][-]{subsection.6.2}{Analisi e grafici}{section.6}% 23
+\BOOKMARK [1][-]{section.7}{Conclusioni}{}% 24

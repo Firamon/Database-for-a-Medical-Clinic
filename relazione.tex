@@ -3,6 +3,7 @@
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{float}
+\usepackage{hyperref}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -154,7 +155,7 @@ Sullo stesso file ("Specifiche.docx") si trova anche la prima iterazione.
     \item Il paziente è identificato univocamente dal codice fiscale, ed è caratterizzato da nome, cognome, indirizzo, un unico recapito telefonico e dalla data di nascita. Il paziente è occasionale, regolare o entrambi. Il paziente regolare si sottopone ad una o più terapie prolungate aperte, mentre il paziente occasionale si sottopone ad una o più sedute. Il paziente è sia regolare che occasionale se ha almeno una terapia prolungata aperta e si sottopone a una seduta.
     \item Ogni seduta è caratterizzata dal paziente, da uno o più medici, da uno o più membri del personale ausiliario, dalla data, dall’ora, e dall’ambulatorio in cui si svolge la seduta.
     \item Ogni terapia prolungata è caratterizzata dal paziente, da uno specifico tipo di medico da una data di inizio; e da una data di fine (quest’ultima è inserita alla fine della terapia prolungata). Una terapia prolungata può essere aperta o chiusa, inizialmente è aperta e quando termina diventa chiusa. Ad un paziente in terapia prolungata aperta possono essere associati uno o più appuntamenti programmati, tra cui almeno uno programmato.
-    \item Ad una terapia prolungata chiusa possono essere associato appuntamenti accettati o appuntamenti saltati.
+    \item Ad una terapia prolungata chiusa possono essere associati appuntamenti accettati o appuntamenti saltati.
     \item Ogni appuntamento è caratterizzato dalla terapia prolungata, dalla data, l’ora e l’ambulatorio in cui si svolge. Un appuntamento può essere programmato, accettato o saltato.
     \begin{itemize}
         \item È programmato quando è fissato per una data e ora future.
@@ -170,8 +171,24 @@ Sullo stesso file ("Specifiche.docx") si trova anche la prima iterazione.
 
 \subsection{ER}
 (immagine ER).
+
 \subsubsection{Stesura}
+Per la stesura dell'ER abbiamo seguito un approccio misto di progettazione.
+Inizialmente abbiamo associato ad ogni punto delle specifiche, una entità, tranne che In
+alcuni casi particolari in cui un'entità era descritta da più punti (esempio: i primi tre punti
+descrivono due entità). Quindi ci siamo divisi le entità tra i membri del gruppo, ed 
+individualmente le abbiamo raffinate e messe in relazione tra di loro.
+
+Finito il lavoro individuale, abbiamo aggregato quanto prodotto individualmente in un unico ER 
+aggiungendo le relazioni tra le due parti, e raffinato ulteriormente le entità, in particolare
+i collegamenti tra le parti sviluppate individualmente. Abbiamo poi verificato, che l'ER rispettasse le specifiche,
+anche analizzando i cicli; ad esempio consideriamo il ciclo: Specializzazioni - terapia prolungata - appuntamento accettato 
+- Medico - Specializzazioni, detto che ad ogni terapia prolungata è associata una specializzazione, ed ogni medico può avere più
+specializzazioni (od anche nessuna), il medico che si occupa di un appuntamento, associato ad una terapia, deve essere specializzato
+\emph{almeno} nella stessa specializzazione associata alla terapia. Molti cicli non erano problematici,
+quelli che lo erano sono stati risolti con un trigger \ref{trig:trigger1}.
 \subsubsection{Ristrutturazione}
+In questa fase abbiamo risolto le specializzazioni, gli attributi composti (sviluppa poi).
 \subsubsection{Analisi delle ridondanze}
 tabellaAnalisi.xlsx
 
@@ -189,6 +206,7 @@ indici.sql
 
 \section{Alcuni Trigger e Query}
 \subsection{Trigger}
+\label{trig:trigger1}
 trigger.sql, codice + spiega il trigger
 \subsection{query}
 interrogazioni.sql, codice + spiega la query
