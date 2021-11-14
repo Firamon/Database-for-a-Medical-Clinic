@@ -115,7 +115,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
+            <width>125.0</width>
             <x>330.0</x>
             <y>609.0</y>
           </default>
@@ -124,7 +124,7 @@
           <default/>
           <double>330.0</double>
           <double>609.0</double>
-          <double>100.0</double>
+          <double>125.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -198,16 +198,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>422.0</x>
+            <width>185.0</width>
+            <x>385.0</x>
             <y>828.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>422.0</double>
+          <double>385.0</double>
           <double>828.0</double>
-          <double>100.0</double>
+          <double>185.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -281,16 +281,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>112.0</width>
-            <x>234.0</x>
+            <width>197.0</width>
+            <x>177.0</x>
             <y>823.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>234.0</double>
+          <double>177.0</double>
           <double>823.0</double>
-          <double>112.0</double>
+          <double>197.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -364,16 +364,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>132.0</width>
-            <x>1307.0</x>
+            <width>354.0</width>
+            <x>1295.0</x>
             <y>663.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1307.0</double>
+          <double>1295.0</double>
           <double>663.0</double>
-          <double>132.0</double>
+          <double>354.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -447,16 +447,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>1506.0</x>
-            <y>823.0</y>
+            <width>192.0</width>
+            <x>1525.0</x>
+            <y>825.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1506.0</double>
-          <double>823.0</double>
-          <double>100.0</double>
+          <double>1525.0</double>
+          <double>825.0</double>
+          <double>192.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -530,16 +530,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>1290.0</x>
+            <width>231.0</width>
+            <x>1266.0</x>
             <y>868.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1290.0</double>
+          <double>1266.0</double>
           <double>868.0</double>
-          <double>100.0</double>
+          <double>231.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -613,7 +613,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
+            <width>125.0</width>
             <x>1767.0</x>
             <y>689.0</y>
           </default>
@@ -622,7 +622,7 @@
           <default/>
           <double>1767.0</double>
           <double>689.0</double>
-          <double>100.0</double>
+          <double>125.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -696,16 +696,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>1867.0</x>
+            <width>148.0</width>
+            <x>1819.0</x>
             <y>907.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1867.0</double>
+          <double>1819.0</double>
           <double>907.0</double>
-          <double>100.0</double>
+          <double>148.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -862,16 +862,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>1520.0</x>
-            <y>1013.0</y>
+            <width>300.0</width>
+            <x>1490.0</x>
+            <y>949.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1520.0</double>
-          <double>1013.0</double>
-          <double>100.0</double>
+          <double>1490.0</double>
+          <double>949.0</double>
+          <double>300.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -1111,16 +1111,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>2126.0</x>
-            <y>425.0</y>
+            <width>236.0</width>
+            <x>2087.0</x>
+            <y>424.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2126.0</double>
-          <double>425.0</double>
-          <double>100.0</double>
+          <double>2087.0</double>
+          <double>424.0</double>
+          <double>236.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -1194,16 +1194,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>2197.0</x>
-            <y>211.0</y>
+            <width>205.0</width>
+            <x>2016.0</x>
+            <y>220.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2197.0</double>
-          <double>211.0</double>
-          <double>100.0</double>
+          <double>2016.0</double>
+          <double>220.0</double>
+          <double>205.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -1277,16 +1277,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>2336.0</x>
-            <y>291.0</y>
+            <width>170.0</width>
+            <x>2244.0</x>
+            <y>245.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2336.0</double>
-          <double>291.0</double>
-          <double>100.0</double>
+          <double>2244.0</double>
+          <double>245.0</double>
+          <double>170.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -1360,7 +1360,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
+            <width>199.0</width>
             <x>1540.0</x>
             <y>228.0</y>
           </default>
@@ -1369,7 +1369,7 @@
           <default/>
           <double>1540.0</double>
           <double>228.0</double>
-          <double>100.0</double>
+          <double>199.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -1443,7 +1443,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
+            <width>192.0</width>
             <x>1277.0</x>
             <y>107.0</y>
           </default>
@@ -1452,7 +1452,7 @@
           <default/>
           <double>1277.0</double>
           <double>107.0</double>
-          <double>100.0</double>
+          <double>192.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -1526,16 +1526,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>60.0</height>
-            <width>100.0</width>
-            <x>840.0</x>
+            <width>153.0</width>
+            <x>819.0</x>
             <y>313.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>840.0</double>
+          <double>819.0</double>
           <double>313.0</double>
-          <double>100.0</double>
+          <double>153.0</double>
           <double>60.0</double>
         </Bounds>
       </Bounds>
@@ -1694,16 +1694,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>70.0</height>
-            <width>130.0</width>
-            <x>609.0</x>
+            <width>159.0</width>
+            <x>580.0</x>
             <y>671.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>609.0</double>
+          <double>580.0</double>
           <double>671.0</double>
-          <double>130.0</double>
+          <double>159.0</double>
           <double>70.0</double>
         </Bounds>
       </Bounds>
@@ -1742,21 +1742,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
-          <RelationKey>Relation:AusiliarioRegistra</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Storico</ParticipantKey>
           <RelationKey>Relation:AusiliarioRegistra</RelationKey>
           <Description></Description>
@@ -1771,13 +1756,28 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
+        <Link>
+          <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
+          <RelationKey>Relation:AusiliarioRegistra</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
       </Links>
       <AutoLineup>false</AutoLineup>
       <Bounds class="Bounds" serialization="custom">
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>70.0</height>
-            <width>130.0</width>
+            <width>169.0</width>
             <x>1020.0</x>
             <y>671.0</y>
           </default>
@@ -1786,7 +1786,7 @@
           <default/>
           <double>1020.0</double>
           <double>671.0</double>
-          <double>130.0</double>
+          <double>169.0</double>
           <double>70.0</double>
         </Bounds>
       </Bounds>
@@ -1825,21 +1825,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Medico</ParticipantKey>
-          <RelationKey>Relation:MedicoSeduta</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:1 [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Seduta</ParticipantKey>
           <RelationKey>Relation:MedicoSeduta</RelationKey>
           <Description></Description>
@@ -1854,6 +1839,21 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
+        <Link>
+          <ParticipantKey>Entity:Medico</ParticipantKey>
+          <RelationKey>Relation:MedicoSeduta</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
       </Links>
       <AutoLineup>false</AutoLineup>
       <Bounds class="Bounds" serialization="custom">
@@ -1861,14 +1861,14 @@
           <default>
             <height>70.0</height>
             <width>130.0</width>
-            <x>608.0</x>
-            <y>902.0</y>
+            <x>622.0</x>
+            <y>881.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>608.0</double>
-          <double>902.0</double>
+          <double>622.0</double>
+          <double>881.0</double>
           <double>130.0</double>
           <double>70.0</double>
         </Bounds>
@@ -1908,21 +1908,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Seduta</ParticipantKey>
-          <RelationKey>Relation:AusiliarioSeduta</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:MembroPersonaleAusiliario</ParticipantKey>
           <RelationKey>Relation:AusiliarioSeduta</RelationKey>
           <Description></Description>
@@ -1937,22 +1922,37 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
+        <Link>
+          <ParticipantKey>Entity:Seduta</ParticipantKey>
+          <RelationKey>Relation:AusiliarioSeduta</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
       </Links>
       <AutoLineup>false</AutoLineup>
       <Bounds class="Bounds" serialization="custom">
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>70.0</height>
-            <width>130.0</width>
-            <x>1071.0</x>
-            <y>944.0</y>
+            <width>155.0</width>
+            <x>1031.0</x>
+            <y>924.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1071.0</double>
-          <double>944.0</double>
-          <double>130.0</double>
+          <double>1031.0</double>
+          <double>924.0</double>
+          <double>155.0</double>
           <double>70.0</double>
         </Bounds>
       </Bounds>
@@ -1991,21 +1991,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Seduta</ParticipantKey>
-          <RelationKey>Relation:Presenzia</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:1 [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Occasionale</ParticipantKey>
           <RelationKey>Relation:Presenzia</RelationKey>
           <Description></Description>
@@ -2016,6 +2001,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Seduta</ParticipantKey>
+          <RelationKey>Relation:Presenzia</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:1 [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -2074,21 +2074,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Paziente</ParticipantKey>
-          <RelationKey>Relation:Sottposto</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
-          <Cardinality>
-            <MinSS>0</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>0:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:TerapiaProlungata</ParticipantKey>
           <RelationKey>Relation:Sottposto</RelationKey>
           <Description></Description>
@@ -2099,6 +2084,21 @@
             <MinLS>1</MinLS>
             <MaxLS>-1</MaxLS>
             <KEY>1:1 [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
+        <Link>
+          <ParticipantKey>Entity:Paziente</ParticipantKey>
+          <RelationKey>Relation:Sottposto</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link[2]/Role"/>
+          <Cardinality>
+            <MinSS>0</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>0:M [1:M]</KEY>
             <PROCESSED>false</PROCESSED>
           </Cardinality>
           <PROCESSED>false</PROCESSED>
@@ -2275,16 +2275,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>70.0</height>
-            <width>130.0</width>
-            <x>993.0</x>
+            <width>226.0</width>
+            <x>982.0</x>
             <y>452.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>993.0</double>
+          <double>982.0</double>
           <double>452.0</double>
-          <double>130.0</double>
+          <double>226.0</double>
           <double>70.0</double>
         </Bounds>
       </Bounds>
@@ -2323,21 +2323,6 @@
       </Temporality>
       <Links>
         <Link>
-          <ParticipantKey>Entity:Accettato</ParticipantKey>
-          <RelationKey>Relation:MedicoAppuntamento</RelationKey>
-          <Description></Description>
-          <Role reference="../../../../Relation/Links/Link/Role"/>
-          <Cardinality>
-            <MinSS>1</MinSS>
-            <MaxSS>-1</MaxSS>
-            <MinLS>1</MinLS>
-            <MaxLS>-1</MaxLS>
-            <KEY>1:M [1:M]</KEY>
-            <PROCESSED>false</PROCESSED>
-          </Cardinality>
-          <PROCESSED>false</PROCESSED>
-        </Link>
-        <Link>
           <ParticipantKey>Entity:Medico</ParticipantKey>
           <RelationKey>Relation:MedicoAppuntamento</RelationKey>
           <Description></Description>
@@ -2352,22 +2337,37 @@
           </Cardinality>
           <PROCESSED>false</PROCESSED>
         </Link>
+        <Link>
+          <ParticipantKey>Entity:Accettato</ParticipantKey>
+          <RelationKey>Relation:MedicoAppuntamento</RelationKey>
+          <Description></Description>
+          <Role reference="../../../../Relation/Links/Link/Role"/>
+          <Cardinality>
+            <MinSS>1</MinSS>
+            <MaxSS>-1</MaxSS>
+            <MinLS>1</MinLS>
+            <MaxLS>-1</MaxLS>
+            <KEY>1:M [1:M]</KEY>
+            <PROCESSED>false</PROCESSED>
+          </Cardinality>
+          <PROCESSED>false</PROCESSED>
+        </Link>
       </Links>
       <AutoLineup>false</AutoLineup>
       <Bounds class="Bounds" serialization="custom">
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>70.0</height>
-            <width>130.0</width>
-            <x>633.0</x>
+            <width>214.0</width>
+            <x>606.0</x>
             <y>425.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>633.0</double>
+          <double>606.0</double>
           <double>425.0</double>
-          <double>130.0</double>
+          <double>214.0</double>
           <double>70.0</double>
         </Bounds>
       </Bounds>
@@ -2470,16 +2470,16 @@
       <Specializations>
         <SpecializationLink>
           <SpecializationNodeKey>SpecializationNode:0</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:MedicoInterno</SpecializedEntityKey>
+          <SpecializedEntityKey>Entity:MedicoEsterno</SpecializedEntityKey>
           <Description></Description>
-          <KEY>LinkToSpecialization:Entity:MedicoInterno-&gt;SpecializationNode:0</KEY>
+          <KEY>LinkToSpecialization:Entity:MedicoEsterno-&gt;SpecializationNode:0</KEY>
           <PROCESSED>false</PROCESSED>
         </SpecializationLink>
         <SpecializationLink>
           <SpecializationNodeKey>SpecializationNode:0</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:MedicoEsterno</SpecializedEntityKey>
+          <SpecializedEntityKey>Entity:MedicoInterno</SpecializedEntityKey>
           <Description></Description>
-          <KEY>LinkToSpecialization:Entity:MedicoEsterno-&gt;SpecializationNode:0</KEY>
+          <KEY>LinkToSpecialization:Entity:MedicoInterno-&gt;SpecializationNode:0</KEY>
           <PROCESSED>false</PROCESSED>
         </SpecializationLink>
       </Specializations>
@@ -2533,14 +2533,14 @@
           <default>
             <height>30.0</height>
             <width>30.0</width>
-            <x>1399.0</x>
-            <y>775.0</y>
+            <x>1465.0</x>
+            <y>760.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1399.0</double>
-          <double>775.0</double>
+          <double>1465.0</double>
+          <double>760.0</double>
           <double>30.0</double>
           <double>30.0</double>
         </Bounds>
@@ -2558,16 +2558,16 @@
       <Specializations>
         <SpecializationLink>
           <SpecializationNodeKey>SpecializationNode:2</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Regolare</SpecializedEntityKey>
+          <SpecializedEntityKey>Entity:Occasionale</SpecializedEntityKey>
           <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Regolare-&gt;SpecializationNode:2</KEY>
+          <KEY>LinkToSpecialization:Entity:Occasionale-&gt;SpecializationNode:2</KEY>
           <PROCESSED>false</PROCESSED>
         </SpecializationLink>
         <SpecializationLink>
           <SpecializationNodeKey>SpecializationNode:2</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Occasionale</SpecializedEntityKey>
+          <SpecializedEntityKey>Entity:Regolare</SpecializedEntityKey>
           <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Occasionale-&gt;SpecializationNode:2</KEY>
+          <KEY>LinkToSpecialization:Entity:Regolare-&gt;SpecializationNode:2</KEY>
           <PROCESSED>false</PROCESSED>
         </SpecializationLink>
       </Specializations>
@@ -2621,14 +2621,14 @@
           <default>
             <height>30.0</height>
             <width>30.0</width>
-            <x>2225.0</x>
-            <y>354.0</y>
+            <x>2200.0</x>
+            <y>349.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2225.0</double>
-          <double>354.0</double>
+          <double>2200.0</double>
+          <double>349.0</double>
           <double>30.0</double>
           <double>30.0</double>
         </Bounds>
@@ -2646,6 +2646,13 @@
       <Specializations>
         <SpecializationLink>
           <SpecializationNodeKey>SpecializationNode:4</SpecializationNodeKey>
+          <SpecializedEntityKey>Entity:Programmato</SpecializedEntityKey>
+          <Description></Description>
+          <KEY>LinkToSpecialization:Entity:Programmato-&gt;SpecializationNode:4</KEY>
+          <PROCESSED>false</PROCESSED>
+        </SpecializationLink>
+        <SpecializationLink>
+          <SpecializationNodeKey>SpecializationNode:4</SpecializationNodeKey>
           <SpecializedEntityKey>Entity:Accettato</SpecializedEntityKey>
           <Description></Description>
           <KEY>LinkToSpecialization:Entity:Accettato-&gt;SpecializationNode:4</KEY>
@@ -2656,13 +2663,6 @@
           <SpecializedEntityKey>Entity:Saltato</SpecializedEntityKey>
           <Description></Description>
           <KEY>LinkToSpecialization:Entity:Saltato-&gt;SpecializationNode:4</KEY>
-          <PROCESSED>false</PROCESSED>
-        </SpecializationLink>
-        <SpecializationLink>
-          <SpecializationNodeKey>SpecializationNode:4</SpecializationNodeKey>
-          <SpecializedEntityKey>Entity:Programmato</SpecializedEntityKey>
-          <Description></Description>
-          <KEY>LinkToSpecialization:Entity:Programmato-&gt;SpecializationNode:4</KEY>
           <PROCESSED>false</PROCESSED>
         </SpecializationLink>
       </Specializations>
@@ -2741,7 +2741,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
+            <width>105.0</width>
             <x>169.0</x>
             <y>659.0</y>
           </default>
@@ -2750,7 +2750,7 @@
           <default/>
           <double>169.0</double>
           <double>659.0</double>
-          <double>80.0</double>
+          <double>105.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -3009,16 +3009,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
-            <x>339.0</x>
+            <width>116.0</width>
+            <x>323.0</x>
             <y>399.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>339.0</double>
+          <double>323.0</double>
           <double>399.0</double>
-          <double>80.0</double>
+          <double>116.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -3076,16 +3076,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
-            <x>240.0</x>
+            <width>123.0</width>
+            <x>216.0</x>
             <y>980.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>240.0</double>
+          <double>216.0</double>
           <double>980.0</double>
-          <double>80.0</double>
+          <double>123.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -3210,16 +3210,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
-            <x>1283.0</x>
+            <width>101.0</width>
+            <x>1254.0</x>
             <y>465.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1283.0</double>
+          <double>1254.0</double>
           <double>465.0</double>
-          <double>80.0</double>
+          <double>101.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -3278,14 +3278,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1394.0</x>
-            <y>478.0</y>
+            <x>1367.0</x>
+            <y>468.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1394.0</double>
-          <double>478.0</double>
+          <double>1367.0</double>
+          <double>468.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3345,14 +3345,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1477.0</x>
-            <y>517.0</y>
+            <x>1466.0</x>
+            <y>486.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1477.0</double>
-          <double>517.0</double>
+          <double>1466.0</double>
+          <double>486.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3412,14 +3412,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1537.0</x>
-            <y>571.0</y>
+            <x>1526.0</x>
+            <y>531.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1537.0</double>
-          <double>571.0</double>
+          <double>1526.0</double>
+          <double>531.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3479,14 +3479,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1556.0</x>
-            <y>632.0</y>
+            <x>1553.0</x>
+            <y>578.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1556.0</double>
-          <double>632.0</double>
+          <double>1553.0</double>
+          <double>578.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3546,14 +3546,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1565.0</x>
-            <y>696.0</y>
+            <x>1574.0</x>
+            <y>620.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1565.0</double>
-          <double>696.0</double>
+          <double>1574.0</double>
+          <double>620.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -3612,16 +3612,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
-            <x>454.0</x>
-            <y>413.0</y>
+            <width>108.0</width>
+            <x>455.0</x>
+            <y>412.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>454.0</double>
-          <double>413.0</double>
-          <double>80.0</double>
+          <double>455.0</double>
+          <double>412.0</double>
+          <double>108.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -3947,7 +3947,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
+            <width>134.0</width>
             <x>1932.0</x>
             <y>600.0</y>
           </default>
@@ -3956,7 +3956,7 @@
           <default/>
           <double>1932.0</double>
           <double>600.0</double>
-          <double>80.0</double>
+          <double>134.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -4014,7 +4014,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
+            <width>112.0</width>
             <x>1956.0</x>
             <y>649.0</y>
           </default>
@@ -4023,7 +4023,7 @@
           <default/>
           <double>1956.0</double>
           <double>649.0</double>
-          <double>80.0</double>
+          <double>112.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -4082,14 +4082,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1612.0</x>
-            <y>1119.0</y>
+            <x>1503.0</x>
+            <y>1070.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1612.0</double>
-          <double>1119.0</double>
+          <double>1503.0</double>
+          <double>1070.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4149,14 +4149,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1662.0</x>
-            <y>1045.0</y>
+            <x>1679.0</x>
+            <y>1069.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1662.0</double>
-          <double>1045.0</double>
+          <double>1679.0</double>
+          <double>1069.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -4215,16 +4215,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
-            <x>1650.0</x>
-            <y>1079.0</y>
+            <width>98.0</width>
+            <x>1586.0</x>
+            <y>1087.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1650.0</double>
-          <double>1079.0</double>
-          <double>80.0</double>
+          <double>1586.0</double>
+          <double>1087.0</double>
+          <double>98.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -4349,7 +4349,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
+            <width>94.0</width>
             <x>645.0</x>
             <y>832.0</y>
           </default>
@@ -4358,7 +4358,7 @@
           <default/>
           <double>645.0</double>
           <double>832.0</double>
-          <double>80.0</double>
+          <double>94.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -4550,7 +4550,7 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>23.0</height>
-            <width>80.0</width>
+            <width>94.0</width>
             <x>1051.0</x>
             <y>829.0</y>
           </default>
@@ -4559,7 +4559,7 @@
           <default/>
           <double>1051.0</double>
           <double>829.0</double>
-          <double>80.0</double>
+          <double>94.0</double>
           <double>23.0</double>
         </Bounds>
       </Bounds>
@@ -4819,14 +4819,14 @@
           <default>
             <height>23.0</height>
             <width>81.0</width>
-            <x>1975.0</x>
-            <y>433.0</y>
+            <x>1964.0</x>
+            <y>432.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1975.0</double>
-          <double>433.0</double>
+          <double>1964.0</double>
+          <double>432.0</double>
           <double>81.0</double>
           <double>23.0</double>
         </Bounds>
@@ -4886,14 +4886,14 @@
           <default>
             <height>23.0</height>
             <width>80.0</width>
-            <x>2066.0</x>
-            <y>548.0</y>
+            <x>2055.0</x>
+            <y>547.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2066.0</double>
-          <double>548.0</double>
+          <double>2055.0</double>
+          <double>547.0</double>
           <double>80.0</double>
           <double>23.0</double>
         </Bounds>
@@ -4953,14 +4953,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>2345.0</x>
-            <y>199.0</y>
+            <x>2297.0</x>
+            <y>190.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2345.0</double>
-          <double>199.0</double>
+          <double>2297.0</double>
+          <double>190.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
@@ -5220,16 +5220,16 @@
         <java.awt.geom.Rectangle2D-Double>
           <default>
             <height>20.0</height>
-            <width>80.0</width>
-            <x>2284.0</x>
-            <y>466.0</y>
+            <width>135.0</width>
+            <x>2233.0</x>
+            <y>520.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>2284.0</double>
-          <double>466.0</double>
-          <double>80.0</double>
+          <double>2233.0</double>
+          <double>520.0</double>
+          <double>135.0</double>
           <double>20.0</double>
         </Bounds>
       </Bounds>
@@ -5288,14 +5288,14 @@
           <default>
             <height>20.0</height>
             <width>80.0</width>
-            <x>1726.0</x>
-            <y>848.0</y>
+            <x>1742.0</x>
+            <y>851.0</y>
           </default>
         </java.awt.geom.Rectangle2D-Double>
         <Bounds>
           <default/>
-          <double>1726.0</double>
-          <double>848.0</double>
+          <double>1742.0</double>
+          <double>851.0</double>
           <double>80.0</double>
           <double>20.0</double>
         </Bounds>
