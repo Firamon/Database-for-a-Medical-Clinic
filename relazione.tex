@@ -70,7 +70,7 @@ a loro volta divisi in sottoprocessi:
         \item Analisi statistica dei dati
     \end{itemize}
 \end{enumerate}
-In questa sezione esponiamo il processo di "Requisiti e specifiche", e riportiamo
+In questa sezione esponiamo il processo di ``Requisiti e specifiche'', e riportiamo
 solo i risultati i risultati finali.
 
 Come prima cosa abbiamo letto il documento con le richieste del cliente (fornito dal professore)
@@ -117,7 +117,7 @@ requisiti e specifiche.
 \end{itemize}
 \subsection{Requisiti}
 Abbiamo riportato requisiti finali, risultato dell'ultima (terza) iterazione di analisi dei requisiti.
-Le iterazioni precedenti dei requisiti si trovano nel documento allegato "Specifiche.docx"
+Le iterazioni precedenti dei requisiti si trovano nel documento allegato ``Specifiche.docx''
 \begin{itemize}
     \item I \emph{medici} possono essere interni od esterni. Un medico è identificato univocamente da un codice-medico, ed ha un nome, un cognome, un indirizzo, un recapito telefonico, ed una o più \emph{specializzazioni}.
     \begin{itemize}
@@ -146,7 +146,7 @@ Le iterazioni precedenti dei requisiti si trovano nel documento allegato "Specif
 \end{itemize}
 \subsection{Specifiche}
 Come per i requisiti, abbiamo riportato solo l'ultima iterazione (seconda) delle specifiche.
-Sullo stesso file ("Specifiche.docx") si trova anche la prima iterazione.
+Sullo stesso file (``Specifiche.docx'') si trova anche la prima iterazione.
 \begin{itemize}
     \item Il medico è identificato univocamente dal codice-medico ed è caratterizzato da nome, cognome, indirizzo, un unico recapito telefonico e una o più specializzazioni. I medici interni hanno diritto a una percentuale degli incassi e i medici esterni hanno una tariffa oraria. Un medico si occupa di zero o più appuntamenti accettati. Il medico si occupa di zero o più sedute.
     \item Un medico ha una o più specializzazioni.
@@ -170,6 +170,16 @@ Sullo stesso file ("Specifiche.docx") si trova anche la prima iterazione.
     \item Quando si assegna un medico a un appuntamento tra le specializzazioni del medico ci deve essere quella del tipo di specializzazione di terapia.
 
 \end{itemize}
+
+\subsection{Diagramma dei Casi d'Uso}
+
+Per facilitare la progettazione abbiamo anche abbozzato un diagramma dei casi d'uso, che rappresenta alcune operazioni comuni che ci aspettiamo dal sistema gestito da questa base di dati.
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/UseCases.png}
+    \caption{Casi d'Uso}
+    \label{fig:usecases}
+\end{figure}
 
 \section{ER e relazionale}
 
@@ -204,7 +214,7 @@ quelli che lo erano sono stati risolti con un trigger \ref{trig:trigger1}.
 In questa fase abbiamo risolto le specializzazioni, gli attributi composti, ed altri costrutti non rappresentabili direttamente in relazionale (come gli attributi con cardinalità multipla). A contario della fase di stesura, la fase di ristrutturazione è stata svolta direttamente in coppia, invece che separando i compiti, questo sia per poter decidere meglio la soluzione più adatta quando un costrutto poteva essere risolto in più modi diversi, che per permettere a tutto il gruppo di prendere \say{familiarità} anche con le parti dello schema ER di cui non si è occupato personalmente.
 Come per i sottoprocessi precedenti, dopo la prima fase di ristrutturazione è seguita una fase di validazione, in cui abbiamo riesaminato l'intero schema, per controllare che fosse adeguato; quindi, insoddisfatti di come era stata trasformata la generalizzazione dell'entità \say{Appuntamento}, abbiamo corretto l'errore in una seconda iterazione, prima di dichiarare conclusa la ristrutturazione.
 
-All'atto pratico, abbiamo deciso di non reificare ne la specializzazione di \say{Medico} (in MedicoInterno e MedicoEsterno), ne la specializzazione di \say{MembroPersonaleAusiliario} (in AssistenteMedico ed Amministrativo), ma di inserire degli attributi \say{Tipo} e \say{TipoDiPersonale} per indicare la a quale entità specializzata appartengono, oltre all'aggiunta di vincoli e trigger. Lo stesso è stato fatto per l'entità \say{Paziente}.
+All'atto pratico, abbiamo deciso di non reificare ne la specializzazione di \say{Medico} (in MedicoInterno e MedicoEsterno), ne la specializzazione di \say{MembroPersonaleAusiliario} (in AssistenteMedico ed Amministrativo), ma di inserire degli attributi \say{Tipo} e \say{TipoDiPersonale} per indicare la a quale entità specializzata appartengono, oltre all'aggiunta di opportuni vincoli e trigger. Lo stesso è stato fatto per l'entità \say{Paziente}.
 La specializzazione dell'entità \say{Appuntamento}, invece, era stata inizialmente reificata completamente nelle sue tre varianti specializzate (Programmato, Accettato, e Saltato); ma nella seconda iterazione di ristrutturazione è stata rimossa l'entità \say{Saltato} perché ridontante, in quanto era sufficiente controllare la data e l'ora prefissate per l'appuntamento, e l'appartenenza o meno all'entità \say{Accettato} per sapere se un appuntamento era programmato o saltato. L'entità \say{Programmato} è stata mantenuta, nonostante fosse superflua come \say{Saltato} in seguito all'analisi delle ridondanze \ref{er:ridondanze1}. Inoltre, si è scelto di reificare \say{Specializzazione} per semplificare altre operazioni sulla base di dati, principalmente per garantire il vincolo che richiede che il medico associato ad un'appuntamento possieda la specializzazione richiesta dalla terapia.
 
 \subsubsection{Analisi delle ridondanze}
@@ -297,31 +307,47 @@ La specializzazione dell'entità \say{Appuntamento}, invece, era stata inizialme
     \label{tab:saltati}
 \end{table}
 
-\textbackslash\textbackslash TODO: possiamo nominare i casi d'uso
 Per l'anilisi delle ridondanze abbiamo cominciato elencando la quantità di istanze di ogni entità e relazione dello schema \ref{tab:istanze}, cercando di utilizzare numeri adeguati ad uno studio moderatamente grande (20 medici) e già in attività da qualche anno (almeno una decina); nella fase di popolazione \ref{pop:popolazione} abbiamo cercato, dove possibile, di riprendere la quantità di istanze prevista in questa fase, per mantenere la validità dell'analisi.
 
-Successivamente abbiamo stilato alcune operazioni tipiche che ci aspettiamo dall'utilizzo del sistema gestito dalla base di dati, con la relativa frequenza giornaliera delle operazioni, tenendo in considerazione anche il numero di istanze (ad esempio, più pazienti vuoldire più sedute) previsto in precedenza. A questo punto ne abbiamo scelto alcune (ne sono state riportate due: \ref{tab:programmati} \ref{tab:saltati}) di queste operazioni legate a delle ridondanze dello schema, e abbiamo calcolato come cambiava il numero di accessi giornalieri alla base di dati con e senza le ridondanze. Ne è risultato che mantenere l'entità ridondante \say{Programmato} portava ad una notevole riduzione degli accessi alla base di dati, quindi si è deciso di mantenere l'entità; mantenere l'entità \say{saltato}, invece, comportava una riduzione minima, quinsi si è scelto di rimuovere la ridondanza.
+Successivamente abbiamo trovato la frequenza delle operazioni prese dal diagramma dei casi d'uso \ref{fig:usecases}, tenendo in considerazione anche il numero di istanze (ad esempio, più appuntamenti programmati vuol dire più accettazioni) previsto in precedenza. A questo punto ne abbiamo scelto alcune (ne sono state riportate due: \ref{tab:programmati} \ref{tab:saltati}) di queste operazioni legate a delle ridondanze dello schema, e abbiamo calcolato come cambiava il numero di accessi giornalieri alla base di dati con e senza le ridondanze. Ne è risultato che mantenere l'entità ridondante \say{Programmato} portava ad una notevole riduzione degli accessi alla base di dati, quindi si è deciso di mantenere l'entità; mantenere l'entità \say{saltato}, invece, comportava una riduzione minima, quinsi si è scelto di rimuovere la ridondanza.
 
 \subsection{Relazionale}
 Una volta ristrutturato, l'ER è pronto per essere tradotto in relazionale, e quindi le entità e le relazioni dell'ER, fanno posto alle relazioni del relazionale, e subito dopo abbiamo 
 validato la nuova struttura, verificando che il relazionale appena prodotto rispettasse le forme normali.
 \subsubsection{Traduzione}
 
-Per prima cosa abbiamo iniziato identificando le entità principali dell'ER che si sarebbero trasformate in singole relazioni, e che avevamo già identificato nella fase di ristrutturazione come medico, membroPersonaleAusiliario, paziente, terapiaProlungata, ... .
+Per prima cosa abbiamo iniziato identificando le entità principali dell'ER che si sarebbero trasformate in singole relazioni, e che avevamo già identificato nella fase di ristrutturazione come medico, membroPersonaleAusiliario, paziente, terapiaProlungata, ...
 
-Poi ci siamo concentrati sulle relazioni molti a molti (dell'ER), per trasformarle in relazioni (in relazionale), anche queste erano già state identificate nella fase precedente di ristrutturazione; relazioni come: AusiliarioSeduta, MedicoRegistra, Specializzare, ... .
+Poi ci siamo concentrati sulle relazioni molti a molti (dell'ER), per trasformarle in relazioni (in relazionale), anche queste erano già state identificate nella fase precedente di ristrutturazione; relazioni come: AusiliarioSeduta, MedicoRegistra, Specializzare, ...
 
-Una volta ottenute le relazioni (del relazionale), abbiamo assegnato i vincoli di chiave primaria, secondo i campi di chiave primaria dell'ER, e le chiavi esterne, facendo attenzione a porle nelle relazioni (del relazionale) ottenute da relazioni molti a molti (dell'ER), per esempio:
+Una volta ottenute le relazioni (del relazionale), abbiamo assegnato i vincoli di chiave primaria, secondo i campi di chiave primaria dell'ER, e le chiavi esterne, facendo attenzione a porle nelle relazioni (del relazionale) ottenute da relazioni molti a molti (dell'ER).
+
 \begin{itemize}
-    \item la relazione MedicoRegistra (molti a molti), è diventata: "MedicoRegistra(mese (ext), codice medico (ext), ordinario, straordinario)";
-    \item la relazione Specializzare (molti a molti), è diventata: "Specializzare(CodiceMedico(ext), tipoDiSpecializzazione (ext))".
-    \item \dots
+    \item Medico(\underline{codice medico}, recapito telefonico, indirizzo, cognome, nome, tipo, percentuale incassi (nullable), tariffa oraria (nullable))
+    \item Seduta(\underline{data, ora, cf (ext)}, ambulatorio)
+    \item MedicoSeduta(\underline{codice medico(ext), data(ext), ora(ext), cf (ext)})
+    \item AusiliarioSeduta(\underline{codice personale(ext), data(ext), ora(ext), cf (ext)})
+    \item MembroPersonaleAusiliario(\underline{codice personale}, nome, cognome, indirizzo, recapito telefonico, tipoDiPersonale)
+    \item Storico(\underline{mese})
+    \item AusiliarioRegistra(\underline{mese (ext), codice personale (ext)}, ordinario, straordinario)
+    \item MedicoRegistra(\underline{mese (ext), codice medico (ext)}, ordinario, straordinario)
+    \item CorsoDiAggiornamento(\underline{Luogo, denominazione, data})
+    \item Partecipa(\underline{CodicePersonale, luogo, denominazione, data (ext)})
+    \item Qualifica(\underline{TipoDiQualifica})
+    \item Qualificare(\underline{codicePersonale, tipoDiQualifica (ext)})
+    \item Specializzazione(\underline{tipoDiSpecializzazione})
+    \item Specializzare(\underline{CodiceMedico(ext), tipoDiSpecializzazione (ext)})
+    \item Paziente(\underline{Cf}, nome, cognome, indirizzo, recapito telefonico, data di nascita, tipo, età)
+    \item TerapiaProlungata(\underline{DataDiInizio, cf (ext)}, dataDiFine (nullable), tipoDiTerapia, tipoDiSpecializzazione (ext), numeroAppuntamento)
+    \item Appuntamento(\underline{data, DataDiInizio (ext), CF (ext)}, ora) [unique: (data, ora, CF)]
+    \item Programmato(\underline{data (ext), DataDiInizio (ext), CF (ext)}, ora)
+    \item Accettato(\underline{data(ext), DataDiInizio (ext), CF (ext)}, ambulatorio)
+    \item MedicoAppuntamento(\underline{codiceMedico, data, DataDiInizio (ext), CF (ext)})
+    \item AusiliarioAppuntamento(\underline{codicePersonale, data, DataDiInizio (ext), CF (ext)})
 \end{itemize}
 
-Il lettore può andare a vedere il documento "Relazionale.docx", per trovare tutte le relazioni tradotte.
-
 \subsubsection{Validazione e forme normali}
-\textbf{prima forma normale}: Lo schema relazionale rispetta la prima forma normale sono stati eliminati in fase di ristrutturazione gli attributi multivalore, 
+~~~~~\textbf{Prima forma normale}: Lo schema relazionale rispetta la prima forma normale sono stati eliminati in fase di ristrutturazione gli attributi multivalore, 
 e di conseguenza non esistono campi di riga i e colonna j di nessuna delle istanze delle relazioni dello schema che abbiano più di un valore.\\
 
 \textbf{Seconda forma normale}: Tutti gli attributi non chiave dipendono (direttamente o tramite catene di dipendenze), dalla chiave primaria completa per ogni relazione, qui scriviamo le più articolate:
@@ -376,7 +402,6 @@ e di conseguenza non esistono campi di riga i e colonna j di nessuna delle istan
         \item Data di Inizio, cf $\rightarrow$ tipo di terapia
         \item Data di Inizio, cf $\rightarrow$ tipo di specializzazione
         \item Data di Inizio, cf $\rightarrow$ numero appuntamenti
-        \item Data di Inizio, cf $\rightarrow$ sconto
     \end{itemize}
 \end{itemize}
 
@@ -420,7 +445,7 @@ tanti dati per certe tabelle, e meno per altre.
 \subsubsection{Snippets}
 popolazione.r
 \subsection{Analisi e grafici}
-inserisci e commenta i grafici, parte delle analisi le abbiamo messe su "Popolazione", altrimenti li non ci mettevamo niente
+inserisci e commenta i grafici, parte delle analisi le abbiamo messe su ``Popolazione'', altrimenti li non ci mettevamo niente
 
 \section{Conclusioni}
 
