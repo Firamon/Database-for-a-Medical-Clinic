@@ -1,9 +1,11 @@
-\documentclass[11pt]{article}
+\documentclass[11pt,a4paper]{article}
+\usepackage{authblk}
 \usepackage{listings}
 \usepackage{xcolor}
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
+\usepackage{dirtytalk}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -31,10 +33,12 @@
 
 \lstset{style=mystyle}
 
-\begin{document}
-\title{Matematica in Latex}
-\author{Calabrigo Massimo}
+\title{Relazione}
+\author{Bruniera Alvise\and Calabrigo Massimo}
+\affil{Università degli studi di Udine}
 \date{\today}
+
+\begin{document}
 \maketitle
 
 \tableofcontents
@@ -170,7 +174,11 @@ Sullo stesso file ("Specifiche.docx") si trova anche la prima iterazione.
 \section{ER e relazionale}
 
 \subsection{ER}
-(immagine ER).
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/ER1.png}
+    \caption{ER}
+    \label{fig:ER}
+\end{figure}
 
 \subsubsection{Stesura}
 Per la stesura dell'ER abbiamo seguito un approccio misto di progettazione.
@@ -188,9 +196,111 @@ specializzazioni (od anche nessuna), il medico che si occupa di un appuntamento,
 \emph{almeno} nella stessa specializzazione associata alla terapia. Molti cicli non erano problematici,
 quelli che lo erano sono stati risolti con un trigger \ref{trig:trigger1}.
 \subsubsection{Ristrutturazione}
-In questa fase abbiamo risolto le specializzazioni, gli attributi composti (sviluppa poi).
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{images/ER_Ristrutturato2.png}
+    \caption{ER Ristrutturato}
+    \label{fig:ER_Ristrutturato}
+\end{figure}
+In questa fase abbiamo risolto le specializzazioni, gli attributi composti, ed altri costrutti non rappresentabili direttamente in relazionale (come gli attributi con cardinalità multipla). A contario della fase di stesura, la fase di ristrutturazione è stata svolta direttamente in coppia, invece che separando i compiti, questo sia per poter decidere meglio la soluzione più adatta quando un costrutto poteva essere risolto in più modi diversi, che per permettere a tutto il gruppo di prendere \say{familiarità} anche con le parti dello schema ER di cui non si è occupato personalmente.
+Come per i sottoprocessi precedenti, dopo la prima fase di ristrutturazione è seguita una fase di validazione, in cui abbiamo riesaminato l'intero schema, per controllare che fosse adeguato; quindi, insoddisfatti di come era stata trasformata la generalizzazione dell'entità \say{Appuntamento}, abbiamo corretto l'errore in una seconda iterazione, prima di dichiarare conclusa la ristrutturazione.
+
+All'atto pratico, abbiamo deciso di non reificare ne la specializzazione di \say{Medico} (in MedicoInterno e MedicoEsterno), ne la specializzazione di \say{MembroPersonaleAusiliario} (in AssistenteMedico ed Amministrativo), ma di inserire degli attributi \say{Tipo} e \say{TipoDiPersonale} per indicare la a quale entità specializzata appartengono, oltre all'aggiunta di vincoli e trigger. Lo stesso è stato fatto per l'entità \say{Paziente}.
+La specializzazione dell'entità \say{Appuntamento}, invece, era stata inizialmente reificata completamente nelle sue tre varianti specializzate (Programmato, Accettato, e Saltato); ma nella seconda iterazione di ristrutturazione è stata rimossa l'entità \say{Saltato} perché ridontante, in quanto era sufficiente controllare la data e l'ora prefissate per l'appuntamento, e l'appartenenza o meno all'entità \say{Accettato} per sapere se un appuntamento era programmato o saltato. L'entità \say{Programmato} è stata mantenuta, nonostante fosse superflua come \say{Saltato} in seguito all'analisi delle ridondanze \ref{er:ridondanze1}. Inoltre, si è scelto di reificare \say{Specializzazione} per semplificare altre operazioni sulla base di dati, principalmente per garantire il vincolo che richiede che il medico associato ad un'appuntamento possieda la specializzazione richiesta dalla terapia.
+
 \subsubsection{Analisi delle ridondanze}
-tabellaAnalisi.xlsx
+\label{er:ridondanze1}
+\begin{table}[H]
+\begin{tabular}{|c|c|c|}
+\hline \textbf{Nome}             & \textbf{Tipo} & \textbf{\#istanze} \\
+\hline Medico                    & E             & 20                 \\
+\hline Specializzazione          & E             & 20                 \\
+\hline Programmato               & E             & 500                \\
+\hline Accettato                 & E             & 20000              \\
+\hline Storico                   & E             & 120                \\
+\hline Seduta                    & E             & 300000             \\
+\hline Saltato                   & E             & 100                \\
+\hline Appuntamento              & E             & 20600              \\
+\hline MembroPersonaleAusiliario & E             & 50                 \\
+\hline CorsoDiAggiornamento      & E             & 50                 \\
+\hline Qualifica                 & E             & 20                 \\
+\hline TerapiaProlungata         & E             & 7000               \\
+\hline Paziente                  & E             & 6000               \\
+\hline Specializzare             & R             & 30                 \\
+\hline MedicoAppuntamento        & R             & 25000              \\
+\hline MedicoRegistra            & R             & 2400               \\
+\hline MedicoSeduta              & R             & 301000             \\
+\hline ApppuntamentoSaltato      & R             & 100                \\
+\hline AppuntamentoProgrammato   & R             & 500                \\
+\hline AppuntamentoAccettato     & R             & 20000              \\
+\hline AusiliarioAppuntamento    & R             & 20000              \\
+\hline AusiliarioRegistra        & R             & 6000               \\
+\hline AusiliarioSeduta          & R             & 20000              \\
+\hline Richiede                  & R             & 7000               \\
+\hline PrevistaDa                & R             & 20600              \\
+\hline Partecipa                 & R             & 500                \\
+\hline Qualificare               & R             & 70                 \\
+\hline Presenzia                 & R             & 300000             \\
+\hline Sottoposto                & R             & 7000               \\
+\hline
+\end{tabular}
+    \caption{Numero di istanze di entità e relazioni}
+    \label{tab:istanze}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|}
+\hline \textbf{Operazioni}                      & \textbf{Tipo} & \textbf{Frequenza} \\
+\hline Cercare dati pazienti                    & Interattivo   & 60                 \\
+\hline Cercare appuntamenti programmati         & Interattivo   & 120                \\
+\hline Programmare un appuntamento              & Interattivo   & 60                 \\
+\hline Accettare un appuntamento                & Interattivo   & 60                 \\
+\hline Accettare sedute                         & Interattivo   & 100                \\
+\hline Creare corso di aggiornamento            & Interattivo   & 0.1                \\
+\hline Registrarsi ad un corso di aggiornamento & Interattivo   & 0.1                \\
+\hline Cercare dati dei medici                  & Interattivo   & 200                \\
+\hline Iniziare una terapia prolungata          & Interattivo   & 2                  \\
+\hline Segna appuntamenti saltati               & Interattivo   & 1                  \\
+\hline
+\end{tabular}
+    \caption{Frequenza e tipo delle operazioni}
+    \label{tab:operazioni}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|}
+\hline \textbf{Cercare appuntamenti programmati} & \textbf{Con}   & \textbf{60000}   &               \\
+\hline \textbf{Concetto}                         & \textbf{Tipo}  & \textbf{Accesso} & \textbf{Tipo} \\
+\hline Programmato                               & E              & 500              & R             \\
+\hline \textbf{Cercare appuntamenti programmati} & \textbf{Senza} & 2472000          &               \\
+\hline \textbf{Concetto}                         & \textbf{Tipo}  & \textbf{Accesso} & \textbf{Tipo} \\
+\hline Appuntamento                              & E              & 20600            & R             \\
+\hline
+\end{tabular}
+    \caption{Analisi appuntamenti programmati}
+    \label{tab:programmati}
+\end{table}
+
+\begin{table}[H]
+\begin{tabular}{|c|c|c|c|}
+\hline \textbf{Segna appuntamenti saltati} & \textbf{Con}   & \textbf{504}     &               \\
+\hline \textbf{Concetto}                   & \textbf{Tipo}  & \textbf{Accesso} & \textbf{Tipo} \\
+\hline Saltato                             & E              & 1                & W             \\
+\hline Programmato                         & E              & 500              & R             \\
+\hline Programmato                         & E              & 1                & W             \\
+\hline \textbf{Segna appuntamenti saltati} & \textbf{Senza} & 502              &               \\
+\hline \textbf{Concetto}                   & \textbf{Tipo}  & \textbf{Accesso} & \textbf{Tipo} \\
+\hline Programmato                         & E              & 500              & R             \\
+\hline Programmato                         & E              & 1                & W             \\
+\hline
+\end{tabular}
+    \caption{Analisi appuntamenti saltati}
+    \label{tab:saltati}
+\end{table}
+
+\textbackslash\textbackslash TODO: possiamo nominare i casi d'uso
+Per l'anilisi delle ridondanze abbiamo cominciato elencando la quantità di istanze di ogni entità e relazione dello schema \ref{tab:istanze}, cercando di utilizzare numeri adeguati ad uno studio moderatamente grande (20 medici) e già in attività da qualche anno (almeno una decina); nella fase di popolazione \ref{pop:popolazione} abbiamo cercato, dove possibile, di riprendere la quantità di istanze prevista in questa fase, per mantenere la validità dell'analisi.
+
+Successivamente abbiamo stilato alcune operazioni tipiche che ci aspettiamo dall'utilizzo del sistema gestito dalla base di dati, con la relativa frequenza giornaliera delle operazioni, tenendo in considerazione anche il numero di istanze (ad esempio, più pazienti vuoldire più sedute) previsto in precedenza. A questo punto ne abbiamo scelto alcune (ne sono state riportate due: \ref{tab:programmati} \ref{tab:saltati}) di queste operazioni legate a delle ridondanze dello schema, e abbiamo calcolato come cambiava il numero di accessi giornalieri alla base di dati con e senza le ridondanze. Ne è risultato che mantenere l'entità ridondante \say{Programmato} portava ad una notevole riduzione degli accessi alla base di dati, quindi si è deciso di mantenere l'entità; mantenere l'entità \say{saltato}, invece, comportava una riduzione minima, quinsi si è scelto di rimuovere la ridondanza.
 
 \subsection{Relazionale}
 logico.docx
@@ -225,6 +335,7 @@ interrogazioni.sql, codice + spiega la query
 
 \section{Popolazione ed analisi}
 \subsection{Popolazione}
+\label{pop:popolazione}
 diciamo che abbiamo usato dati generati casualmente, e andiamo a motivargli perchè abbiamo scelto di generare 
 tanti dati per certe tabelle, e meno per altre.
 \subsubsection{Snippets}
