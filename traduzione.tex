@@ -1,0 +1,102 @@
+\documentclass[11pt]{article}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{float}
+
+\begin{document}
+\title{Matematica in Latex}
+\author{Calabrigo Massimo}
+\date{\today}
+\maketitle
+
+\tableofcontents
+
+\section{Relazionale}
+Una volta ristrutturato, l'ER è pronto per essere tradotto in relazionale, e quindi le entità e le relazioni dell'ER, fanno posto alle relazioni del relazionale, e subito dopo abbiamo 
+validato la nuova struttura, verificando che il relazionale appena prodotto rispettasse le forme normali.
+
+\subsection{Traduzione}
+
+Per prima cosa abbiamo iniziato identificando le entità principali dell'ER che si sarebbero trasformate in singole relazioni, e che avevamo già identificato nella fase di ristrutturazione come medico, membroPersonaleAusiliario, paziente, terapiaProlungata, ... .
+
+Poi ci siamo concentrati sulle relazioni molti a molti (dell'ER), per trasformarle in relazioni (in relazionale), anche queste erano già state identificate nella fase precedente di ristrutturazione; relazioni come: AusiliarioSeduta, MedicoRegistra, Specializzare, ... .
+
+Una volta ottenute le relazioni (del relazionale), abbiamo assegnato i vincoli di chiave primaria, secondo i campi di chiave primaria dell'ER, e le chiavi esterne, facendo attenzione a porle nelle relazioni (del relazionale) ottenute da relazioni molti a molti (dell'ER), per esempio:
+\begin{itemize}
+    \item la relazione MedicoRegistra (molti a molti), è diventata: "MedicoRegistra(mese (ext), codice medico (ext), ordinario, straordinario)";
+    \item la relazione Specializzare (molti a molti), è diventata: "Specializzare(CodiceMedico(ext), tipoDiSpecializzazione (ext))".
+    \item \dots
+\end{itemize}
+
+Il lettore può andare a vedere il documento "Relazionale.docx", per trovare tutte le relazioni tradotte.
+
+\subsection{Validazione e forme normali}
+
+\textbf{prima forma normale}: Lo schema relazionale rispetta la prima forma normale sono stati eliminati in fase di ristrutturazione gli attributi multivalore, 
+e di conseguenza non esistono campi di riga i e colonna j di nessuna delle istanze delle relazioni dello schema che abbiano più di un valore.\\
+
+\textbf{Seconda forma normale}: Tutti gli attributi non chiave dipendono (direttamente o tramite catene di dipendenze), dalla chiave primaria completa per ogni relazione, qui scriviamo le più articolate:
+
+\begin{itemize}
+    \item Medico: tariffa oraria e percentuale incassi non dipendono da tipo perché per uno stesso tipo di medico, possono esserci diverse percentuali o tariffe orarie, mentre per uno stesso codice medico, ci sono le stesse percentuali incassi e tariffa oraria.
+    \begin{itemize}
+        \item codice medico $\rightarrow$ recapito telefonico
+        \item codice medico $\rightarrow$ indirizzo
+        \item codice medico $\rightarrow$ nome
+        \item codice medico $\rightarrow$ cognome
+        \item codice medico $\rightarrow$ tipo
+        \item codice medico $\rightarrow$ percentuale incassi
+        \item codice medico $\rightarrow$ tariffa oraria
+    \end{itemize}
+
+    \item Seduta:
+    \begin{itemize}
+        \item Cf $\rightarrow$ data
+        \item Cf $\rightarrow$ ora
+        \item Cf $\rightarrow$ ambulatorio
+    \end{itemize}
+    \item MembroPersonaleAusiliario:
+    \begin{itemize}
+        \item Codice medico $\rightarrow$ nome
+        \item Codice medico $\rightarrow$ cognome
+        \item Codice medico $\rightarrow$ indirizzo
+        \item Codice medico $\rightarrow$ recapito telefonico
+        \item Codice medico $\rightarrow$ tipo di personale
+    \end{itemize}
+
+    \item AusiliarioRegistra:
+    \begin{itemize}
+        \item Mese, codice personale $\rightarrow$ ordinario
+        \item Mese, codice personale $\rightarrow$ straordinario
+    \end{itemize}
+
+    \item Paziente:
+    \begin{itemize}
+        \item Cf $\rightarrow$ nome
+        \item Cf $\rightarrow$ cognome
+        \item Cf $\rightarrow$ indirizzo
+        \item Cf $\rightarrow$ recapito telefonico
+        \item Cf $\rightarrow$ data di nascita
+        \item Cf $\rightarrow$ tipo
+        \item Cf $\rightarrow$ età
+    \end{itemize}
+
+    \item TerapiaProlungata:
+    \begin{itemize}
+        \item Data di Inizio, cf $\rightarrow$ data di fine
+        \item Data di Inizio, cf $\rightarrow$ tipo di terapia
+        \item Data di Inizio, cf $\rightarrow$ tipo di specializzazione
+        \item Data di Inizio, cf $\rightarrow$ numero appuntamenti
+        \item Data di Inizio, cf $\rightarrow$ sconto
+    \end{itemize}
+\end{itemize}
+
+In realtà è facile vedere che non ci sono catene di dipendenze, quindi le relazioni saranno anche in terza forma normale.\\
+
+\textbf{Terza forma normale}: Dall’analisi effettuata è risultato che ogni attributo non chiave dipende direttamente dalla chiave composta, 
+e che non esistono dipendenze transitive, quindi tutte le relazioni analizzate sono in terza forma normale.\\
+\\
+Visto che il relazionale rispetta le forme normali, lo riteniamo validato e possiamo passare alla fase successiva di creazione degli indici.
+
+\end{document}
