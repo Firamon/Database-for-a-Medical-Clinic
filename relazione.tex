@@ -5,7 +5,7 @@
 \usepackage{graphicx}
 \usepackage{float}
 \usepackage{hyperref}
-\usepackage{dirtytalk}
+\usepackage{indentfirst}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -211,11 +211,11 @@ quelli che lo erano sono stati risolti con un trigger \ref{trig:trigger1}.
     \caption{ER Ristrutturato}
     \label{fig:ER_Ristrutturato}
 \end{figure}
-In questa fase abbiamo risolto le specializzazioni, gli attributi composti, ed altri costrutti non rappresentabili direttamente in relazionale (come gli attributi con cardinalità multipla). A contario della fase di stesura, la fase di ristrutturazione è stata svolta direttamente in coppia, invece che separando i compiti, questo sia per poter decidere meglio la soluzione più adatta quando un costrutto poteva essere risolto in più modi diversi, che per permettere a tutto il gruppo di prendere \say{familiarità} anche con le parti dello schema ER di cui non si è occupato personalmente.
-Come per i sottoprocessi precedenti, dopo la prima fase di ristrutturazione è seguita una fase di validazione, in cui abbiamo riesaminato l'intero schema, per controllare che fosse adeguato; quindi, insoddisfatti di come era stata trasformata la generalizzazione dell'entità \say{Appuntamento}, abbiamo corretto l'errore in una seconda iterazione, prima di dichiarare conclusa la ristrutturazione.
+In questa fase abbiamo risolto le specializzazioni, gli attributi composti, ed altri costrutti non rappresentabili direttamente in relazionale (come gli attributi con cardinalità multipla). A contario della fase di stesura, la fase di ristrutturazione è stata svolta direttamente in coppia, invece che separando i compiti, questo sia per poter decidere meglio la soluzione più adatta quando un costrutto poteva essere risolto in più modi diversi, che per permettere a tutto il gruppo di prendere ``familiarità'' anche con le parti dello schema ER di cui non si è occupato personalmente.
+Come per i sottoprocessi precedenti, dopo la prima fase di ristrutturazione è seguita una fase di validazione, in cui abbiamo riesaminato l'intero schema, per controllare che fosse adeguato; quindi, insoddisfatti di come era stata trasformata la generalizzazione dell'entità ``Appuntamento'', abbiamo corretto l'errore in una seconda iterazione, prima di dichiarare conclusa la ristrutturazione.
 
-All'atto pratico, abbiamo deciso di non reificare ne la specializzazione di \say{Medico} (in MedicoInterno e MedicoEsterno), ne la specializzazione di \say{MembroPersonaleAusiliario} (in AssistenteMedico ed Amministrativo), ma di inserire degli attributi \say{Tipo} e \say{TipoDiPersonale} per indicare la a quale entità specializzata appartengono, oltre all'aggiunta di opportuni vincoli e trigger. Lo stesso è stato fatto per l'entità \say{Paziente}.
-La specializzazione dell'entità \say{Appuntamento}, invece, era stata inizialmente reificata completamente nelle sue tre varianti specializzate (Programmato, Accettato, e Saltato); ma nella seconda iterazione di ristrutturazione è stata rimossa l'entità \say{Saltato} perché ridontante, in quanto era sufficiente controllare la data e l'ora prefissate per l'appuntamento, e l'appartenenza o meno all'entità \say{Accettato} per sapere se un appuntamento era programmato o saltato. L'entità \say{Programmato} è stata mantenuta, nonostante fosse superflua come \say{Saltato} in seguito all'analisi delle ridondanze \ref{er:ridondanze1}. Inoltre, si è scelto di reificare \say{Specializzazione} per semplificare altre operazioni sulla base di dati, principalmente per garantire il vincolo che richiede che il medico associato ad un'appuntamento possieda la specializzazione richiesta dalla terapia.
+All'atto pratico, abbiamo deciso di non reificare ne la specializzazione di ``Medico'' (in MedicoInterno e MedicoEsterno), ne la specializzazione di ``MembroPersonaleAusiliario'' (in AssistenteMedico ed Amministrativo), ma di inserire degli attributi ``Tipo'' e ``TipoDiPersonale'' per indicare la a quale entità specializzata appartengono, oltre all'aggiunta di opportuni vincoli e trigger. Lo stesso è stato fatto per l'entità ``Paziente''.
+La specializzazione dell'entità ``Appuntamento'', invece, era stata inizialmente reificata completamente nelle sue tre varianti specializzate (Programmato, Accettato, e Saltato); ma nella seconda iterazione di ristrutturazione è stata rimossa l'entità ``Saltato'' perché ridontante, in quanto era sufficiente controllare la data e l'ora prefissate per l'appuntamento, e l'appartenenza o meno all'entità ``Accettato'' per sapere se un appuntamento era programmato o saltato. L'entità ``Programmato'' è stata mantenuta, nonostante fosse superflua come ``Saltato'' in seguito all'analisi delle ridondanze \ref{er:ridondanze1}. Inoltre, si è scelto di reificare ``Specializzazione'' per semplificare altre operazioni sulla base di dati, principalmente per garantire il vincolo che richiede che il medico associato ad un'appuntamento possieda la specializzazione richiesta dalla terapia.
 
 \subsubsection{Analisi delle ridondanze}
 \label{er:ridondanze1}
@@ -307,9 +307,9 @@ La specializzazione dell'entità \say{Appuntamento}, invece, era stata inizialme
     \label{tab:saltati}
 \end{table}
 
-Per l'anilisi delle ridondanze abbiamo cominciato elencando la quantità di istanze di ogni entità e relazione dello schema \ref{tab:istanze}, cercando di utilizzare numeri adeguati ad uno studio moderatamente grande (20 medici) e già in attività da qualche anno (almeno una decina); nella fase di popolazione \ref{pop:popolazione} abbiamo cercato, dove possibile, di riprendere la quantità di istanze prevista in questa fase, per mantenere la validità dell'analisi.
+Per l'anilisi delle ridondanze abbiamo cominciato elencando la quantità di istanze di ogni entità e relazione dello schema \ref{tab:istanze}, cercando di utilizzare numeri adeguati ad uno studio moderatamente grande (20 medici) e già in attività da qualche anno (almeno una decina); nella fase di popolazione \ref{pop:popolazione} abbiamo cercato, dove possibile, di tenere in considerazione la quantità di istanze prevista in questa fase, per mantenere la validità dell'analisi.
 
-Successivamente abbiamo trovato la frequenza delle operazioni prese dal diagramma dei casi d'uso \ref{fig:usecases}, tenendo in considerazione anche il numero di istanze (ad esempio, più appuntamenti programmati vuol dire più accettazioni) previsto in precedenza. A questo punto ne abbiamo scelto alcune (ne sono state riportate due: \ref{tab:programmati} \ref{tab:saltati}) di queste operazioni legate a delle ridondanze dello schema, e abbiamo calcolato come cambiava il numero di accessi giornalieri alla base di dati con e senza le ridondanze. Ne è risultato che mantenere l'entità ridondante \say{Programmato} portava ad una notevole riduzione degli accessi alla base di dati, quindi si è deciso di mantenere l'entità; mantenere l'entità \say{saltato}, invece, comportava una riduzione minima, quinsi si è scelto di rimuovere la ridondanza.
+Successivamente abbiamo trovato la frequenza delle operazioni prese dal diagramma dei casi d'uso \ref{fig:usecases}, tenendo in considerazione anche il numero di istanze (ad esempio, più appuntamenti programmati vuol dire più accettazioni) previsto in precedenza. A questo punto ne abbiamo scelto alcune (ne sono state riportate due: \ref{tab:programmati} \ref{tab:saltati}) di queste operazioni legate a delle ridondanze dello schema, e abbiamo calcolato come cambiava il numero di accessi giornalieri alla base di dati con e senza le ridondanze. Ne è risultato che mantenere l'entità ridondante ``Programmato'' portava ad una notevole riduzione degli accessi alla base di dati, quindi si è deciso di mantenere l'entità; mantenere l'entità ``saltato'', invece, comportava una riduzione minima, quinsi si è scelto di rimuovere la ridondanza.
 
 \subsection{Relazionale}
 Una volta ristrutturato, l'ER è pronto per essere tradotto in relazionale, e quindi le entità e le relazioni dell'ER, fanno posto alle relazioni del relazionale, e subito dopo abbiamo 
@@ -347,7 +347,7 @@ Una volta ottenute le relazioni (del relazionale), abbiamo assegnato i vincoli d
 \end{itemize}
 
 \subsubsection{Validazione e forme normali}
-~~~~~\textbf{Prima forma normale}: Lo schema relazionale rispetta la prima forma normale sono stati eliminati in fase di ristrutturazione gli attributi multivalore, 
+\textbf{Prima forma normale}: Lo schema relazionale rispetta la prima forma normale sono stati eliminati in fase di ristrutturazione gli attributi multivalore, 
 e di conseguenza non esistono campi di riga i e colonna j di nessuna delle istanze delle relazioni dello schema che abbiano più di un valore.\\
 
 \textbf{Seconda forma normale}: Tutti gli attributi non chiave dipendono (direttamente o tramite catene di dipendenze), dalla chiave primaria completa per ogni relazione, qui scriviamo le più articolate:
@@ -440,10 +440,109 @@ interrogazioni.sql, codice + spiega la query
 \section{Popolazione ed analisi}
 \subsection{Popolazione}
 \label{pop:popolazione}
-diciamo che abbiamo usato dati generati casualmente, e andiamo a motivargli perchè abbiamo scelto di generare 
-tanti dati per certe tabelle, e meno per altre.
+Per avere dei dati su cui eseguire l'analisi, quindi provare quesy ed il comportamento dei vari vincoli e trigger, abbiamo popolato in modo casuale il database utilizzando uno script in R, che si collega al database e, partendo da dei campioni (elenchi casuali di nomi, cognomi, indirizzi, date, etc. recuperati da Internet) genera dei dati casuali da memorizzare sulla base di dati.
+Per maggiore coerenza con il resto del progetto, abbiamo scelto il numero di righe genarate, tenendo conto del numero di istanze ipotizzato per l'analisi delle ridondanze \ref{tab:istanze}, ma (escluse alcune tabelle come ``Accettato'', il cui numero di righe è casuale) generalmente generandone una quantità maggiore.
+
+Il lavoro si è svolto in due fasi ed anche questa volta è stato diviso tra i membri del gruppo. Nella prima fase abbiamo separato le tabelle corrispondenti alle entità dell'ER, queste tabelle sono state suddivise in due gruppi di simili dimensioni di cui ciascun membro si è occupato individualmente producendo uno script; ci siamo poi incontrati per mettere insieme i due script in uno unico che popolasse tutte le entità.
+Nella seconda fase abbiamo gestito allo stesso modo le tabelle che rappresentavano le relazioni dell'ER, eventualmente leggendo dal database dati scritti dagli script della prima fase per assicurarsi di rispettare alcuni vincoli di integrità.
+
+Lo script è stato scritto in modo da generare dati che rispettassero i vincoli implementati nella base di dati, questo anche a discapito dell'efficienza, sapendo che anche così i dati vengono generati in pochi secondi ed è sufficiente farlo una volta sola.
+Tuttavia a volte può generare delle chiavi ripetute per le tabelle ``Seduta'' e ``TerapiaProlungata''; nonostante la quantità di dati generati, questo evento si verifica poco spesso, ed in quel caso è sufficiente cancellare i dati già scritti e riprovare. Visto che si trattava (considetata la frequenza del problema, e l'utilizzo di un tale script) di un problema marginale, abbiamo deciso di non risolverlo ma sottolinearne semplicemente la possibilità.
+
 \subsubsection{Snippets}
-popolazione.r
+Riportiamo alcuni snippets interessanti del codice che genera i dati di popolazione, il codice completo dello script è disponibile nel file ``popolazione.r''.\\
+
+\textbf{Generazione sedute}
+\begin{lstlisting}[language=R]
+## Omessa la generazione di cf (contenente i codici fiscali di tutti i pazienti) e cf_terapia (contenente i codici dei pazienti in terapia prolungata)
+
+# Seduta
+# Questo campionamento e' la causa delle eventuali chiavi ripetute
+cf_seduta <- sample(cf, 20000, replace=T)
+ora <- sample(1:24, 20000, replace=T)
+ambulatorio <- sample(LETTERS[1:26], 20000, replace=T)
+data_seduta <- sample(dat, 20000, replace=T)
+
+# Controllo che tutti i pazienti siano regolari od occasionali, e memorizzo l'informazione su un array
+tipo = c()
+for(i in 1:length(cf)) {
+    regolare <- cf[i]%in%cf_terapia
+    occasionale <- cf[i]%in%cf_seduta
+    if(regolare && occasionale) {
+        tipo[i] <- "entrambi"
+    } else {
+        if(regolare) {
+            tipo[i] <- "regolare"
+        } else {
+            if(occasionale) {
+                tipo[i] <- "occasionale"
+            } else {
+                # Se il paziente non e' ancora ne regolare ne occasionale, aggiungo una seduta rendendolo occasionale
+                tipo[i] <- "occasionale"
+                append(cf_seduta, cf[i])
+                append(ora, sample(1:24, 1, replace=T))
+                append(ambulatorio, sample(LETTERS[1:26], 1, replace=T))
+                append(data_seduta, sample(dat, 1, replace=T))
+            }
+        }
+    }
+}
+\end{lstlisting}
+
+\textbf{Generazione terapie prolungate}
+\begin{lstlisting}[language=R]
+# Terapie aperte (frame di appoggio per controllare i vincoli)
+aperte <- data.frame(matrix(ncol = 2, nrow=0))
+colnames(aperte) <- c("cf", "spec")
+# Terapia prolungata
+cf_terapia <- sample(cf, 5000, replace=T)
+tipodispecializzazione_terapia <- sample(tipodispecializzazione, 5000, replace=T)
+datadiinizio <- sample(dat, 5000, replace=T)
+datadifine <- sample(dat, 5000, replace=T)
+tipoditerapia <- c()
+for(i in 1:length(datadifine)) {
+    # Se la data di fine e' invalida, la si cancella e si mantiene aperta la terapia
+    if(datadifine[i] < datadiinizio[i]) {
+        # Controlla che non ci sia una terapia aperta dello stesso tipo per lo stesso paziente
+        record <- data.frame(cf = c(cf_terapia[i]), spec = c(tipodispecializzazione_terapia[i]))
+        if(!duplicated(rbind(aperte, record))[nrow(aperte)+1]) {
+            datadifine[i]  <- NA
+            tipoditerapia[i] <- "aperta"
+            aperte <- rbind(aperte, record)
+        } else {
+            # Se non rispetta il vincolo si sceglie una fine valida
+            datadifine[i] <- datadiinizio[i] + 1
+            tipoditerapia[i] <- "chiusa"
+        }
+    } else {
+        tipoditerapia[i] <- "chiusa"
+    }
+}
+\end{lstlisting}
+
+\textbf{Generazione della relazione AusiliarioAppuntamento}
+\begin{lstlisting}[language=R]
+# Campione di personale
+personale <- dbGetQuery(con, "select * from membropersonaleausiliario")
+
+codicepersonale = c()
+data_ac = c()
+datadiinizio = c()
+cf = c()
+tipodispecializzazione = c()
+for(i in 1:nrow(accettato)) {
+    app = accettato[i,]
+    # Scelgo quanti membri del personale ausiliario assegnare all'appuntamento
+    n = sample(1:3, 1)
+    medici <- sample(personale$codicepersonale, n, replace=F)
+    codicepersonale <- append(codicepersonale, medici)
+    data_ac <- append(data_ac, rep(app$data, n))
+    datadiinizio <- append(datadiinizio, rep(app$datadiinizio, n))
+    cf <- append(cf, rep(paste(app$cf), n))
+    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(app$tipodispecializzazione), n))
+}
+\end{lstlisting}
+
 \subsection{Analisi e grafici}
 inserisci e commenta i grafici, parte delle analisi le abbiamo messe su ``Popolazione'', altrimenti li non ci mettevamo niente
 

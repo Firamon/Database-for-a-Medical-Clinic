@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.7)  21 NOV 2021 11:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (TeX Live 2019/Debian) (preloaded format=pdflatex 2021.3.7)  28 NOV 2021 01:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -230,17 +230,12 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 )
 \Hy@SectionHShift=\skip51
 )
-(/usr/share/texlive/texmf-dist/tex/latex/dirtytalk/dirtytalk.sty
-Package: dirtytalk 2010/11/21 A package making "quoting" easier
-
-(/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
-)
-\c@dirtytalk@qdepth=\count198
+(/usr/share/texlive/texmf-dist/tex/latex/tools/indentfirst.sty
+Package: indentfirst 1995/11/23 v1.03 Indent first paragraph (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdfmode.def
 File: l3backend-pdfmode.def 2020-02-03 L3 backend support: PDF mode
-\l__kernel_color_stack_int=\count199
+\l__kernel_color_stack_int=\count198
 \l__pdf_internal_box=\box49
 )
 (./relazione.aux)
@@ -262,20 +257,20 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 41.
 LaTeX Font Info:    ... okay on input line 41.
-\c@lstlisting=\count266
+\c@lstlisting=\count199
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count267
+\scratchcounter=\count266
 \scratchdimen=\dimen145
 \scratchbox=\box50
-\nofMPsegments=\count268
-\nofMParguments=\count269
+\nofMPsegments=\count267
+\nofMParguments=\count268
 \everyMPshowfont=\toks18
-\MPscratchCnt=\count270
+\MPscratchCnt=\count269
 \MPscratchDim=\dimen146
-\MPnumerator=\count271
-\makeMPintoPDFobject=\count272
+\MPnumerator=\count270
+\makeMPintoPDFobject=\count271
 \everyMPtoPDFconversion=\toks19
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -298,7 +293,7 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count273
+\c@section@level=\count272
 )
 LaTeX Info: Redefining \ref on input line 41.
 LaTeX Info: Redefining \pageref on input line 41.
@@ -417,26 +412,56 @@ Underfull \hbox (badness 10000) in paragraph at lines 410--414
 
 [19] (/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2019/09/10 1.8c listings language file
-)
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 453.
- [20]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 453.
+) [20]
+Underfull \hbox (badness 10000) in paragraph at lines 453--454
 
-(./relazione.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 453.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 453.
+ []
+
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang2.sty
+File: lstlang2.sty 2019/09/10 1.8c listings language file
+)
+(/usr/share/texlive/texmf-dist/tex/latex/listings/lstlang3.sty
+File: lstlang3.sty 2019/09/10 1.8c listings language file
+) [21]
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.523 \\\textbf
+               {Generazione della relazione AusiliarioAppuntamento}
+? q
+OK, entering \batchmode...
+ [22]
+LaTeX Font Info:    Trying to load font information for TS1+cmtt on input line 
+537.
+
+(/usr/share/texlive/texmf-dist/tex/latex/base/ts1cmtt.fd
+File: ts1cmtt.fd 2019/12/16 v2.5j Standard LaTeX font definitions
+)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 552.
+ [23]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 552.
+ (./relazione.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 552.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 552.
 Package rerunfilecheck Info: File `relazione.out' has not changed.
 (rerunfilecheck)             Checksum: 3703DFDAABD8F5B551A72E768B037346;1577.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 453.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 552.
  ) 
 Here is how much of TeX's memory you used:
- 7812 strings out of 481239
- 113699 string characters out of 5920378
- 593230 words of memory out of 5000000
- 22894 multiletter control sequences out of 15000+600000
- 538215 words of font info for 44 fonts, out of 8000000 for 9000
+ 8581 strings out of 481239
+ 122643 string characters out of 5920378
+ 749871 words of memory out of 5000000
+ 23569 multiletter control sequences out of 15000+600000
+ 538512 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 34i,8n,42p,937b,1391s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 34i,8n,42p,925b,2551s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
 mf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dis
@@ -446,11 +471,12 @@ public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
 amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt9.pf
-b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb>
-Output written on relazione.pdf (20 pages, 684189 bytes).
+b></usr/share/texmf/fonts/type1/public/cm-super/sfrm1095.pfb></usr/share/texmf/
+fonts/type1/public/cm-super/sftt0900.pfb>
+Output written on relazione.pdf (23 pages, 703645 bytes).
 PDF statistics:
- 314 PDF objects out of 1000 (max. 8388607)
- 271 compressed objects within 3 object streams
- 68 named destinations out of 1000 (max. 500000)
+ 431 PDF objects out of 1000 (max. 8388607)
+ 383 compressed objects within 4 object streams
+ 153 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 
