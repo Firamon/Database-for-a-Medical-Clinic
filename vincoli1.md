@@ -1,7 +1,7 @@
 Vincoli aziendali:
 * Ogni paziente regolare deve sottoporsi ad almeno una terapia aperta
   * Tipo di paziente diventa un attributo derivato
-* [x] Ad una terapia prolungata aperta deve essere associato almeno un appuntamento programmato
+* Ad una terapia prolungata aperta deve essere associato almeno un appuntamento programmato
 * Ad una terapia polungata chiusa possono essere associati solo appuntamenti accettati o saltati
   * Trigger, quando si chiude la terapia si controllano gli appuntamenti
 * Il medico che si occupa dell'appuntamento deve essere specializzato secondo la specializzazione richiesta dalla terapia

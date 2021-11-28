@@ -369,7 +369,7 @@ medicoappuntamento <- data.frame(
 
 dbWriteTable(con, name=c("medicoappuntamento"), value=medicoappuntamento, append=T, row.names=F)
 
-# Campione di medici
+# Campione di personale
 personale <- dbGetQuery(con, "select * from membropersonaleausiliario")
 
 codicepersonale = c()

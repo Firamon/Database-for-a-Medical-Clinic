@@ -6,6 +6,7 @@
 \usepackage{float}
 \usepackage{hyperref}
 \usepackage{indentfirst}
+\usepackage{pdfpages}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -13,7 +14,7 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{mystyle}{
-    backgroundcolor=\color{backcolour},   
+    backgroundcolor=\color{backcolour},
     commentstyle=\color{codegreen},
     keywordstyle=\color{magenta},
     numberstyle=\tiny\color{codegray},
@@ -337,7 +338,7 @@ Una volta ottenute le relazioni (del relazionale), abbiamo assegnato i vincoli d
     \item Qualificare(\underline{codicePersonale, tipoDiQualifica (ext)})
     \item Specializzazione(\underline{tipoDiSpecializzazione})
     \item Specializzare(\underline{CodiceMedico(ext), tipoDiSpecializzazione (ext)})
-    \item Paziente(\underline{Cf}, nome, cognome, indirizzo, recapito telefonico, data di nascita, tipo, età)
+    \item Paziente(\underline{Cf}, nome, cognome, indirizzo, recapito telefonico, data di nascita, tipo, età (derivato))
     \item TerapiaProlungata(\underline{DataDiInizio, cf (ext)}, dataDiFine (nullable), tipoDiTerapia, tipoDiSpecializzazione (ext), numeroAppuntamento)
     \item Appuntamento(\underline{data, DataDiInizio (ext), CF (ext)}, ora) [unique: (data, ora, CF)]
     \item Programmato(\underline{data (ext), DataDiInizio (ext), CF (ext)}, ora)
@@ -417,12 +418,12 @@ Visto che il relazionale rispetta le forme normali, lo riteniamo validato e poss
 \subsection{Scelta degli indici}
 Sono stati implementati degli indici per velocizzare l'esecuzione di alcune query per cui abbiamo rutenuto valesse la pena allocare lo spazio aggiuntivo necessario.
 
-Abbiamo utilizzato indici secondari per la ricerca attraverso nome o cognome di pazienti o medici, e per la ricerca della terapia prolungata secondo le stime della frequenza di interrogazione \ref{tab:programmati}
+Abbiamo aggiunto degli indici per la ricerca attraverso nome o cognome di pazienti o medici, e per la ricerca della terapia prolungata secondo le stime della frequenza di interrogazione \ref{tab:programmati}
 
 \begin{itemize}
     \item cf terapiaProlungata $\rightarrow$ per tutte le query che cercano dati su un paziente in generale (es. tutte le terapie del paziente x);
-    \item terapia appuntamento $\rightarrow$ per la query "cerca tutti gli appuntamenti di una determinata terapia x";
-    \item codiceMedico medicoAppuntamento $\rightarrow$ per la query "Tutti gli appuntamenti in cui il medico ha partecipato"
+    \item terapia appuntamento $\rightarrow$ per la query ``cerca tutti gli appuntamenti di una determinata terapia x'';
+    \item codiceMedico medicoAppuntamento $\rightarrow$ per la query ``Tutti gli appuntamenti in cui il medico ha partecipato''
 \end{itemize}
 \begin{lstlisting}[language=SQL]
     create index cf_terapiaProlungata on terapiaProlungata (cf);
@@ -534,7 +535,7 @@ Nelle fasi precedenti (diagramma casi d'uso, frequenza e tipo operazioni)sono st
     on partecipa for each row
     execute procedure check_non_partecipa_amministrativo();
 \end{lstlisting}
-Tutti i trigger implementati sono nel file ``Trigger.sql'' in allegato
+Tutti i trigger implementati sono nel file ``relazionale.sql'' in allegato
 \subsection{query}
 Qui riportiamo alcune delle queries riportate nella tabella di ``frequenza e tipo di operazioni'' \ref{tab:operazioni} e altre queries più complicate.
 
@@ -574,19 +575,33 @@ Qui riportiamo alcune delle queries riportate nella tabella di ``frequenza e tip
         where t2.tipoDiSpecializzazione <> 'ABCDEF'
         and m1.codiceMedico = m2. codiceMedico);
 \end{lstlisting}
-Tutte le queries sono implementate nelle "Query.sql" in allegato
+Tutte le queries sono implementate nelle ``query.sql'' in allegato
+
+\subsection{Viste}
+Abbiamo aggiunto anche due viste al database: una per aggiungere l'età alla tabella ``Paziente'' (derivata dalla data di nascita), ed una che aggiunge il numero di appuntamenti accettati alle terapie prolungate.
+Sono riportate entrambe.
+
+\begin{lstlisting}[language=SQL]
+create view paziente_eta as
+select *, age(datadinascita) eta from paziente;
+
+create view terapia_naccettati as
+select dataDiInizio, cf, dataDiFine, tipoDiTerapia, tipoDiSpecializzazione, count(*) nAppuntamentiAccettati
+from terapiaprolungata natural join accettato
+group by dataDiInizio, cf, dataDiFine, tipoDiTerapia, tipoDiSpecializzazione;
+\end{lstlisting}
 
 \section{Popolazione ed analisi}
 \subsection{Popolazione}
 \label{pop:popolazione}
-Per avere dei dati su cui eseguire l'analisi, quindi provare quesy ed il comportamento dei vari vincoli e trigger, abbiamo popolato in modo casuale il database utilizzando uno script in R, che si collega al database e, partendo da dei campioni (elenchi casuali di nomi, cognomi, indirizzi, date, etc. recuperati da Internet) genera dei dati casuali da memorizzare sulla base di dati.
+Per avere dei dati su cui eseguire l'analisi, quindi provare query ed il comportamento dei vari vincoli e trigger, abbiamo popolato in modo casuale il database utilizzando uno script in R, che si collega al database e, partendo da dei campioni (elenchi casuali di nomi, cognomi, indirizzi, date, etc. recuperati da Internet) genera dei dati casuali da memorizzare sulla base di dati.
 Per maggiore coerenza con il resto del progetto, abbiamo scelto il numero di righe genarate, tenendo conto del numero di istanze ipotizzato per l'analisi delle ridondanze \ref{tab:istanze}, ma (escluse alcune tabelle come ``Accettato'', il cui numero di righe è casuale) generalmente generandone una quantità maggiore.
 
 Il lavoro si è svolto in due fasi ed anche questa volta è stato diviso tra i membri del gruppo. Nella prima fase abbiamo separato le tabelle corrispondenti alle entità dell'ER, queste tabelle sono state suddivise in due gruppi di simili dimensioni di cui ciascun membro si è occupato individualmente producendo uno script; ci siamo poi incontrati per mettere insieme i due script in uno unico che popolasse tutte le entità.
 Nella seconda fase abbiamo gestito allo stesso modo le tabelle che rappresentavano le relazioni dell'ER, eventualmente leggendo dal database dati scritti dagli script della prima fase per assicurarsi di rispettare alcuni vincoli di integrità.
 
 Lo script è stato scritto in modo da generare dati che rispettassero i vincoli implementati nella base di dati, questo anche a discapito dell'efficienza, sapendo che anche così i dati vengono generati in pochi secondi ed è sufficiente farlo una volta sola.
-Tuttavia a volte può generare delle chiavi ripetute per le tabelle ``Seduta'' e ``TerapiaProlungata''; nonostante la quantità di dati generati, questo evento si verifica poco spesso, ed in quel caso è sufficiente cancellare i dati già scritti e riprovare. Visto che si trattava (considetata la frequenza del problema, e l'utilizzo di un tale script) di un problema marginale, abbiamo deciso di non risolverlo ma sottolinearne semplicemente la possibilità.
+Tuttavia a volte può generare delle chiavi ripetute per le tabelle ``Seduta'' e ``TerapiaProlungata''; nonostante la quantità di dati generati, questo evento si verifica poco spesso, ed in quel caso è sufficiente cancellare i dati già scritti e riprovare. Visto che si trattava (considetata la frequenza del problema, e l'utilizzo di un tale script) di un problema marginale, abbiamo deciso di non risolverlo ma sottolinearne semplicemente l'eventualità.
 
 \subsubsection{Snippets}
 Riportiamo alcuni snippets interessanti del codice che genera i dati di popolazione, il codice completo dello script è disponibile nel file ``popolazione.r''.\\
@@ -678,14 +693,66 @@ for(i in 1:nrow(accettato)) {
     data_ac <- append(data_ac, rep(app$data, n))
     datadiinizio <- append(datadiinizio, rep(app$datadiinizio, n))
     cf <- append(cf, rep(paste(app$cf), n))
-    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(app$tipodispecializzazione), n))
+    tipodispecializzazione <- append(tipodispecializzazione, rep(paste(app$tipodispecializzazione), n)) #$
 }
 \end{lstlisting}
 
 \subsection{Analisi e grafici}
-inserisci e commenta i grafici, parte delle analisi le abbiamo messe su ``Popolazione'', altrimenti li non ci mettevamo niente
+Sui dati generati casualmente abbiamo effettuato delle analisi utilizzando R, e riportiamo di seguito i grafici ottenuti. Dell'ultimo \ref{fig:andamento_ore} (in cui rappresentiamo un grafico a linee delle ore comulative ti tutti i medici e tutti gli ausiliari, nel corso dei mesi) abbiamo riportato anche il codice R da cui viene generato.
+Il codice completo è disponibile nel file ``analisi.r''
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{eta_vs_sedute.pdf}
+    \caption{Età vs \#sedute}
+    \label{fig:eta_vs_sedute}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{pazienti_per_medico.pdf}
+    \caption{Pazienti per medico}
+    \label{fig:pazienti_per_medico}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{ore_per_categoria.pdf}
+    \caption{Ore per categoria}
+    \label{fig:ore_per_categoria}
+\end{figure}
+
+\begin{figure}[H]
+    \includegraphics[width=\linewidth]{andamento_ore.pdf}
+    \caption{Andamento ore}
+    \label{fig:andamento_ore}
+\end{figure}
+\begin{lstlisting}[language=R]
+#!/usr/bin/env Rscript
+library("RPostgreSQL")
+drv <- dbDriver("PostgreSQL")
+con <- dbConnect(drv,
+	dbname="studiomedico",
+	host="localhost",
+	port=5432,
+	user="postgres",
+	password="postgres")
+silent <- dbGetQuery(con, "set search_path to studio;")
+
+pdf("andamento_ore.pdf")
+andamento_ore <- dbGetQuery(con, "select
+                                    extract(year from s.mese) + ((extract(month from s.mese) - 1) / 12) mese,
+                                    sum(a.ordinario + a.straordinario) ore_ausiliario,
+                                    sum(m.ordinario + m.straordinario) ore_medico
+                                  from (storico as s join ausiliarioRegistra as a on s.mese = a.mese) join medicoRegistra as m  on s.mese = m.mese
+                                  group by s.mese
+                                  order by s.mese;")
+plot(andamento_ore$mese, andamento_ore$ore_medico, lty = 1, type = "l", main = "Andamento ore mensili")
+lines(andamento_ore$mese, andamento_ore$ore_ausiliario, lty = 4, type = "l")
+legend("topleft", legend = c("ore medici", "ore ausiliari"), lty = c(1, 4))
+
+dev.off()
+\end{lstlisting}
 
 \section{Conclusioni}
+Abbiamo ottenuto un database per la gestione di uno studio medico mediamente grande. Abbiamo implementato e testato diverse query, viste, e trigger su una popolazione casuale di grandi dimensioni, ed abbiamo testato le funzionalità di base, come inserimenti e la coerenza tra le tabelle; ad esempio verificando che i medici assegnati ad un appuntamento possedessero la specializzazione richiesta dalla terapia \ref{trig:trigger1}.
 
-
+Il database è quasi completo, tuttavia alcuni vincoli non sono stati implementati, ma solo individuati; per esempio non verifichiamo che il tipo di paziente sia coerente con la presenza di terapie aperte o sedute. Come sviluppo futuro si potrebbero completare i trigger per i vincoli individuati. Possiamo ipotizzare che, in un primo rilascio, il software gestionale da cui il personale dello studio accede al database, permetterebbe solo le operazioni che non causano incoerenze; e man mano che nei rilasci successivi vengono implementati ulteriori vincoli, il gestionale aggiungerà altre funzionalità.
 \end{document}

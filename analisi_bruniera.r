@@ -23,7 +23,7 @@ andamento_ore <- dbGetQuery(con, "select
                                   from (storico as s join ausiliarioRegistra as a on s.mese = a.mese) join medicoRegistra as m  on s.mese = m.mese
                                   group by s.mese
                                   order by s.mese;")
-plot(andamento_ore$mese, andamento_ore$ore_medico, lty = 1, type = "l", main = "Andamento ore mensili")
+plot(andamento_ore$mese, andamento_ore$ore_medico, lty = 1, type = "l", main = "Andamento ore mensili", ylab = "#ore", xlab = "mese")
 lines(andamento_ore$mese, andamento_ore$ore_ausiliario, lty = 4, type = "l")
 legend("topleft", legend = c("ore medici", "ore ausiliari"), lty = c(1, 4))
 
