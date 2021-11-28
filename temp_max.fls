@@ -1,7 +1,7 @@
 PWD c:\Users\grand\Desktop\Programming\Database-Project-2020
 INPUT C:\Users\grand\AppData\Local\MiKTeX\2.9\miktex\data\le\pdftex\pdflatex.fmt
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.tex
-OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.log
+INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.tex
+OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.log
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\size11.clo
@@ -96,11 +96,9 @@ INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunf
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\uniquecounter.sty
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\uniquecounter.sty
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.sty
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\tools\indentfirst.sty
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.aux
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.aux
-OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.aux
+INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.aux
+INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.aux
+OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.aux
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty
@@ -113,71 +111,33 @@ INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\refcou
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\oberdiek\refcount.sty
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
-OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.pdf
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
-OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
+OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.out
+OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.pdf
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr17.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr12.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.toc
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.toc
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx10.tfm
+OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.toc
+INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
+INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
+INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
+INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr8.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr6.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi10.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi8.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmmi6.tfm
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy10.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy8.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmsy6.tfm
-INPUT C:\Users\grand\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
-OUTPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.toc
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmbx12.tfm
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\workflow.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\workflow.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\workflow.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\workflow.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\workflow.png
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmti10.tfm
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\UseCases.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\UseCases.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\UseCases.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\UseCases.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\UseCases.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER1.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER1.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER1.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER1.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER1.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER_Ristrutturato2.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER_Ristrutturato2.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER_Ristrutturato2.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER_Ristrutturato2.png
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\images\ER_Ristrutturato2.png
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt10.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmtt9.tfm
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\tfm\public\cm\cmr9.tfm
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang1.sty
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang2.sty
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang2.sty
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang3.sty
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\tex\latex\listings\lstlang3.sty
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.aux
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
-INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\relazione.out
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx10.pfb
+INPUT C:\Users\grand\AppData\Local\MiKTeX\2.9\pdftex\config\pdftex.map
+INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.aux
+INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.out
+INPUT c:\Users\grand\Desktop\Programming\Database-Project-2020\temp_max.out
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmbx12.pfb
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr10.pfb
@@ -190,7 +150,5 @@ INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfon
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmr6.pfb
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmsy10.pfb
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
-INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmti10.pfb
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt9.pfb
 INPUT C:\Users\grand\AppData\Local\Programs\MiKTeX 2.9\fonts\type1\public\amsfonts\cm\cmtt9.pfb
